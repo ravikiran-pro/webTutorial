@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Live Editor</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="index.css" rel="stylesheet"/>
+</head>
+<body>
+        <div id="menu">
+            <label>FontSize</label>
+            <select id="fontsize" onchange="setFontsize()">
+                <option value="8px">8</option>
+                <option value="10px">10</option>
+                <option value="12px">12</option>
+                <option value="14px">14</option>
+                <option value="16px">16</option>
+                <option value="18px">18</option>
+            </select>
+            <label>Theme</label>
+            <select id="theme" onchange="setTheme()">
+                <option value="monokai">Monokai</option>
+                <option value="dracula" key="red">Dracula</option>
+                <option value="terminal">Terminal</option>
+                <option value="clouds">Clouds</option>
+            </select>
+        </div>
+        <pre id="editor"></pre>
+        <iframe  id="channel">editor.setAutoScrollEditorIntoView(true);
+        </iframe>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/test/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="index.js"></script>
+</body>
+</html>
