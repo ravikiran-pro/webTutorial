@@ -27,6 +27,7 @@ varible declaration
 --------------------
 
 Similar to env build..
+____________________________________________________________
     Using by variable
     ---------------------
         sccs  --->similar to css
@@ -45,7 +46,17 @@ Similar to env build..
             font-size: fontSize;  
 
         Don't joke u can write down the css conversion
-
+    Mapping varibles (from video)
+    -------------------------------
+        $colors:(
+            primary:red,
+            seconary:green
+        )
+        nav{
+            background-color:map-get($colors,primary);
+            color:map-get($colors,secondary);
+        }
+____________________________________________________________
     Nesting (my-kind)
     -----------------
         Nesting to the parent element nav ul
@@ -64,7 +75,7 @@ Similar to env build..
         }
         sass        >> Make it pythonish :-)
         css         >>expand it
-    
+____________________________________________________________    
     Partial
     -------
         changing to scss even makes it bigger?
@@ -75,8 +86,8 @@ Similar to env build..
         note : 
             1.) partial file starts with _partial.css (such they dont get compiled)
             2.) TO use partial use the keyword @import
-    
-    Mixins      (functions renamed -_-)
+____________________________________________________________
+    Mixins      (Returns the code of inside mixin)
     -------
         Grouping an reusing css declaration
             @mixin transform($property) /*parameters*\{
@@ -94,7 +105,14 @@ Similar to env build..
                         ---whether can be implemented with Partial
                         ---Sass differs in syntax @cool let's learn that later
                 """"
-
+    functions   (returns values )
+    ------------------
+        @function color()
+        {
+            @return "red"
+        }
+        color() ///returns red
+____________________________________________________________
     Extend/Inheritance  ***hope important for dry codes
     ------------------
         This guys are seriouly geniu
@@ -140,7 +158,8 @@ Similar to env build..
             .success {
                 border-color: green; }
             compiled by sass playground: https://www.sassmeister.com/  
-    
+____________________________________________________________
+
     Operotors  (There comes my boy :-} )
     ---------
         operators : +,-,*,/,%
