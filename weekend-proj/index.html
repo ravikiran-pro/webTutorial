@@ -1,33 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-<title>Live Editor</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="index.css" rel="stylesheet"/>
+	<title>Html tutorial</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="index.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@700&family=Source+Code+Pro&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="index.js"></script>
 </head>
+
 <body>
-        <div id="menu">
-            <label>FontSize</label>
-            <select id="fontsize" onchange="setFontsize()">
-                <option value="8px">8</option>
-                <option value="10px">10</option>
-                <option value="12px">12</option>
-                <option value="14px">14</option>
-                <option value="16px">16</option>
-                <option value="18px">18</option>
-            </select>
-            <label>Theme</label>
-            <select id="theme" onchange="setTheme()">
-                <option value="monokai">Monokai</option>
-                <option value="dracula" key="red">Dracula</option>
-                <option value="terminal">Terminal</option>
-                <option value="clouds">Clouds</option>
-            </select>
-        </div>
-        <pre id="editor"></pre>
-        <iframe  id="channel">editor.setAutoScrollEditorIntoView(true);
-        </iframe>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/test/ace.js" type="text/javascript" charset="utf-8"></script>
-<script src="index.js"></script>
+	<div class="container">
+		<nav>
+			<h1>HTML (Study material)</h1>
+		</nav>
+		<div class="contents">
+			<div class="content">
+				<p>
+					<u>
+						<h2>Introduction</h2>
+					</u>
+				<ul>
+					<li>
+						<abr title="hyper text markup language">HTML <a href="#">Full Form</a></abr><br />
+					</li>
+					<li>The stable version is <b>html4</b> and the current version is <b>html5</b><br /></li>
+					<li>This material follows html5 standards</li>
+					<li>html is not a programming language.It is based on document object model(
+						<a href="https://en.wikipedia.org/wiki/Document_Object_Model">DOM</a> )</li>
+					<li>html tells the browser how the content should be shown to the end user
+						.this can be achieved by using html elements</li>
+					<li>The style of the element can also be changed by using style property</li>
+				</ul>
+				</p>
+				<div>
+					<button class="btn" onclick="redirect(1)">check out example&nbsp
+					</button>
+				</div>
+			</div>
+			<div>
+			</div>
+		</div>
+	</div>
+
 </body>
+
 </html>

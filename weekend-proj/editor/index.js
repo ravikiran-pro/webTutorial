@@ -58,7 +58,7 @@ window.onload=function(){
     let xmlhttp = new XMLHttpRequest(),
     method = 'GET',
     URL = filterCall();
-    xmlhttp.open(method, URL, true);
+    xmlhttp.open(method, URL, false);
     xmlhttp.onload = function () {
         setEditor(xmlhttp.response);
     };    
