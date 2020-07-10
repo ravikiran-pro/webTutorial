@@ -1,0 +1,44 @@
+$primary:orange;
+$secondary:white;
+
+body,html{
+    background-color: $primary;
+}
+@mixin grid_system_CF {
+    background-color: $secondary;
+        .col-sm,.col-sm-3,.col-sm-1{
+       border: solid $primary 1px;
+    }
+}
+
+@mixin grid_system_C {
+    .col-md{
+        background-color: yellow;
+        border:solid  purple 1px;
+    }    
+}
+
+///@include grid_system_C();
+.container{
+    //@include grid_system_C();
+}
+.container-fluid{
+    //@include grid_system_CF();
+}
+
+body{
+    /// @include sample();    
+   }
+@mixin sample(){
+    position: relative;
+    margin: auto;
+    .container{
+        &:nth-child(1){
+            background-color: $secondary;
+    }}
+        .container-fluid{
+            background-color: $secondary;
+            opacity: 20%;
+        }
+}
+
