@@ -1,0 +1,102 @@
+html, body, .container-fluid {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.row:nth-child(1) {
+  height: 100%;
+  margin-top: 50px;
+}
+
+.row:nth-child(1) #drawer {
+  background-color: #1e727b;
+  opacity: 0.9;
+}
+
+.row:nth-child(1) .view {
+  padding-top: 80px;
+  background-color: #eceff1;
+}
+
+.row:nth-child(1) .view h5 {
+  color: #1e727b;
+}
+
+.card-group {
+  text-transform: capitalize;
+  margin-top: 0;
+}
+
+.card-group .first {
+  background-image: url("../add.png");
+  background-size: 40% 40%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card-group .first p {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.card-group .card {
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  height: 280px;
+}
+
+.card-group .card .card-title {
+  margin: 10px 0.2em 0px 1em;
+}
+
+.card-group .card .card-title .fa {
+  float: right;
+  padding-right: 0.4em;
+  color: grey;
+}
+
+.card-group .card .card-title .expiry {
+  margin-top: -1em;
+  width: 150px;
+  padding: 3px;
+  padding-left: 0.4em;
+  color: #f6786e;
+  background-color: #f8dedc;
+  border-radius: 5px;
+}
+
+.card-group .card .card-title .expiry1 {
+  margin-top: -1em;
+  width: 150px;
+  padding: 3px;
+  padding-left: 0.4em;
+  color: #81b6b2;
+  background-color: #def8f6;
+  border-radius: 5px;
+}
+
+.card-group .card .card-body {
+  padding: 0px 0.2em 0px 1em;
+}
+
+.card-group .card .card-body p {
+  margin-bottom: 50px;
+}
+
+.card-group .card .card-foo {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.card-group .card .card-foo .span:nth-child(2) {
+  float: right;
+  color: orange;
+}
+
+.card-group .card .card-foo .span1:nth-child(2) {
+  float: right;
+  color: #f6786e;
+}
+/*# sourceMappingURL=main.css.map */

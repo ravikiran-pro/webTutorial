@@ -1,0 +1,7 @@
+html, body { height: 100%; background-color:teal;}
+#menu{float: right;}
+label{color: orangewhite;}
+#fontsize,#theme,label{font-size: 14px; font-style:oblique; padding: 5px;}
+#fontsize,#theme{text-decoration:line-through; background-color: teal; border-radius: 8px;}
+#editor, #channel { height: 50%; width:100%}
+#channel{background-color: lightcyan}

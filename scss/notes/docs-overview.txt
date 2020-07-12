@@ -1,0 +1,203 @@
+sass is a kind compiler for compiling the code into css
+sass can be directly used or can be used with sscs
+Something has much more flexibility towards css.
+scss is compiled using saas to css
+docs: https://sass-lang.com/documentation
+
+ooh, even the docs gives preference to scss
+
+Overall understanding
+----------------------
+1.) Follows more flexible,Allows to use dry priciple,Has things like varible,
+,nesting,mixins,inheritance which helps us do that.
+2.) that's enough reason to make people wow.Becaue strandizing gives much control
+even though browser cant unsderstand sass or sccs.We can do it :-)
+saas Follows unsimilar strcture to css where scss As more same synatical approach.
+
+Getting into tutorial
+-----------------------
+    Note: following basic commands and syntax before the deep dive
+    -----
+Preprocessing sass
+----------------------
+    Sass can  be directly converted 
+        sass --watch input.scss|input.sass output.css
+
+varible declaration
+--------------------
+
+Similar to env build..
+____________________________________________________________
+    Using by variable
+    ---------------------
+        sccs  --->similar to css
+        -----
+        $fontSize: 16px;  //Decalring variblas for dry usage(variable decalration,global)
+        $primary-color: #333;
+        element{
+            font-size: $fontSize;  >>>can be directly defined (property defination)
+        }
+        _____________________________________________________
+        sass    --->similar to python -_-
+        -----
+        fontSize: 16px;  
+        primary-color: #333;
+        element
+            font-size: fontSize;  
+
+        Don't joke u can write down the css conversion
+    Mapping varibles (from video)
+    -------------------------------
+        $colors:(
+            primary:red,
+            seconary:green
+        )
+        nav{
+            background-color:map-get($colors,primary);
+            color:map-get($colors,secondary);
+        }
+____________________________________________________________
+    Nesting (my-kind)
+    -----------------
+        Nesting to the parent element nav ul
+        scss
+        -----
+        $linkcolor: white
+        nav{
+            ul  /* (nav ul) *\
+            {     
+                list-style:none;
+            }
+            a   /* (nav a) *\
+            {
+                color:$linkcolor
+            }
+        }
+        sass        >> Make it pythonish :-)
+        css         >>expand it
+____________________________________________________________    
+    Partial
+    -------
+        changing to scss even makes it bigger?
+        Here is partial kepp code aside and use it 
+
+        partial file :  _filename.scss
+        Using (another file): @import "filename";
+        note : 
+            1.) partial file starts with _partial.css (such they dont get compiled)
+            2.) TO use partial use the keyword @import
+____________________________________________________________
+    Mixins      (Returns the code of inside mixin)
+    -------
+        Grouping an reusing css declaration
+            @mixin transform($property) /*parameters*\{
+                -webkit-transform: $property;   
+                -ms-transform: $property;
+                transform : $property;
+            }
+            /* call it *\
+            .box {
+                @include transform(rotate(30deg)); 
+            }
+                """"
+                    A bit confusing check out doing examples
+                        ---passing multiple parameters
+                        ---whether can be implemented with Partial
+                        ---Sass differs in syntax @cool let's learn that later
+                """"
+    functions   (returns values )
+    ------------------
+        @function color()
+        {
+            @return "red"
+        }
+        color() ///returns red
+____________________________________________________________
+    Extend/Inheritance  ***hope important for dry codes
+    ------------------
+        This guys are seriouly geniu
+        --->You can use the properties of other css selector by using inheritance
+        ----> whereas extend which is based on a new concept called as placeholder
+
+        How placeholder works ?
+            When there is no input.It just shows the default text
+        scss or saas going to get converted to css.I can't dump all elements especially those drawer type one
+        placeholders help us to show such properties only when they are used
+        Responsive layouts are good example
+        ....Lets get into the code
+        /* similar to base class *\
+        %message-shared{
+            border: 16px solid #ccc;
+            padding: 10px;
+            color:#333;
+        }
+        %equal-heights{
+            display:flex;
+            flex-wrap:wrap;
+        }
+        .message{
+            @extend %message-shared; /*inheriting those properties*\
+        }
+        .success{
+            @extend %message-shared; 
+            border-color: green;
+        }
+        .error{
+            @extend %message-shared;
+        }
+        .error:active{
+            @extend %equal-heights;
+        }
+        css     (It is really beautiful)
+        ----
+           .error, .success, .message {
+                border: 16px solid #ccc;  padding: 10px;  color: #333; }
+            .error:active {
+                display: flex;  flex-wrap: wrap; }
+            /*inheriting those properties*/
+            .success {
+                border-color: green; }
+            compiled by sass playground: https://www.sassmeister.com/  
+____________________________________________________________
+
+    Operotors  (There comes my boy :-} )
+    ---------
+        operators : +,-,*,/,%
+
+"""First step 
+    It's just to start with css..There are lot of things to learn 
+    Put some time daily and master it
+""""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

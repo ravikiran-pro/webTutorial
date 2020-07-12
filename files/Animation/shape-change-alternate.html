@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Practice playground</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <style>
+            .container{
+                display: flex;
+                margin: 0px;
+            }
+            .element{
+                background-color: red;
+                width: 100px;
+                height: 100px;
+                position: relative;
+                animation: move 5s infinite;
+                animation-direction: reverse;
+                animation-fill-mode: both;
+                animation-timing-function: linear;
+            }
+            @keyframes move {
+                from {left: 250px;}
+                to{ left:400px;}
+
+                from{background-color: salmon;}
+                to{background-color: green;}
+                
+                from{border-bottom-right-radius: 0px;}
+                to{border-bottom-right-radius: 500px;}
+            }
+            .element1{
+                background-color: orange;
+                width: 100px;
+                height: 100px;
+                position: relative;
+                animation: move1 5s infinite;
+                animation-fill-mode: both;
+                animation-timing-function: linear;
+            }
+            @keyframes move1{
+
+                from {left: 0px;}
+                to{ left:50px;}
+
+                from{background-color: green;}
+                to{background-color: salmon;}
+                
+                from{border-bottom-left-radius: 500px;}
+                to{border-bottom-left-radius: 0px;}
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="element">
+                &nbsp;
+            </div>
+            <div class="element1">
+                &nbsp;
+            </div>
+        </div>
+    </body>
+</html>

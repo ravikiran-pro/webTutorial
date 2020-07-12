@@ -1,0 +1,12 @@
+.container .d-flex {
+  background-color: orange;
+}
+
+.container .flex-item {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(orange), to(red));
+  background-image: linear-gradient(orange, red);
+  border: solid orange 2px;
+  margin: 0px;
+  opacity: 0.5;
+}
+/*# sourceMappingURL=flex.css.map */
