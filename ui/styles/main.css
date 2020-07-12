@@ -1,130 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 html, body {
   height: 100%;
 }
 
-html .container-fluid, body .container-fluid {
-  background-color: #eceff1;
+.container-fluid {
   height: 100%;
-  padding: 8px;
+}
+
+.container-fluid .view {
   background-color: #eceff1;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
 }
 
-.d-flex .customcard {
-  width: 33%;
-  margin: 8px;
+.container-fluid .view .customcard {
   background-color: #fff;
-  -webkit-box-shadow: 1.2px 1.2px rgba(0, 0, 0, 0.1);
-          box-shadow: 1.2px 1.2px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 6px solid #eceff1;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
 }
 
-.d-flex .customcard .block1, .d-flex .customcard .block2 {
+.container-fluid .view .customcard .block1, .container-fluid .view .customcard .block2 {
   border-bottom: solid 0.15px rgba(0, 0, 0, 0.2);
 }
 
-.d-flex:nth-child(1) .first {
+.container-fluid .view:nth-child(1) .img-center {
   background-image: url("../add.png");
   background-size: 30% 30%;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.d-flex:nth-child(1) .block1 {
-  height: 72px;
-}
-
-.d-flex:nth-child(1) .block2 {
-  padding-top: 6px;
-  padding-bottom: 22px;
-}
-
-.d-flex:nth-child(1) .block3 {
-  height: 1em;
-  padding-top: 0.5em;
-}
-
-.d-flex:nth-child(1) .add {
+.container-fluid .view:nth-child(1) .img-center .add {
   position: relative;
   text-align: center;
   top: 68%;
 }
 
-.d-flex:nth-child(1) .expiry, .d-flex:nth-child(1) .expiry1 {
-  width: 120px;
-  padding: 4px;
-  font-size: 12px;
+.container-fluid .view:nth-child(1) .block1 {
+  height: 60px;
+}
+
+.container-fluid .view:nth-child(1) .block1 .expiry, .container-fluid .view:nth-child(1) .block1 .expiry1 {
+  width: 9.5em;
   margin-top: 0.2em;
   padding-left: 0.4em;
   border-radius: 2px;
 }
 
-.d-flex:nth-child(1) .expiry {
+.container-fluid .view:nth-child(1) .block1 .expiry {
   color: #f6786e;
   background-color: #f8dedc;
 }
 
-.d-flex:nth-child(1) .expiry1 {
+.container-fluid .view:nth-child(1) .block1 .expiry1 {
   color: #81b6b2;
   background-color: #def8f6;
 }
 
-.d-flex:nth-child(2) .first {
-  background-image: url("../add.png");
-  background-size: 30% 30%;
-  background-repeat: no-repeat;
-  background-position: center;
+.container-fluid .view:nth-child(1) .block2 {
+  padding-top: 6px;
+  padding-bottom: 11px;
 }
 
-.d-flex:nth-child(2) .block1 {
-  height: 50px;
+.container-fluid .view:nth-child(1) .block3 {
+  padding-top: 6px;
 }
 
-.d-flex:nth-child(2) .block2 {
-  padding-top: 10px;
-  padding-bottom: 10px;
+.container-fluid .view:nth-child(2) .block1 {
+  height: 38px;
 }
 
-.d-flex:nth-child(2) .block3 {
-  height: 1em;
-  padding-top: 0.5em;
+.container-fluid .view:nth-child(2) .block2 {
+  height: 63px;
+  padding-top: 6px;
+  padding-bottom: 0px;
 }
 
-.d-flex:nth-child(2) .add {
-  position: relative;
-  text-align: center;
-  top: 68%;
+.container-fluid .view:nth-child(2) .block3 {
+  padding-top: 1em;
 }
 
-.d-flex span {
-  font-size: 13px;
+.container-fluid .view:nth-child(2) .progress-line {
+  margin-top: 0.5em;
+  margin-bottom: 18px;
+}
+
+.container-fluid .view:nth-child(2) .progress-line .progress {
+  height: 4px;
+}
+
+.container-fluid .view span {
   opacity: 0.7;
 }
 
-.d-flex .right {
-  float: right;
-  padding-left: 0.3em;
-}
-
-.d-flex .approval {
+.container-fluid .view .approval {
   color: orange;
 }
 
-.d-flex .rejection {
+.container-fluid .view .rejection {
   color: red;
 }
 
-.d-flex .completed {
+.container-fluid .view .completed {
   color: green;
-}
-
-.progress-line {
-  margin-top: 0.4em;
-  margin-bottom: 20px;
-}
-
-.progress-line .progress {
-  height: 8px;
 }
 /*# sourceMappingURL=main.css.map */

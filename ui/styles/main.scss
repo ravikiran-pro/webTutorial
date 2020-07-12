@@ -1,6 +1,6 @@
 //$primary-color:#fff;
 //$drawer-color: 	#1e727b;
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 $primary-color:#eceff1;
 $plain:#fff;
 $status:(
@@ -11,12 +11,7 @@ $status:(
 
 @mixin common_classes {
     span{
-        font-size: 13px;
         opacity: 0.7;
-    }
-    .right{
-        float: right;
-        padding-left: 0.3em;
     }
     .approval{
         color: map-get($status, "orange" )
@@ -30,9 +25,7 @@ $status:(
 }
 @mixin mixed-theme-button{
     .expiry,.expiry1{
-        width: 120px;
-        padding:4px;
-        font-size: 12px;
+        width: 9.5em;
         margin-top: 0.2em;
         padding-left: 0.4em;
         border-radius: 2px;
@@ -49,82 +42,68 @@ $status:(
 
 html,body{
     height: 100%;
+}
     .container-fluid{
-        background-color: $primary-color;
         height: 100%;
-        padding: 8px;
+    .view{
         background-color: $primary-color;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 13px;
-    }
-}
-.d-flex{
-    .customcard{
-        width: 33%;
-        margin: 8px;
-        background-color: $plain;
-        box-shadow: 1.2px 1.2px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        .block1,.block2{
-            border-bottom: solid 0.15px rgba(0, 0, 0, 0.2);
-        }
-    }
-    &:nth-child(1){
-        .first{
-            background-image: url('../add.png');
-            background-size: 30% 30%;
-            background-repeat: no-repeat;
-            background-position: center;
+        .customcard{
+            background-color: $plain;
+            box-sizing: border-box;
+            border: 6px solid $primary-color;
+            border-radius: 10px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 11px;
+            .block1,.block2{
+                border-bottom: solid 0.15px rgba(0, 0, 0, 0.2);
             }
-        .block1{
-            height: 72px;   
         }
-        .block2{
-            padding-top: 6px;
-            padding-bottom: 22px;
+        &:nth-child(1){
+                .img-center{
+                    background-image: url('../add.png');
+                    background-size: 30% 30%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+
+                    .add{
+                        position: relative;
+                        text-align: center;
+                        top: 68%;
+                }
+                }
+
+                .block1{
+                    height: 60px;
+                    @include mixed-theme-button();
+                }
+                .block2{
+                    padding-top: 6px;
+                    padding-bottom: 11px;
+                }
+                .block3{
+                    padding-top: 6px;
+                }
         }
-        .block3{
-            height: 1em;
-            padding-top: 0.5em;
+        &:nth-child(2){
+                .block1{
+                    height: 38px;
+                }
+                .block2{
+                    height: 63px;
+                    padding-top: 6px;
+                    padding-bottom: 0px;
+                }
+                .block3{
+                    padding-top: 1em;
+                }
+                .progress-line{
+                    margin-top: 0.5em;
+                    margin-bottom: 18px;
+                    .progress{
+                        height: 4px;
+                    }   
+                }
         }
-        .add{
-            position: relative;
-            text-align: center;
-            top: 68%;
-        }
-        @include mixed-theme-button();
+        @include common_classes();
+       }
     }
-    &:nth-child(2){
-        .first{
-            background-image: url('../add.png');
-            background-size: 30% 30%;
-            background-repeat: no-repeat;
-            background-position: center;
-            }
-        .block1{
-            height: 50px;
-        }
-        .block2{
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-        .block3{
-            height: 1em;
-            padding-top: 0.5em;
-        }
-        .add{
-            position: relative;
-            text-align: center;
-            top: 68%;
-        }
-    }
-    @include common_classes();
-}
-///Commonly used classes
-.progress-line{
-    margin-top: 0.4em;
-    margin-bottom: 20px;
-    .progress{
-        height: 8px;
-    }   
-}
