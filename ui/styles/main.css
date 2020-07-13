@@ -1,13 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 html, body {
-  height: 100%;
-}
-
-.container-fluid {
-  height: 100%;
-}
-
-.container-fluid .view {
   background-color: #eceff1;
 }
 
@@ -27,15 +19,19 @@ html, body {
 
 .container-fluid .view:nth-child(1) .img-center {
   background-image: url("../add.png");
-  background-size: 30% 30%;
+  background-size: 60px;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.container-fluid .view:nth-child(1) .img-center .image {
+  height: 135px;
 }
 
 .container-fluid .view:nth-child(1) .img-center .add {
   position: relative;
   text-align: center;
-  top: 68%;
+  top: 85%;
 }
 
 .container-fluid .view:nth-child(1) .block1 {
