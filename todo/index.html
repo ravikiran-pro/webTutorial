@@ -22,8 +22,16 @@
     </nav >
     <div class="container-fluid">
         <!-- Grid Start-->
+        <div class="row"> 
+        <div class="drawer-top col-xs-12 col-md-3 bg-dark">
+            <li class="fa fa-home" data-toggle="tooltip" title="Home"></li>
+            <li class="fa fa-bell" data-toggle="tooltip" title="Activity"></li>
+            <li class="fa fa-star" data-toggle="tooltip" title="Acheivements"></li>
+            <li class="fa fa-plus" data-toggle="tooltip" title="Crete New Activity"></li>
+        </div>
+        </div>
         <div class="row h-100">
-            <div class="col drawer bg-dark">
+            <div class="drawer-side bg-dark">
                 <li class="fa fa-home" data-toggle="tooltip" title="Home"></li>
                 <li class="fa fa-bell" data-toggle="tooltip" title="Activity"></li>
                 <li class="fa fa-star" data-toggle="tooltip" title="Acheivements"></li>
@@ -32,46 +40,52 @@
             <!-- Drawer Start-->
             <!--Drawer End-->
             <!--View starts -->
-            <div class="col auto col-sm col-md  shadow-lg p-3 bg-white mb-1 view" data-interval="false">
-                <div id="carousel" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
+            <div class="col-12 mx-auto col-sm col-md  shadow-lg p-3 bg-white mb-1 view" data-interval="false">
                             <div class="row">
-                                <div class="col-3 bg-danger customcards">
-                                    <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <div class="col" id="card-0">
+                                    <div class="customcards bg-danger"> 
+                                        &nbsp;
+                                    </div>
                                 </div>
-                                <div class="col-3 bg-primary customcards card-1">
-                                    <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <div class="col" id="card-1">
+                                    <div class="customcards bg-dark"> 
+                                        &nbsp;
+                                    </div>
                                 </div>
-                                <div class="col-3 bg-success customcards card-2">
-                                    <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <div class="col" id="card-2">
+                                    <div class="customcards bg-primary"> 
+                                        &nbsp;
+                                    </div>
                                 </div>
-                                <div class="col-3 bg-info customcards card-3">
-                                    <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <div class="col" id="card-3">
+                                    <div class="customcards bg-success"> 
+                                        &nbsp;
+                                    </div>
                                 </div>
+                                <div class="col" id="card-00">
+                                    <div class="customcards bg-danger"> 
+                                        &nbsp;
+                                    </div>
+                                </div>
+
+                                <div class="col" id="card-2">
+                                    <div class="customcards bg-primary"> 
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="col" id="card-3">
+                                    <div class="customcards bg-success"> 
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="col" id="card-00">
+                                    <div class="customcards bg-danger"> 
+                                        &nbsp;
+                                    </div>
+                                </div>y
                             </div>
-                        </div>
-                        <!--Place to add carousel-->
-                    </div>
-                    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-                      <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-                      <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
-                      <span class="sr-only">Next</span>
-                    </a>
-                  </div>
-            </div>
             <!-- View Ends-->
+            </div>
         </div>
         <!-- Grid End-->
     </div>
