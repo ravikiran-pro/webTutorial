@@ -37,66 +37,91 @@ $status:(
         background-color:#def8f6;
     }
 }
-
-.container-fluid{
-    background-color: $primary-color;
-    height: 100vh;
-    .img-center{
-        background-image: url('../add.png');
-        background-size: 90px;
-        background-repeat: no-repeat;
-        background-position: center;
-        .image{
-            height: 120px;
-        }
-        .add{
-            position: relative;
-            margin-top: 40px;
-        }
+.sidebar{
+    background: rgb(254,255,255);
+    background: linear-gradient(180deg, #116f6f 0%, rgba(36,118,112,1) 2%, rgba(28,112,125,1) 38%, rgba(20,107,137,1) 90%);
+    width: 230px;
+    ul{
+        padding: 0px;
     }
-    .cards-upper,.cards-lower{
-        background-color: $plain;
-        height: 243px;
-        margin: 24px -8px 0px -8px;
-        box-shadow: 0.8px 0.8px 3px 2px rgba(51, 45, 45, 0.11), 1px 1px 5px 0px #f4f3f3;
-
-        border-radius: 5px;
-        padding: 9px;
-        .block1,.block2{
-            border-bottom: solid 0.15px rgba(0, 0, 0, 0.2);
-        }
-        @include common_classes();
-    }
-    .cards-upper{
-        .block1{
-            height: 90px;
-            @include mixed-theme-button();
-        }
-        .block2{
-            padding-top: 6px;
-            padding-bottom: 34px;
-        }
-        .block3{
-            padding-top: 6px;
-        }
-    }
-    .cards-lower{
-        .block1{
-            height: 58px;
-        }
-        .block2{
-            height: 86px;
-            padding-top: 6px;
-        }
-        .block3{
-            padding-top: 16px;
-        }
-        .progress-line{
-            margin-top: 0.5em;
-            margin-bottom: 30px;
-            .progress{
-                   height: 4px;
-            }   
+    li{
+        list-style-type: none;
+        color: white;
+        line-height: 2.3em;
+        &:hover{
+            background-color: #13645E;
         }
     }
 }
+.container-fluid{
+    height: 100vh;
+    background-color: $primary-color;
+    .row{
+        padding: 4px;
+        .img-center{
+            background-image: url('../add.png');
+            background-size: 90px;
+            background-repeat: no-repeat;
+            background-position: center;
+            .image{
+                height: 120px;
+            }
+            .add{
+                position: relative;
+                margin-top: 40px;
+            }
+        }
+        .cards-upper,.cards-lower{
+            background-color: $plain;
+            height: 243px;
+            margin: 24px -8px 0px -8px;
+            box-shadow: 0.8px 0.8px 3px 2px rgba(51, 45, 45, 0.11), 1px 1px 5px 0px #f4f3f3;
+
+            border-radius: 5px;
+            padding: 9px;
+            .block1,.block2{
+                border-bottom: solid 0.15px rgba(0, 0, 0, 0.2);
+            }
+            @include common_classes();
+        }
+        .cards-upper{
+            .block1{
+                height: 90px;
+                @include mixed-theme-button();
+            }
+            .block2{
+                padding-top: 6px;
+                padding-bottom: 34px;
+            }
+            .block3{
+                padding-top: 6px;
+            }
+        }
+        .cards-lower{
+            .block1{
+                height: 58px;
+            }
+            .block2{
+                height: 86px;
+                padding-top: 6px;
+            }
+            .block3{
+                padding-top: 16px;
+            }
+            .progress-line{
+                margin-top: 0.5em;
+                margin-bottom: 30px;
+                .progress{
+                       height: 4px;
+                }   
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1180px) {
+    .sidebar{
+      display: none;
+    }
+  }

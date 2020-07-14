@@ -1,17 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="plugins/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles/new.css">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Simple Sidebar - Start Bootstrap Template</title>
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="plugins/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/new.css">
+
 </head>
+
 <body>
-    <div class="container-fluid">
+
+    <nav>
+        <!---Nav to be added-->
+        <button  onclick="controller()">sidebar-control</button>
+    </nav>
+  <div class="d-flex content mx-auto">
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar-drawer">
+      <div class="user" style="height: 80px;">
+        &nbsp;
+      </div >
+      <ul>
+        <li class="icon"><i class="fa fa-home">&nbsp</i> Home</li>
+        <li class="icon"><i class="fa fa-folder-open-o"></i> Projects</li>
+        <li class="icon"><i class="fa fa-pencil-square-o">&nbsp</i> Notes</li>
+        <li class="icon"><i class="fa fa-user-o">&nbsp</i> Members</li>
+        <li class="icon"><i class="fa fa-users">&nbsp</i> Teams</li>
+        <li class="icon"><i class="fa fa-question-circle-o">&nbsp</i>Help & support</li>
+        <li class="icon"><i class="fa fa-gears">&nbsp</i> Settings</li>
+      </ul>
+    </div>
+    <!-- sidebar -->
+      <!--View container-->
+      <section>
+      <div class="container-fluid">
         <div class="row"> 
             <!-- card 1 U-->
             <div class="col-md-3 col-lg-3 col-xl-3">
@@ -212,9 +238,23 @@
                 </div >
             </div >
         </div>
+        <!-- container End-->
+    </div>
+    </section>
     </div>
     <script src="plugins/jquery/jquery.min.js"></script>
     <script src="plugins/popper/popper.min.js"></script>
     <script src="plugins/bootstrap/bootstrap.min.js"></script>
+    <script>
+        $("#menu-toggle").click(function(e) {
+          e.preventDefault();
+          $("#wrapper").toggleClass("toggled");
+        });
+        function controller(){
+            console.log("ddjjd");
+            var x=document.getElementById("sidebar-drawer");
+            x.style.display="none";
+        }
+      </script>
 </body>
 </html>
