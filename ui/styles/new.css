@@ -1,6 +1,6 @@
 .container-fluid {
   background-color: #eceff1;
-  height: 100%;
+  height: 100vh;
 }
 
 .container-fluid .img-center {

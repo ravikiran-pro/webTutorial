@@ -39,7 +39,7 @@ $status:(
 
 .container-fluid{
     background-color: $primary-color;
-    height: 100%;
+    height: 100vh;
     .img-center{
         background-image: url('../add.png');
         background-size: 90px;
