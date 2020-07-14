@@ -1,4 +1,3 @@
-
 $primary-color:#eceff1;
 $plain:#fff;
 $status:(
@@ -58,8 +57,10 @@ $status:(
         background-color: $plain;
         height: 243px;
         margin: 24px -8px 0px -8px;
-        box-shadow: 1px 1px 3px 2px rgba(110, 89, 89, 0.11), 1px 1px 5px 0px #f4f3f3;
-
+        box-shadow:
+          0 0px 0.3px rgba(0, 0, 0, 0.018),
+          0 0px 2px rgba(0, 0, 0, 0.17)
+        ;
         border-radius: 5px;
         padding: 9px;
         .block1,.block2{
