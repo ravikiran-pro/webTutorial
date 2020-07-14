@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,600;1,400&display=swap");
+.logo {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 18px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.logo .logo-up {
+  -webkit-animation-name: roll;
+          animation-name: roll;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  animation-direction: reverse;
+}
+
+.logo .logo-up a:nth-child(1) {
+  color: blue;
+  background-color: yellow;
+}
+
+.logo .logo-up a:nth-child(2) {
+  color: yellow;
+  background-color: blue;
+}
+
+.logo .logo-down {
+  -webkit-animation-name: roll;
+          animation-name: roll;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  animation-direction: reverse;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.logo .logo-down a:nth-child(1) {
+  color: yellow;
+  background-color: blue;
+}
+
+.logo .logo-down a:nth-child(2) {
+  color: blue;
+  background-color: yellow;
+}
+
+html, body {
+  height: 100%;
+}
+
+.container-fluid {
+  background-color: lightcyan;
+  height: 90%;
+}
+
+.container-fluid .row .drawer {
+  position: relative;
+  width: 30px;
+  text-align: center;
+  line-height: 4em;
+}
+
+.container-fluid .row .drawer li {
+  list-style-type: none;
+  color: white;
+}
+
+.container-fluid .row .drawer li:hover {
+  color: red;
+  cursor: pointer;
+  -webkit-animation-name: ring;
+          animation-name: ring;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 10;
+          animation-iteration-count: 10;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.container-fluid .view {
+  -webkit-box-shadow: 0.4px 0.3px black;
+          box-shadow: 0.4px 0.3px black;
+}
+
+.container-fluid .view .carousel .row .customcards {
+  border: solid 1px red;
+  height: 100px;
+}
+
+.container-fluid .view .carousel-control-prev,
+.container-fluid .view .carousel-control-next {
+  /* Aligns it at the bottom    margin: -8%; */
+  display: none;
+}
+
+@-webkit-keyframes roll {
+  0% {
+    left: 0px;
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  20% {
+    left: 10px;
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+  }
+  40% {
+    left: 20px;
+    -webkit-transform: rotate(80deg);
+            transform: rotate(80deg);
+  }
+  80% {
+    left: 20px;
+    -webkit-transform: rotate(1600deg);
+            transform: rotate(1600deg);
+  }
+  100% {
+    left: 40px;
+    -webkit-transform: rotate(320deg);
+            transform: rotate(320deg);
+  }
+}
+
+@keyframes roll {
+  0% {
+    left: 0px;
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  20% {
+    left: 10px;
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+  }
+  40% {
+    left: 20px;
+    -webkit-transform: rotate(80deg);
+            transform: rotate(80deg);
+  }
+  80% {
+    left: 20px;
+    -webkit-transform: rotate(1600deg);
+            transform: rotate(1600deg);
+  }
+  100% {
+    left: 40px;
+    -webkit-transform: rotate(320deg);
+            transform: rotate(320deg);
+  }
+}
+
+@-webkit-keyframes ring {
+  0% {
+    left: 0px;
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  20% {
+    left: 10px;
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+  }
+  40% {
+    left: 10px;
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  60% {
+    left: 10px;
+    -webkit-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+  }
+}
+
+@keyframes ring {
+  0% {
+    left: 0px;
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  20% {
+    left: 10px;
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+  }
+  40% {
+    left: 10px;
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  60% {
+    left: 10px;
+    -webkit-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+  }
+}
+/*# sourceMappingURL=index.css.map */

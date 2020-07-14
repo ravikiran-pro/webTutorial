@@ -4,14 +4,18 @@ html, body {
   height: 100%;
 }
 
+.container-fluid .view {
+  margin: 9px;
+}
+
 .container-fluid .view .customcard {
   background-color: #fff;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: 6px solid #eceff1;
-  border-radius: 10px;
+  height: 220px;
+  border-radius: 8px;
   font-family: 'Roboto', sans-serif;
   font-size: 11px;
+  -webkit-box-shadow: 0 6.4px 10px rgba(0, 0, 0, 0.022), 0 51px 80px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 6.4px 10px rgba(0, 0, 0, 0.022), 0 51px 80px rgba(0, 0, 0, 0.07);
 }
 
 .container-fluid .view .customcard .block1, .container-fluid .view .customcard .block2 {

@@ -38,4 +38,4 @@ img screen
 changing image screen to myscreen
 -----------------------------------------
     only card:----      233 in 1236    230  in 1236  8m
-                        
+                            
