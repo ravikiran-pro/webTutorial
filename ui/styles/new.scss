@@ -37,25 +37,55 @@ $status:(
         background-color:#def8f6;
     }
 }
+.d-flex{
+    height: 100vh;
+}
 .sidebar{
     background: rgb(254,255,255);
     background: linear-gradient(180deg, #116f6f 0%, rgba(36,118,112,1) 2%, rgba(28,112,125,1) 38%, rgba(20,107,137,1) 90%);
-    width: 230px;
+    min-width: 170px;
+    .user{
+        color: white;
+        font-size: 15px;
+        .user-title{
+            margin-top:-2px;
+            font-size: 12px;
+        }
+    }
+    img{
+        width: 40px;
+        height: 40px;
+        align-content: center;
+    }
     ul{
         padding: 0px;
+        margin-top: 10px;
     }
-    li{
-        list-style-type: none;
+    a{
+        display: block;
         color: white;
-        line-height: 2.3em;
+        padding: 3px;
+        line-height: 3em;
+        font-size: 13px;
+        text-decoration: none;
         &:hover{
             background-color: #13645E;
+        }
+        span{
+            margin-right: 8px;
+        }
+        .fa{
+            font-size: 18px;
+            vertical-align: middle;
+            margin-left: 9px;
+            width: 1em;
         }
     }
 }
 .container-fluid{
-    height: 100vh;
+    font-size: 14px;
     background-color: $primary-color;
+    height: 100vh;
     .row{
         padding: 4px;
         .img-center{
@@ -73,8 +103,8 @@ $status:(
         }
         .cards-upper,.cards-lower{
             background-color: $plain;
-            height: 243px;
-            margin: 24px -8px 0px -8px;
+            height: 233px;
+            margin: 0px -8px 0px -8px;
             box-shadow: 0.8px 0.8px 3px 2px rgba(51, 45, 45, 0.11), 1px 1px 5px 0px #f4f3f3;
 
             border-radius: 5px;
@@ -84,14 +114,25 @@ $status:(
             }
             @include common_classes();
         }
+        .section{
+            margin: 18px 0px 5px 0px;
+            padding: 8px;
+            b{
+                font-size: 15px;
+                color:  #116f6f;
+            }
+            span{
+                opacity: 0.7;
+            }
+        }
         .cards-upper{
             .block1{
-                height: 90px;
+                height: 80px;
                 @include mixed-theme-button();
             }
             .block2{
-                padding-top: 6px;
-                padding-bottom: 34px;
+                padding-top: 10px;
+                padding-bottom: 40px;
             }
             .block3{
                 padding-top: 6px;
@@ -99,18 +140,18 @@ $status:(
         }
         .cards-lower{
             .block1{
-                height: 58px;
+                height: 54px;
             }
             .block2{
-                height: 86px;
+                height: 82px;
                 padding-top: 6px;
             }
             .block3{
-                padding-top: 16px;
+                padding-top: 12px;
             }
             .progress-line{
                 margin-top: 0.5em;
-                margin-bottom: 30px;
+                margin-bottom: 25px;
                 .progress{
                        height: 4px;
                 }   
@@ -119,9 +160,3 @@ $status:(
     }
 }
 
-
-@media (max-width: 1180px) {
-    .sidebar{
-      display: none;
-    }
-  }
