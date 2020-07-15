@@ -1,110 +1,195 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-html, body {
+.d-flex {
+  height: 100vh;
+}
+
+.d-flex .sidebar {
+  background: #feffff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#116f6f), color-stop(2%, #247670), color-stop(38%, #1c707d), color-stop(90%, #146b89));
+  background: linear-gradient(180deg, #116f6f 0%, #247670 2%, #1c707d 38%, #146b89 90%);
+  min-width: 170px;
+}
+
+.d-flex .sidebar .user {
+  color: white;
+  font-size: 15px;
+}
+
+.d-flex .sidebar .user .user-title {
+  margin-top: -2px;
+  font-size: 12px;
+}
+
+.d-flex .sidebar img {
+  width: 40px;
+  height: 40px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.d-flex .sidebar ul {
+  padding: 0px;
+  margin-top: 10px;
+}
+
+.d-flex .sidebar a {
+  display: block;
+  color: white;
+  padding: 3px;
+  line-height: 3em;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.d-flex .sidebar a:hover {
+  background-color: #13645E;
+}
+
+.d-flex .sidebar a span {
+  margin-right: 8px;
+}
+
+.d-flex .sidebar a .fa {
+  font-size: 18px;
+  vertical-align: middle;
+  margin-left: 12px;
+  width: 1em;
+}
+
+.container-fluid {
+  font-size: 14px;
   background-color: #eceff1;
-  height: 100%;
+  height: 100vh;
 }
 
-.container-fluid .view {
-  margin: 9px;
-}
-
-.container-fluid .view .customcard {
-  background-color: #fff;
-  height: 220px;
-  border-radius: 8px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 11px;
-  -webkit-box-shadow: 0 6.4px 10px rgba(0, 0, 0, 0.022), 0 51px 80px rgba(0, 0, 0, 0.07);
-          box-shadow: 0 6.4px 10px rgba(0, 0, 0, 0.022), 0 51px 80px rgba(0, 0, 0, 0.07);
-}
-
-.container-fluid .view .customcard .block1, .container-fluid .view .customcard .block2 {
-  border-bottom: solid 0.15px rgba(0, 0, 0, 0.2);
-}
-
-.container-fluid .view:nth-child(1) .img-center {
+.container-fluid .row .img-center {
   background-image: url("../add.png");
-  background-size: 60px;
+  background-size: 90px;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.container-fluid .view:nth-child(1) .img-center .image {
-  height: 135px;
+.container-fluid .row .img-center .image {
+  height: 120px;
 }
 
-.container-fluid .view:nth-child(1) .img-center .add {
+.container-fluid .row .img-center .add {
   position: relative;
-  text-align: center;
-  top: 85%;
+  margin-top: 40px;
 }
 
-.container-fluid .view:nth-child(1) .block1 {
-  height: 60px;
+.container-fluid .row .cards-upper, .container-fluid .row .cards-lower {
+  background-color: #fff;
+  height: 233px;
+  margin: 0px -8px 0px -8px;
+  -webkit-box-shadow: 0.8px 0.8px 3px 2px rgba(51, 45, 45, 0.11), 1px 1px 5px 0px #f4f3f3;
+          box-shadow: 0.8px 0.8px 3px 2px rgba(51, 45, 45, 0.11), 1px 1px 5px 0px #f4f3f3;
+  border-radius: 5px;
+  padding: 9px;
 }
 
-.container-fluid .view:nth-child(1) .block1 .expiry, .container-fluid .view:nth-child(1) .block1 .expiry1 {
+.container-fluid .row .cards-upper .block1, .container-fluid .row .cards-upper .block2, .container-fluid .row .cards-lower .block1, .container-fluid .row .cards-lower .block2 {
+  border-bottom: solid 0.15px rgba(0, 0, 0, 0.2);
+}
+
+.container-fluid .row .cards-upper span, .container-fluid .row .cards-lower span {
+  opacity: 0.7;
+}
+
+.container-fluid .row .cards-upper .approval, .container-fluid .row .cards-lower .approval {
+  color: orange;
+}
+
+.container-fluid .row .cards-upper .rejection, .container-fluid .row .cards-lower .rejection {
+  color: red;
+}
+
+.container-fluid .row .cards-upper .completed, .container-fluid .row .cards-lower .completed {
+  color: green;
+}
+
+.container-fluid .row .filter {
+  background-color: white;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  vertical-align: center;
+  padding: 15px;
+  -webkit-box-shadow: inset -6px 1px 0px 4px rgba(0, 0, 0, 0.025), 5px 6px 6px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: inset -6px 1px 0px 4px rgba(0, 0, 0, 0.025), 5px 6px 6px 0px rgba(0, 0, 0, 0.05);
+}
+
+.container-fluid .row .filter span {
+  opacity: 0.7;
+}
+
+.container-fluid .row .section {
+  margin: 18px 0px 5px 0px;
+  padding: 8px;
+}
+
+.container-fluid .row .section b {
+  font-size: 15px;
+  color: #116f6f;
+}
+
+.container-fluid .row .section span {
+  opacity: 0.7;
+}
+
+.container-fluid .row .cards-upper .block1 {
+  height: 80px;
+}
+
+.container-fluid .row .cards-upper .block1 .expiry, .container-fluid .row .cards-upper .block1 .expiry1 {
   width: 9.5em;
   margin-top: 0.2em;
   padding-left: 0.4em;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
-.container-fluid .view:nth-child(1) .block1 .expiry {
+.container-fluid .row .cards-upper .block1 .expiry {
   color: #f6786e;
   background-color: #f8dedc;
 }
 
-.container-fluid .view:nth-child(1) .block1 .expiry1 {
+.container-fluid .row .cards-upper .block1 .expiry1 {
   color: #81b6b2;
   background-color: #def8f6;
 }
 
-.container-fluid .view:nth-child(1) .block2 {
+.container-fluid .row .cards-upper .block2 {
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+.container-fluid .row .cards-upper .block3 {
   padding-top: 6px;
-  padding-bottom: 11px;
 }
 
-.container-fluid .view:nth-child(1) .block3 {
+.container-fluid .row .cards-lower .block1 {
+  height: 54px;
+}
+
+.container-fluid .row .cards-lower .block2 {
+  height: 82px;
   padding-top: 6px;
 }
 
-.container-fluid .view:nth-child(2) .block1 {
-  height: 38px;
+.container-fluid .row .cards-lower .block3 {
+  padding-top: 12px;
 }
 
-.container-fluid .view:nth-child(2) .block2 {
-  height: 63px;
-  padding-top: 6px;
-  padding-bottom: 0px;
-}
-
-.container-fluid .view:nth-child(2) .block3 {
-  padding-top: 1em;
-}
-
-.container-fluid .view:nth-child(2) .progress-line {
+.container-fluid .row .cards-lower .progress-line {
   margin-top: 0.5em;
-  margin-bottom: 18px;
+  margin-bottom: 25px;
 }
 
-.container-fluid .view:nth-child(2) .progress-line .progress {
+.container-fluid .row .cards-lower .progress-line .progress {
   height: 4px;
 }
 
-.container-fluid .view span {
-  opacity: 0.7;
-}
-
-.container-fluid .view .approval {
-  color: orange;
-}
-
-.container-fluid .view .rejection {
-  color: red;
-}
-
-.container-fluid .view .completed {
-  color: green;
+@media (max-width: 1180px) {
+  .sidebar {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,6 +1,4 @@
-//$primary-color:#fff;
-//$drawer-color: 	#1e727b;
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 $primary-color:#eceff1;
 $plain:#fff;
 $status:(
@@ -17,10 +15,10 @@ $status:(
         color: map-get($status, "orange" )
     }
     .rejection{
-        color: map-get($status, "red" )
+        color: map-get($status, "red" );
     }
     .completed{
-        color: map-get($status, "green")
+        color: map-get($status, "green");
     }    
 }
 @mixin mixed-theme-button{
@@ -28,7 +26,7 @@ $status:(
         width: 9.5em;
         margin-top: 0.2em;
         padding-left: 0.4em;
-        border-radius: 2px;
+        border-radius: 4px;
     }
     .expiry{
         color: #f6786e;
@@ -39,76 +37,140 @@ $status:(
         background-color:#def8f6;
     }
 }
-
-html,body{
-    background-color: $primary-color;
-    height: 100%;
+.d-flex{
+    height: 100vh;
+        .sidebar{
+            background: rgb(254,255,255);
+            background: linear-gradient(180deg, #116f6f 0%, rgba(36,118,112,1) 2%, rgba(28,112,125,1) 38%, rgba(20,107,137,1) 90%);
+            min-width: 170px;
+            .user{
+                color: white;
+                font-size: 15px;
+                .user-title{
+                    margin-top:-2px;
+                    font-size: 12px;
+                }
+            }
+            img{
+                width: 40px;
+                height: 40px;
+                align-content: center;
+            }
+            ul{
+                padding: 0px;
+                margin-top: 10px;
+            }
+            a{
+                display: block;
+                color: white;
+                padding: 3px;
+                line-height: 3em;
+                font-size: 13px;
+                text-decoration: none;
+                &:hover{
+                    background-color: #13645E;
+                }
+                span{
+                    margin-right: 8px;
+                }
+                .fa{
+                    font-size: 18px;
+                    vertical-align: middle;
+                    margin-left: 12px;
+                    width: 1em;
+                }
+            }
+        }
 }
-    .container-fluid{
-        
-    .view{
-        margin: 9px;
-        .customcard{
+
+.container-fluid{
+    font-size: 14px;
+    background-color: $primary-color;
+    height: 100vh;
+    .row{
+        .img-center{
+            background-image: url('../add.png');
+            background-size: 90px;
+            background-repeat: no-repeat;
+            background-position: center;
+            .image{
+                height: 120px;
+            }
+            .add{
+                position: relative;
+                margin-top: 40px;
+            }
+        }
+        .cards-upper,.cards-lower{
             background-color: $plain;
-            height: 220px;
-            border-radius: 8px;
-            font-family: 'Roboto', sans-serif;
-            font-size: 11px;
-            box-shadow:
-              0 6.4px 10px rgba(0, 0, 0, 0.022),
-              0 51px 80px rgba(0, 0, 0, 0.07)
-            ;
+            height: 233px;
+            margin: 0px -8px 0px -8px;
+            box-shadow: 0.8px 0.8px 3px 2px rgba(51, 45, 45, 0.11), 1px 1px 5px 0px #f4f3f3;
+
+            border-radius: 5px;
+            padding: 9px;
             .block1,.block2{
                 border-bottom: solid 0.15px rgba(0, 0, 0, 0.2);
             }
+            @include common_classes();
         }
-        &:nth-child(1){
-                .img-center{
-                    background-image: url('../add.png');
-                    background-size: 60px;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    .image{
-                        height: 135px;
-                    }
-                    .add{
-                        position: relative;
-                        text-align: center;
-                        top:85%;
-                    }
-                }
-                .block1{
-                    height: 60px;
-                    @include mixed-theme-button();
-                }
-                .block2{
-                    padding-top: 6px;
-                    padding-bottom: 11px;
-                }
-                .block3{
-                    padding-top: 6px;
-                }
+        .filter{
+            background-color: white;
+            align-content: center;
+            vertical-align: center;
+            padding: 15px;
+            box-shadow:inset -6px 1px 0px 4px rgba(0, 0, 0, 0.025), 5px 6px 6px 0px rgba(0, 0, 0, 0.05);
+            span{
+                opacity: 0.7;
+            }
         }
-        &:nth-child(2){
-                .block1{
-                    height: 38px;
-                }
-                .block2{
-                    height: 63px;
-                    padding-top: 6px;
-                    padding-bottom: 0px;
-                }
-                .block3{
-                    padding-top: 1em;
-                }
-                .progress-line{
-                    margin-top: 0.5em;
-                    margin-bottom: 18px;
-                    .progress{
-                        height: 4px;
-                    }   
-                }
+        .section{
+            margin: 18px 0px 5px 0px;
+            padding: 8px;
+            b{
+                font-size: 15px;
+                color:  #116f6f;
+            }
+            span{
+                opacity: 0.7;
+            }
         }
-        @include common_classes();
-       }
+        .cards-upper{
+            .block1{
+                height: 80px;
+                @include mixed-theme-button();
+            }
+            .block2{
+                padding-top: 10px;
+                padding-bottom: 40px;
+            }
+            .block3{
+                padding-top: 6px;
+            }
+        }
+        .cards-lower{
+            .block1{
+                height: 54px;
+            }
+            .block2{
+                height: 82px;
+                padding-top: 6px;
+            }
+            .block3{
+                padding-top: 12px;
+            }
+            .progress-line{
+                margin-top: 0.5em;
+                margin-bottom: 25px;
+                .progress{
+                       height: 4px;
+                }   
+            }
+        }
+    }
 }
+@media (max-width: 1180px) {
+    .sidebar{
+      display: none;
+    }
+  }
