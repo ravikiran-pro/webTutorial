@@ -186,10 +186,4 @@
 .container-fluid .row .cards-lower .progress-line .progress {
   height: 4px;
 }
-
-@media (max-width: 1180px) {
-  .sidebar {
-    display: none;
-  }
-}
 /*# sourceMappingURL=main.css.map */
