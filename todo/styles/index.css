@@ -49,6 +49,8 @@
 
 html, body {
   height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .drawer-top {
@@ -57,12 +59,12 @@ html, body {
 
 .drawer-top li {
   list-style-type: none;
-  padding-left: 6px;
+  padding-left: 12px;
   color: white;
 }
 
 .drawer-top li:hover {
-  color: red;
+  color: gold;
   cursor: pointer;
   -webkit-animation-name: ring;
           animation-name: ring;
@@ -75,16 +77,17 @@ html, body {
 }
 
 .container-fluid {
-  height: 100%;
+  height: 100vh;
 }
 
 .container-fluid .row .drawer-side {
-  width: 30px;
+  width: 50px;
   text-align: center;
-  line-height: 4em;
 }
 
 .container-fluid .row .drawer-side li {
+  display: block;
+  line-height: 6rem;
   list-style-type: none;
   color: white;
 }
@@ -104,11 +107,15 @@ html, body {
 
 .container-fluid .view .col .customcards {
   position: absolute;
-  width: 150px;
+  width: 200px;
   height: 200px;
   -webkit-box-shadow: 2px -8px 1.8px -5px rgba(0, 0, 0, 0.15), 2px 11px 12px 0px #5090d4;
           box-shadow: 2px -8px 1.8px -5px rgba(0, 0, 0, 0.15), 2px 11px 12px 0px #5090d4;
   border-radius: 8px;
+}
+
+.container-fluid .view .col .customcards:hover {
+  z-index: 1;
 }
 
 @media (max-width: 850px) {
