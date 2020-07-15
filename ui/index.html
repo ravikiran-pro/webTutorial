@@ -15,7 +15,7 @@
     <nav>
         <div class="row align-content-center" style="height: 60px;">
             <div class="col-2 col-sm-2 col-md-2 col-xl-2 col-lg-2">
-                <button onclick="controller()" style="width: 120px; height: 30px; background-color: #EED2D2; border: none; margin-left: 22px;"></button>
+                <button id="controller" style="width: 120px; height: 30px; background-color: #EED2D2; border: none; margin-left: 22px;"></button>
             </div>
         </div>
     </nav>
@@ -266,16 +266,16 @@
     </div>
     </section>
     </div>
-    <script>
-        function controller(){
-            var x=document.getElementById('sidebar-drawer');
-            console.log(x.style.display);
-            if(x.style.display=='') x.style.display='none';
-            else x.style.display='';
-        }
-    </script>
     <script src="plugins/jquery/jquery.min.js"></script>
     <script src="plugins/popper/popper.min.js"></script>
     <script src="plugins/bootstrap/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+          $("#controller").click(function(){
+            $("#sidebar-drawer").toggle();
+          });
+        });
+    </script>
 </body>
 </html>
