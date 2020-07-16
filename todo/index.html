@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="plugins/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/index.css">
     <title>TODO App</title>
-
 </head>
 <body>
     <nav class="nabar navbar-light bg-primary p-2">
@@ -58,7 +57,7 @@
                                                     var e=
                                                     "<div class='col'>"+
                                                         "<div class='customcards customcard "+color[j]+" '>"+
-                                                            "&nbsp;"+
+                                                            "<div class='float-right'>rjfkfjkj</div>"+
                                                         "</div>"+
                                                     "</div>"
                                                     ;
@@ -76,6 +75,7 @@
     <script src="plugins/popper/popper.min.js"></script>
     <script src="plugins/bootstrap/bootstrap.min.js"></script>
     <script>
+        let active;
         var start=0;
         var ele=document.getElementsByClassName("customcards");
         var gap=ele[1].getBoundingClientRect().left-ele[0].getBoundingClientRect().left;
@@ -105,7 +105,23 @@
                 console.log("MAX-FOLDED-CARDS that can be placed on the screen "+Math.floor(available_width/card_width*4-2));
         });
 
+        $(".customcards").on('click', function(event){
+            if (active!=event.target)  {
+                console.log(active);
+                $("active").css({"position": "absolute", "z-index": "0"});
+                console.log($(active).css("position"));
+                console.log($(active).css("zIndex"));
+            }
+            if(event.target.style.position=="relative") {
+                event.target.style.position="absolute";
+                event.target.style.zIndex=0;
+                }
+            else {
+                event.target.style.position="relative";
+                event.target.style.zIndex=3;
+                active=event.target;
+                }
+        });
     </script>
 </body>
-
 </html>

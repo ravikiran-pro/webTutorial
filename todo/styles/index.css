@@ -114,10 +114,6 @@ html, body {
   border-radius: 8px;
 }
 
-.container-fluid .view .col .customcards:hover {
-  z-index: 1;
-}
-
 @media (max-width: 850px) {
   .drawer-top {
     display: inline;
