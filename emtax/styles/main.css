@@ -219,7 +219,7 @@ html, body {
   position: relative;
   background-color: #665DD6;
   height: 94vh;
-  z-index: 0;
+  z-index: 4;
 }
 
 #nav-mobile-header #navbar-content .d-block {
@@ -232,7 +232,7 @@ html, body {
 
 #nav-mobile-header #navbar-content .d-block ul {
   padding-top: 45px;
-  line-height: 3.3em;
+  line-height: 3em;
   font-size: 16px;
   font-weight: lighter;
 }
@@ -251,7 +251,7 @@ html, body {
   vertical-align: center;
 }
 
-#body {
-  height: 1000px;
+#section1 {
+  padding: 16px;
 }
 /*# sourceMappingURL=main.css.map */

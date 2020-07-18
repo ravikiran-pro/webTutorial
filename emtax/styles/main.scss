@@ -68,7 +68,7 @@ html,body{
         position: relative;
         background-color: #665DD6;
         height: 100vh-6vh;
-        z-index: 0;
+        z-index: 4;
         .d-block{
             height: 60vh;
             width: 100%;
@@ -77,7 +77,7 @@ html,body{
             text-align: center;
             ul{
                 padding-top: 45px;
-                line-height: 3.3em;
+                line-height: 3em;
                 font-size: 16px;
                 font-weight: lighter;
             }
@@ -96,6 +96,6 @@ html,body{
         }
     }
 }
-#body{
-    height: 1000px;
+#section1{
+    padding: 16px;
 }
