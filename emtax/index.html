@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-
+    
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>emtax</title>
@@ -12,36 +12,136 @@
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
+    
     <div id="Preloader"></div>
-    <div class="container-fluid" id="wrapper">
-        <!-- chat bot loader-->
-        <div class="chatbot">
-            <img src="assets/chatbot.svg" id="chatbot-on">
-            <div class="chatbot-messenger bg-dark">
-                <span class="fa fa-close float-right" id="chatbot-off"></span>
+    <!-- Header Desktop (@close 991px) --> 
+            <div class="container-fluid p-0" id="nav-desktop-wrapper">
+                <nav class="container">
+                <div class="row align-items-center" id="nav-desktop">
+                    <div class="col-6 col-md-3 col-xl-3">
+                        <a href="">
+                             <img src="assets/companylogo.jpg" alt="log" id="logo">
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-7">
+                        <a href="#">Who We Are</a>
+                        <a href="#" class="ml-md-2 ml-xl-5">Our Approach</a>
+                        <a href="#" class="ml-md-2 ml-xl-5">Products<tag>NEW&nbsp; </tag></a>
+                        <a href="#" class="ml-md-4 ml-xl-5">Blog</a>
+                        <a href="#" class="ml-md-2 ml-xl-5">Contact</a>
+                    </div>
+                    <div class="col-6 col-md-2 col-xl-2">
+                        <button class="btn ml-md-5 ml-xl-2">TALK TO US</button>
+                    </div>
+                </div>
+                </nav>
+            </div>
+    <!--Header Desktop-->
+    <!--Header Mobile-->
+    <nav class="navbar navbar-expand-lg navbar-light p-0" id="nav-mobile-header">
+        <a class="navbar-brand mx-auto p-1" href="">
+            <img src="assets/companylogo.jpg" alt="Crayon'D">
+        </a>
+        <a class="bg-white" id="toggler-on">
+          <span class="fa fa-bars"></span>
+        </a>
+      
+        <div class="collapse navbar-collapse" id="navbar-content">
+          <div class="d-block bg-white align">
+            <ul class="list-unstyled">
+                <!-- note link-->
+                <li>Who We Are</li>
+                <li>Our Approach</li>
+                <li>Opportunities</li>
+                <li>Products</li>
+                <li>Blog</li>
+                <li>Contact</li>
+            </ul>
+          </div >
+          <div class="close pt-3">
+              <span class="fa fa-close" id="toggler-off"></span>
+          </div>
+        </div>
+      </nav>
+    <!-- Header Mobile-->
+    <!-- chat bot loader-->
+        <div class="container wrapper">
+            <div class="chatbot">
+                <img src="assets/chatbot.svg" id="chatbot-on">
+                <div class="chatbot-messenger">
+                    <span class="fa fa-close float-right" id="chatbot-off"></span>
+                    <div id="chat-messanger-top">
+                        <div class="title">
+                            <img src="assets/chatbot-re.svg" id="icon">
+                            <p>INBOX</p>
+                        </div>
+                    </div >
+                    <div class="container-fluid" id="chat-messanger-chat">
+                        <div class="header">
+                        </div>
+                        <div class="body">
+                        </div >
+                    </div >
+                    <input type="text" class="form-control border-none" placeholder="Reply here ...">
+                </div>
             </div>
         </div>
-    </div>
+    <!-- chat bot loader-->
+                <div style="height: 1000px;">dkdkkd</div>
+                
     <script src="plugins/jquery/jquery.min.js"></script>
     <script src="plugins/popper/popper.min.js"></script>
     <script src="plugins/bootstrap/bootstrap.min.js"></script>
     <script>
+        /* intial Animation loader
+           setting timer for entire loader
+                After timout  >> close loader (preloader)
+                              >> open entire content(wrapper)
+        */
         $(document).ready(function() {
             $('#loader').show();
             setTimeout(function(){
                 $('#Preloader').hide();
-                $("#wrapper").toggle();
-                }, 1); ///6 count 5000s
+                $(".wrapper").toggle();
+                $("#nav-desktop-wrapper").toggle();
+                $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', 'styles/query.css') );
+                },1); ///6 count 5000s
         });
-
+        $("#toggler-on").click("onclick",function(){
+            $("#toggler-on").hide(); 
+            $("#navbar-content").toggle();   
+        });
+        $("#toggler-off").click("onclick",function(){
+            $("#toggler-on").show(); 
+            $("#navbar-content").toggle();   
+        });
+        ////toggle chat messenger  ON
         $("#chatbot-on").click("onclick",function(){
             $('#chatbot-on').toggle();
             $(".chatbot-messenger").toggle();
         })
+        ////toggle chat messenger  OFF
         $("#chatbot-off").click("onclick",function(){
             $('#chatbot-on').toggle();
             $(".chatbot-messenger").toggle();
         })
+        
+        ////animation missing...chage to jquery on sroll event and animation...review todo app
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+            document.getElementById("nav-desktop-wrapper").style.boxShadow="0 1px 1px 0 #6c757d";
+        var currentScrollPos = window.pageYOffset;
+          if (prevScrollpos > currentScrollPos) {
+            document.getElementById("nav-desktop-wrapper").style.top = "0";
+          } else {
+            document.getElementById("nav-desktop-wrapper").style.top = "-91px";
+          }
+          prevScrollpos = currentScrollPos;
+          setTimeout(function(){
+            document.getElementById("nav-desktop-wrapper").style.boxShadow="";
+            },1);   
+        }
     </script>
+    
 </body>
 </html>

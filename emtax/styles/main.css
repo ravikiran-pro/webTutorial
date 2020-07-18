@@ -1,8 +1,4 @@
-html, body {
-  width: 100%;
-  height: 1000px;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 #Preloader {
   width: 100%;
   height: 100vh;
@@ -16,30 +12,93 @@ html, body {
 
 .chatbot {
   position: fixed;
-  right: 2%;
-  bottom: 3%;
+  right: 1.6%;
+  bottom: 4%;
+  z-index: 2;
+}
+
+.chatbot .chatbot-messenger {
+  display: none;
+  position: relative;
+  width: 60vh;
+  height: 78vh;
+  background-color: #F4F5F7;
+  -webkit-box-shadow: 0 0px 17px -2px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 0px 17px -2px rgba(0, 0, 0, 0.23);
+  border-top-left-radius: 3%;
+  border-top-right-radius: 3%;
+  -webkit-animation: chatboxMessenger 0.1s linear;
+          animation: chatboxMessenger 0.1s linear;
+}
+
+.chatbot .chatbot-messenger #chat-messanger-top {
+  height: 16vh;
+  background-color: #675ED7;
+  border-top-left-radius: 3%;
+  border-top-right-radius: 3%;
+}
+
+.chatbot .chatbot-messenger #chat-messanger-top .title {
+  position: absolute;
+  margin: 3%;
+}
+
+.chatbot .chatbot-messenger #chat-messanger-top .title #icon {
+  width: 32px;
+  height: 32px;
+}
+
+.chatbot .chatbot-messenger #chat-messanger-top .title p {
+  padding-top: 0.8%;
+  color: #DED3F6;
+}
+
+.chatbot .chatbot-messenger #chat-messanger-chat {
+  position: relative;
+  border-radius: 5px;
+  border-top-left-radius: 1.8%;
+  border-top-right-radius: 1.8%;
+  bottom: 5%;
+  width: 95%;
+  height: 57.5vh;
+  background-color: #fff;
+}
+
+.chatbot .chatbot-messenger input {
+  height: 44px;
+  width: 100%;
+  font-size: 12px;
+  margin-top: -18px;
+  padding: 20px;
+  border: none;
+  -webkit-box-shadow: inset 0px 1px 0px 1px rgba(159, 159, 159, 0.23);
+          box-shadow: inset 0px 1px 0px 1px rgba(159, 159, 159, 0.23);
+}
+
+.chatbot .chatbot-messenger input:focus, .chatbot .chatbot-messenger input:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .chatbot #chatbot-on {
-  width: 40px;
+  width: 60px;
   background: none;
   -webkit-filter: drop-shadow(1px 1.6px 0.9px #575353);
           filter: drop-shadow(1px 1.6px 0.9px #575353);
   -webkit-animation: chatboxIcon 0.4s linear;
           animation: chatboxIcon 0.4s linear;
+  z-index: 4;
 }
 
-#wrapper {
-  display: none;
-  height: 1000px;
-}
-
-.chatbot-messenger {
-  display: none;
-  width: 200px;
-  height: 300px;
-  -webkit-animation: chatboxMessenger 0.1s linear;
-          animation: chatboxMessenger 0.1s linear;
+.chatbot #chatbot-off {
+  width: 34px;
+  height: 25px;
+  margin-top: -30px;
+  padding: 5px;
+  background-color: #99A1B0;
+  color: white;
+  text-align: center;
+  border-radius: 25px;
 }
 
 @-webkit-keyframes chatboxIcon {
@@ -76,5 +135,123 @@ html, body {
     width: 0px;
     height: 0px;
   }
+}
+
+html, body {
+  width: 100%;
+}
+
+.wrapper {
+  display: none;
+}
+
+#nav-desktop-wrapper {
+  display: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#nav-desktop-wrapper #nav-desktop {
+  padding: 16px;
+}
+
+#nav-desktop-wrapper #nav-desktop #logo {
+  height: 32px;
+}
+
+#nav-desktop-wrapper #nav-desktop a {
+  color: black;
+  font-size: 16px;
+  font-weight: lighter;
+  font-family: 'Lato', sans-serif;
+}
+
+#nav-desktop-wrapper #nav-desktop a:hover {
+  color: #665CD7;
+}
+
+#nav-desktop-wrapper #nav-desktop a tag {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #58cebc;
+  border-radius: 2px;
+  margin-left: -5px;
+  bottom: 80%;
+  font-size: 10px;
+  padding: 1px 4px 1px 3px;
+  color: white;
+}
+
+#nav-desktop-wrapper #nav-desktop button {
+  height: 46px;
+  width: 146px;
+  border-color: #675ED7;
+  background-color: white;
+  color: #675ED7;
+  font-size: 16px;
+  font-weight: bolder;
+  -webkit-box-shadow: 0 5px 12px 0 rgba(11, 33, 105, 0.17);
+          box-shadow: 0 5px 12px 0 rgba(11, 33, 105, 0.17);
+}
+
+#nav-desktop-wrapper #nav-desktop button:hover {
+  background-color: #665CD7;
+  color: white;
+}
+
+#nav-mobile-header {
+  display: none;
+  border-bottom: solid 1px #EDEDF1;
+  height: 60px;
+}
+
+#nav-mobile-header img {
+  height: 32px;
+  margin-left: 12px;
+}
+
+#nav-mobile-header #toggler-on {
+  margin-right: 12px;
+  border: none;
+}
+
+#nav-mobile-header #navbar-content {
+  position: relative;
+  background-color: #665DD6;
+  height: 94vh;
+  z-index: 0;
+}
+
+#nav-mobile-header #navbar-content .d-block {
+  height: 60vh;
+  width: 100%;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  text-align: center;
+}
+
+#nav-mobile-header #navbar-content .d-block ul {
+  padding-top: 45px;
+  line-height: 3.3em;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+#nav-mobile-header #navbar-content .close {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  z-index: 400;
+}
+
+#nav-mobile-header #navbar-content .close #toggler-off {
+  background-color: white;
+  padding: 13px;
+  border-radius: 50%;
+  vertical-align: center;
+}
+
+#body {
+  height: 1000px;
 }
 /*# sourceMappingURL=main.css.map */
