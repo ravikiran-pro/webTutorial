@@ -12,8 +12,8 @@
 
 .chatbot {
   position: fixed;
-  right: 1.6%;
-  bottom: 4%;
+  right: 2%;
+  bottom: 3%;
   z-index: 2;
 }
 
@@ -251,7 +251,102 @@ html, body {
   vertical-align: center;
 }
 
-#section1 {
-  padding: 16px;
+#introduction {
+  margin-top: 9.8%;
+  cursor: auto;
+  font-family: 'Avenir Book';
+}
+
+#introduction .header {
+  margin-top: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  color: #FDBC2C;
+}
+
+#introduction .title {
+  font-size: 48px;
+}
+
+#introduction .content {
+  margin-top: 30px;
+  color: #595959;
+  font-size: 20px;
+  line-height: 2em;
+}
+
+#introduction .services-available {
+  margin-top: 52px;
+}
+
+#introduction .services-available .service {
+  margin-left: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#introduction .services-available .service .icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: solid 1.5px #EEEEEE;
+  text-align: center;
+}
+
+#introduction .services-available .service .icon img {
+  margin-top: 30%;
+}
+
+#introduction .services-available .service div:nth-child(2) {
+  padding-left: 30px;
+  font-size: 14px;
+}
+
+#introduction .services-available .service div:nth-child(2) p {
+  font-family: 'Avenir Heavy';
+  margin-top: 5px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+#challenge {
+  height: 100%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  background-color: #1D1A42;
+  border-radius: 30px;
+  overflow-x: hidden;
+  color: white;
+}
+
+#challenge .d-flex .heading {
+  font-family: 'Avenir black';
+  font-size: 36px;
+  font-weight: bold;
+}
+
+#challenge .d-flex .content {
+  padding-left: 2%;
+  padding-right: 2%;
+  font-family: 'Avenir medium';
+  font-size: 24px;
+  text-align: center;
+  text-align-last: center;
+  font-stretch: expanded;
+  line-height: 1.8;
+}
+
+#challenge .d-flex .borderline {
+  width: 100px;
+  height: 4px;
+  border: solid 1px red;
+  margin-top: 15px;
+  margin-bottom: 34px;
+}
+
+#challenge .right {
+  position: absolute;
+  right: 0;
 }
 /*# sourceMappingURL=main.css.map */
