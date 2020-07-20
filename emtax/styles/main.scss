@@ -1,8 +1,25 @@
 @import "chatbot";
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@font-face {
+    font-family: "Avenir Black";
+    src        : url("../plugins/fonts/Avenir Book.ttf")
+  }
+  @font-face {
+    font-family: "Avenir-Heavy";
+    src        : url("../plugins/fonts/Avenir-Heavy.ttf")
+  }
+  @font-face {
+    font-family: "Avenir-Medium";
+    src        : url("../plugins/fonts/Avenir-Medium.ttf")
+  }
+  @font-face {
+    font-family: 'Un Graphic Bold';
+    src: url('../plugins/fonts/UnGraphicBold.ttf');
+  }
+  
 
 html,body{
-    width: 100%;
+    overflow-x: hidden;
 }
 .wrapper{
     display: none;
@@ -99,7 +116,7 @@ html,body{
 #introduction{
     margin-top: 9.8%;
     cursor: auto;
-    font-family : 'Avenir Book' ;
+    font-family : 'Avenir Black' ;
     .header{
         margin-top: 16px;
         font-family: Arial, Helvetica, sans-serif;
@@ -108,6 +125,7 @@ html,body{
     }
     .title{
         font-size: 48px;
+        font-family: 'Un Graphic Bold';
     }
     .content{
         margin-top: 30px;
@@ -134,7 +152,7 @@ html,body{
                 padding-left: 30px;
                 font-size: 14px;
                 p{
-                    font-family : 'Avenir Heavy' ;
+                    font-family : 'Avenir-Heavy' ;
                     margin-top: 5px;
                     font-size: 17px;
                     font-weight: bold;
@@ -146,31 +164,37 @@ html,body{
 #challenge{
     height: 100%;
     margin-top: 10%;
-    margin-bottom: 10%;
+    margin-bottom: 11%;
     background-color:#1D1A42;
+    box-shadow:
+      0 3.5px 3.5px -23px rgba(0, 0, 0, 0.075),
+      0 28px 28px -23px rgba(0, 0, 0, 0.15)
+    ;
     border-radius: 30px;
-    overflow-x: hidden;;
+    overflow-x: hidden;
     color: white;
     .d-flex{
         .heading{
-            font-family : 'Avenir black' ;
+            font-family : 'Avenir Black' ;
             font-size: 36px;
             font-weight: bold;
+            padding-top: 20px;
         }
         .content{
             padding-left: 2%;
             padding-right:2%;
-            font-family : 'Avenir medium' ;
+            font-family : 'Avenir-Medium' ;
             font-size: 24px;
             text-align: center;
             text-align-last: center;
             font-stretch: expanded;
             line-height: 1.8;
+            padding-bottom: 20px;
         }
         .borderline{
             width: 100px;
             height: 4px;
-            border: solid 1px red;
+            border: solid 1.2px rgb(249,161,42);
             margin-top: 15px;
             margin-bottom:34px
         }
@@ -178,5 +202,323 @@ html,body{
     .right{
         position: absolute;
         right: 0;
+    }
+}
+#goals-main{
+    .title{
+            border: solid 2px #EEEEEE;
+            padding-bottom: 5%;
+            #oval-violet{
+                margin-top: 10px;
+                margin-left: 75%;
+            }
+            #oval-green{
+                margin-left: 40%;
+            }
+            .d-flex{
+                margin: auto;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                border-radius: 50%;
+                margin-bottom: 30%;
+                width: 100px;
+                background-color: #FCEBC8;
+                img{
+                    width: 35px;
+                }
+            }
+            .header{
+                font-family : 'Avenir-Medium' ;
+                .borderline{
+                    width: 100px;
+                    height: 4px;
+                    border: solid 1.2px rgb(249,161,42);
+                    margin-top: 28px;
+                    margin-bottom:34px
+                }
+                .heading{
+                    font-size: 32px;
+                    font-weight: bold;
+                }
+                .sub-heading{
+                    padding-right: 18%;
+                    font-size: 22px;
+                    line-height: 2em;
+                    color: #878787;
+                }
+            }
+    }
+    #oval-orange{
+        position: absolute;
+        margin-top: -40px;
+        left: 88.5%;
+    }
+}
+#goals-contents{
+    border: solid 2px #EEEEEE;
+    border-top: none;
+    padding-top: 7%;
+    padding-bottom: 5%;
+    font-family : 'Avenir-Medium' ;
+    color: rgb(89,89,89);
+    .row{
+        margin-top: -0px;
+    }
+    .draw{
+        padding-left: 13%;
+    }
+    #list{
+        padding-right: 18%;
+        font-size: 20px;
+        line-height: 2em;
+    }
+    #oval-white{
+        position: absolute;
+        margin-left: -92px;
+        margin-top: -40px;
+    }
+}
+#endorsement{   
+    margin-top: 15%;
+    margin-bottom: 7%;
+    padding-top: 4%;
+    padding-bottom: 7%;
+    font-family : 'Avenir-Medium' ;
+    background-color:#1D1A42;
+    .header{
+        padding-left: 12%;
+        #quote-header{
+            margin-left: 26px;
+            margin-bottom: 30px;
+            font-size: 36px;
+            color: rgb(249,160,42);
+        }
+        .header-main{
+            font-family : 'Avenir Black';
+            font-size: 56px;
+        }
+    }
+    .quote-box{
+        margin-top: 5%;
+        #customer{
+            margin-left: 11%;
+            padding: 6px;
+            background-color: white;
+        }
+        .quote-box-content{ 
+            padding-left:6%;
+            padding-top: 2.5%;
+            .para{
+                font-size: 24px;
+                padding-right:20%;
+                line-height: 2em;
+                margin-top: 4.5%;
+                margin-bottom: 4.5%;
+            }
+            .title{
+                margin-top: 4%;
+                margin-bottom: 1.5%;
+                font-family : 'Avenir-Heavy';
+                font-size: 24px;
+                font-weight: bold;
+            }
+            .sub-title{
+                color: #8B869E;
+                font-size: 20px;
+            }
+        }
+    }
+}
+#features{
+    .header{
+        font-family : 'Avenir-Black';
+        font-size: 36px;
+        font-weight: bold;
+    }
+    .borderline{
+        width: 100px;
+        height: 1px;
+        border: solid 1px rgb(249,161,42);
+        margin:30px auto 26px auto;
+    }
+    .sub-heading{
+        font-family : 'Avenir-Medium';
+        font-size: 24px;
+        margin-left: 14%;
+        margin-right: 14%;
+        color: rgb(135,135,135);
+        line-height: 1.8em;
+    }
+    .card{
+        width:88%;
+        border-radius: 12px;
+        margin-top: 7%;
+        margin-bottom: 6%;
+        margin-left: 2%;
+        height:80vh;
+        .align{
+            width: 45%;
+            margin: auto 0px auto 10%;
+            .heading-card{
+                font-family : 'Avenir-Heavy';
+                font-size: 38px;
+                font-weight: bold;
+                line-height: 2.5em;
+            }
+            .sub-heading-card{
+                font-family : 'Avenir-Medium';
+                font-size: 24px;
+                line-height: 2em;
+            }
+        }
+    }
+    .guard{
+        background-color: white;
+        position: absolute;
+        margin-top: 11%;
+        margin-left: 44%;
+        width:46%;
+        height: 56%;
+        z-index: 3;
+        border-radius: 15px;
+        border: solid 2px #E4E4E4; 
+        border-right: none;
+    }
+}
+#model{
+    .row{
+        &:nth-child(1){
+            .title{
+                font-family : 'Avenir Black';
+                font-size: 38px;
+                font-weight: bold;
+                text-align: center;
+            }
+            .borderline{
+                width: 100px;
+                height: 3px;
+                border: solid 1px #6455C2;
+                margin:30px auto 26px auto;
+            }
+            .sub-title{
+                padding-left: 16%;
+                padding-right: 16%;
+                font-family : 'Avenir-Medium';
+                font-size: 22px;
+                text-align: center;
+                padding-bottom: 17%;
+            }
+        }
+        &:nth-child(2){
+            margin-left: 16%;
+            margin-right: 16%;
+            padding-bottom: 15%;
+            .card-col{
+                padding-right: 30%;
+                .card{
+                    height: 187px;
+                    width: 214px;
+                    z-index:4;
+                    margin-right: 30px;
+                    border-radius: 30px;
+                    box-shadow: 0 0px 104px -24px rgba(210, 210, 210, 0.52), 0px 13px 0px 0px rgba(25, 17, 17, 1);
+
+                    .content{
+                        margin: auto;
+                        .header{
+                            font-weight: bold;
+                            font-size: 32px;
+                            text-align: center;
+                        }
+                        .sub-header{
+                            font-size: 24px;
+                            color:rgb(173,173,173);
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+#result{
+    background-color: #FCFAFA;
+    font-family : 'Avenir-Medium';
+    padding-top: 5%;
+    padding-bottom: 7%;
+    .header{
+        font-family : 'Avenir Black';
+        font-size: 32px;
+        color: #FDBC2C;       
+        text-align: center;
+    }
+    .sub-header{
+        text-align: center;
+        font-size: 42px;
+        font-weight: bold;
+        padding-top: 25px;
+        padding-left: 6.5%;
+        padding-right: 6.5%;
+        color: #878787;
+    }
+    .borderline{
+        width: 100px;
+        height: 1px;
+        border: solid 1px #6455C2;
+        margin:30px auto 0px auto;
+    }
+    .bullet{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #F9A02A;
+        margin: auto;
+        margin-top: 14px;
+    }
+    .list{
+        color: #8A8A8A;
+        font-size: 21px;
+    }
+}
+#help{
+    margin-top: 6%;
+    border-radius: 20px;
+    background-color:#1D1A42;
+    color: white;
+    font-family : 'Avenir Black';
+    box-shadow:
+      0 3.5px 3.5px -23px rgba(0, 0, 0, 0.075),
+      0 28px 28px -23px rgba(0, 0, 0, 0.15)
+    ;
+    .row{
+        padding-top: 7%;
+        padding-bottom: 4%;
+        .header{
+            font-size: 32px;
+            color: #7F7893;
+            word-spacing: 3px;
+        }
+        .sub-header{
+            margin-top: 10px;
+            font-size: 38px;
+            font-weight: bolder;
+        }
+        .btn{
+            font-family : 'Avenir-Heavy';
+            width: 260px;
+            height: 66px;
+            font-size: 22px;
+            font-weight: bold;
+            background-color: rgb(252,193,44);
+            border-radius: 9px;
+            color: #ffffff;
+        }
+    }
+}
+#nav-bottom{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    .row{
+        height: 100px;
     }
 }
