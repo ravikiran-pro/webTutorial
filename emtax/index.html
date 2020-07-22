@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
     <div id="Preloader"></div>
     <!-- Header Desktop (@close 991px) -->
     <div class="container-fluid p-0" id="nav-desktop-wrapper">
@@ -50,12 +49,26 @@
             <div class="d-block bg-white align">
                 <ul class="list-unstyled">
                     <!-- note link-->
-                    <li>Who We Are</li>
-                    <li>Our Approach</li>
-                    <li>Opportunities</li>
-                    <li>Products</li>
-                    <li>Blog</li>
-                    <li>Contact</li>
+                    <a href="#">
+                        <li>Who We Are</li>
+                    </a>
+                    <a href="#">
+                        <li>Our Approach</li>
+                    </a>
+                    <a href="#">
+                        <li>Opportunities</li>
+                    </a>
+                    <a href="#">
+                        <li>Products<sup>
+                                <tag>NEW&nbsp; </tag>
+                            </sup></li>
+                    </a>
+                    <a href="#">
+                        <li>Blog</li>
+                    </a>
+                    <a href="#">
+                        <li>Contact</li>
+                    </a>
                 </ul>
             </div>
             <div class="close pt-3">
@@ -65,14 +78,16 @@
     </nav>
     <!-- Header Mobile-->
     <!-- chat bot loader-->
-    <div class="container wrapper">
-        <div class="chatbot">
+    <div class="container">
+        <div class="chatbot" id="chatbot">
+            <div class="none"></div>
             <img src="assets/chatbot.svg" id="chatbot-on">
             <div class="chatbot-messenger">
                 <span class="fa fa-close float-right" id="chatbot-off"></span>
                 <div id="chat-messanger-top">
                     <div class="title">
-                        <img src="assets/chatbot.svg" id="icon">
+                        <img src="https://assetscdn-wchat.freshchat.com/static/assets/images/freshchat-line-1cc53925eae96a19142ee7b807093272.svg"
+                            id="icon">
                         <p>INBOX</p>
                     </div>
                 </div>
@@ -130,17 +145,18 @@
                 <!---Add dotted line   search assets for suitable svg-->
             </div>
             <div class="col-12  col-md-5 col-xl-4 pl-2">
-                <img src="assets/orbit.png">
+                <img src="assets/orbit.png" id="concentric-cirle">
             </div>
         </div>
     </div>
     <!---Challenge-->
     <div class="container" id="challenge">
         <div class="row">
-            <div class="col-4 col-sm-3 col-md-3 col-xl-3">
-                <img src="assets/Path LHS.png" alt="shadow" id="lhs" style="width: 140%;">
+            <img src="assets/Path LHS.png" alt="shadow" id="lhs" style="width: 30%; position: absolute; left: 0px;">
+            <div class="col-2 col-sm-2 col-md-2 col-xl-2">
+
             </div>
-            <div class="col-4 col-sm-6 col-md-6 col-xl-6 p-4">
+            <div class="col-8 col-sm-8 col-md-8 col-xl-8">
                 <div class="d-flex flex-column">
                     <div class="heading align-self-center">The challenge</div>
                     <div class="borderline align-self-center"></div>
@@ -150,9 +166,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4 col-sm-3 col-md-3 col-xl-3 right align-self-end">
-                <img src="assets/Path RHS.png" alt="shadow" id="rhs" style="width: 100%;">
+            <div class="col-2 col-sm-2 col-md-2 col-xl-2 right align-self-end">
+                <img src="assets/Path RHS.png" alt="shadow" id="rhs">
             </div>
+
         </div>
     </div>
     <!---Challenge-->
@@ -179,13 +196,13 @@
         </div>
         <img id="oval-orange" src="assets/oval-copy-4.svg" alt="none">
     </div>
-    <div class="container" id="goals-contents">
+    <div class="container my-sm-auto my-xs-auto" id="goals-contents">
         <!-- LINE 1-->
         <div class="row bg"">
-                <div class=" col-3 draw">
-            <div><img src="assets/group-11.svg" alt="" style="width: 38px;"></div>
-            <div><img class="p-3" src="assets/line-17-copy.svg" alt=""></div>
-        </div>
+            <div class=" col-3 draw">
+                <div><img src="assets/group-11.svg" alt="" style="width: 38px;"></div>
+                <div><img class="p-3" src="assets/line-17-copy.svg" alt=""></div>
+            </div>
         <div class="col-9" id="list">
             <p>Achieving perfection with the technical design was key given the complexity of the problem and the
                 volume of data that would get processed.</p>
@@ -193,10 +210,10 @@
     </div>
     <!-- LINE 2-->
     <div class="row bg"">
-                <div class=" col-3 draw">
-        <div><img src="assets/group-11.svg" alt="" style="width: 38px;"></div>
-        <div><img class="p-3" src="assets/line-17-copy.svg" alt=""></div>
-    </div>
+        <div class=" col-3 draw">
+            <div><img src="assets/group-11.svg" alt="" style="width: 38px;"></div>
+            <div><img class="p-3" src="assets/line-17-copy.svg" alt=""></div>
+        </div>
     <div class="col-9" id="list">
         <p>Users needn’t a learning curve to derive value from a product. We focused on making the UX extremely simple;
             with minimal effort, the user would get what they need.</p>
@@ -248,22 +265,22 @@
     </div>
     <!--Goals-->
     <!--Endorsement-->
-    <div class="container-fluid text-light" id="endorsement">
+    <div class="container-fluid text-light " id="endorsement">
         <img src="assets/Path LHS.png" alt="none" style="position: absolute; left: 0; margin-top: -6%;">
         <div class="row header">
             <div class="col-sm-12 col-xs-12 col-xl-12 col-lg-12">
                 <h2 id="quote-header">Quote</h2>
             </div>
             <div class="col-sm-12 col-xs-12 col-xl-12 col-lg-12">
-                <b class="header-main">Words from the client</b>
+                <b class="header-main" id="header-quote">Words from the client</b>
             </div>
             <img src="assets/Path RHS.png" alt="none" style="position: absolute; right: 0; margin-top: 30%;">
             <img src="assets/group-17 (1).svg" alt="none" style="position: absolute; right: 0; margin-right: 20px;">
             <div class="row quote-box">
-                <div class="col-sm-12 col-xs-12 col-md-6 col-xl-4 col-lg-4">
+                <div class="col-sm-12 col-xs-12 col-md-4 col-xl-3 col-lg-4">
                     <img id="customer" src="assets/Testimonial image.jpg" alt="our-client">
                 </div>
-                <div class="col-sm-12 col-xs-12 col-md-6 col-xl-8 col-lg-8 quote-box-content">
+                <div class="col-sm-12 col-xs-12 col-md-8 col-xl-8 col-lg-8 quote-box-content">
                     <img src="assets/invalid-name.png" alt='""'>
                     <div class="para">
                         <p>Our action speak louder than words. Empathy is the biggest driver of results, be it building
@@ -287,7 +304,7 @@
         <div class="sub-heading text-center">The goal was to build something extremely modular—scalability would be at
             its core to essentially drive adoption.</div>
         <!--carousel-->
-        <div class="guard"></div>
+        <div class="guard" id="guard"></div>
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <!--card-->
@@ -334,15 +351,14 @@
                 <!--card-->
             </div>
             <!--Controller-->
-            <a class="carousel-control-prev bg-secondary my-auto"
-                style="height: 60px; width: 60px; border-radius: 50%; position: absolute; margin-left: -8%;"
+            <a class="carousel-control-prev bg-secondary my-auto" style="height: 60px; width: 60px; border-radius: 50%;"
                 href="#carouselExampleControls" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon my-auto" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
             <!--Controller-->
             <a class="carousel-control-next bg-secondary my-auto"
-                style="height: 60px; width: 60px; border-radius: 50%; position: absolute; margin-right: -3%; z-index: 6;"
+                style="height: 60px; width: 60px; border-radius: 50%; position: absolute; z-index: 6; right: 3%;"
                 href="#carouselExampleControls" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
@@ -356,13 +372,15 @@
         <div class="row pt-4">
             <div class="col-12 title">Title goes here</div>
             <div class="col-12">
-                <div class="borderline align-self-center"></div>         
+                <div class="borderline align-self-center"></div>
             </div>
-            <div class="col-12 sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            <div class="col-12 sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.</div>
         </div>
         <div class="row">
-        <img src="assets/path-22.svg" alt="--" srcset="" style="position: absolute; left: 4%; margin-top: -3%; width: 96%;">
-            <div class="col-2 col-xl-2 card-col">
+            <img src="assets/path-22.svg" alt="--" srcset=""
+                style="position: absolute; left: 4%; margin-top: -3%; width: 96%;">
+            <div class="col-sm-12 col-md-2 col-xl-2 card-col mt-3">
                 <div class="card" id="card-1">
                     <div class="content">
                         <div class="header">100+</div>
@@ -370,7 +388,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-2 col-xl-2 card-col" id="card-2">
+            <div class="col-sm-12 col-md-2 col-xl-2 card-col mt-3" id="card-2">
                 <div class="card">
                     <div class="content">
                         <div class="header">20+</div>
@@ -378,7 +396,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-2 col-xl-2 card-col" id="card-3">
+            <div class="col-sm-12 col-md-2 col-xl-2 card-col mt-3" id="card-3">
                 <div class="card">
                     <div class="content">
                         <div class="header">15+</div>
@@ -400,16 +418,24 @@
                     <div class="bullet"></div>
                 </div>
                 <div class="col-11 p-0 list">
-                    In the begining, there was a problem. We worked on it, and created a solution.Going from wanting to automate VAT related tasks to developing a roburst product that handled all VAT regulations, it was a productive journey.
+                    In the begining, there was a problem. We worked on it, and created a solution.Going from wanting to
+                    automate VAT related tasks to developing a roburst product that handled all VAT regulations, it was
+                    a productive journey.
                 </div>
             </div>
             <div class="row mt-5">
-                <div class="col-1 "><div class="bullet"></div></div>
-                <div class="col-11 p-0 list">Now, Emtax's platform can process loads of data and apply the tax rules to finally generate the tax determinations.</div>
+                <div class="col-1 ">
+                    <div class="bullet"></div>
+                </div>
+                <div class="col-11 p-0 list">Now, Emtax's platform can process loads of data and apply the tax rules to
+                    finally generate the tax determinations.</div>
             </div>
             <div class="row mt-5">
-                <div class="col-1"><div class="bullet"></div></div>
-                <div class="col-11 p-0 list">with that, every enterprise in the GCC is ready for the new race. Or, as Emtax calls it, they are ready to 'Get,Set ,VAT'.</div>
+                <div class="col-1">
+                    <div class="bullet"></div>
+                </div>
+                <div class="col-11 p-0 list">with that, every enterprise in the GCC is ready for the new race. Or, as
+                    Emtax calls it, they are ready to 'Get,Set ,VAT'.</div>
             </div>
         </div>
     </div>
@@ -426,22 +452,88 @@
                 <div class="header col-xl-12">Need Help with a project?</div>
                 <div class="sub-header col-xl-12">Let's Talk</div>
             </div>
-            <div class="col-md-4 col-xl-4 p-0 my-auto">
-                <button class="btn">Let's Start Talking<span class="fa fa-arrow-right" style="display: none;"></span></button>
+            <div class="col-md-4 col-xl-4 p-0 my-auto mx-auto">
+                <button class="btn">Let's Start Talking<span class="fa fa-arrow-right"
+                        style="display: none;"></span></button>
             </div>
         </div>
     </div>
+    <!--Help-->
+    <!--Nav footer-->
     <div class="container" id="nav-bottom">
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-3 col-xl-3 col-lg-3 bg-dark"></div>
-            <div class="col-6 col-sm-12 col-md-2 col-xl-2 col-lg-2 bg-info"></div>
-            <div class="col-6 col-sm-12 col-md-2 col-xl-2 col-lg-2 bg-danger"></div>
-            <div class="col-6 col-sm-12 col-md-2 col-xl-2 col-lg-2 bg-primary"></div>
-            <div class="col-6 col-sm-12 col-md-1 col-xl-1 col-lg-1 bg-dark"></div>
-            <div class="col-6 col-sm-12 col-md-2 col-xl-2 col-lg-2 bg-success"></div>
+        <div class="row align-items-center">
+            <div class="col-12 col-sm-12 col-md-3 col-xl-3 col-lg-3">
+                <p><img src="assets/companylogo.jpg" alt="Crayon'd" id="logo"></p>
+                <p style="font-family: 'Graphicregular'; font-size: 16px; color: #43434b;">© Crayond Digital Pvt.
+                    Ltd.<br> All rights reserved</p>
+            </div>
+            <div class="col-6 col-sm-12 col-md-2 col-xl-2 col-lg-2 p-2">
+                <div class="center text-lg-center text-xl-center">
+                    <a class="#" href="#">Who We Are</a>
+                </div>
+            </div>
+            <div class="col-6 col-sm-12 col-md-2 col-xl-2 col-lg-2 p-2">
+                <div class="center text-lg-center text-xl-center">
+                    <a href="#">Our Approach</a>
+                </div>
+            </div>
+            <div class="col-6 col-sm-12 col-md-2 col-xl-2 col-lg-2 p-2">
+                <div class="center text-lg-center text-xl-center"">
+                    <a  href=" #">Opportunities</a>
+                </div>
+            </div>
+            <div class="col-6 col-sm-12 col-md-1 col-xl-1 col-lg-1 p-2">
+                <div class="center text-lg-center text-xl-center">
+                    <a href="#">Blog</a>
+                </div>
+            </div>
+            <div class="col-6 col-sm-12 col-md-2 col-xl-2 col-lg-2 p-2">
+                <div class="center text-lg-center text-xl-center">
+                    <a href="#">Contact</a>
+                </div>
+            </div>
         </div>
     </div>
-    <!--Help-->
+    <hr>
+    <!--Nav footer-->
+    <!--Footer-->
+    <div class="container" id="footer">
+        <div class="row">
+            <div
+                class="order-12 order-xs-12 order-sm-12 order-xl-0 order-md-0 order-lg-0 col-sm-12 col-md-4 col-xl-4 col-lg-4">
+                <div class="social-media">
+                    <a href="#">
+                        <span class="fa fa-linkedin"></span>
+                    </a>
+                    <a href="#">
+                        <span class="fa fa-facebook-f"></span>
+                    </a>
+                    <a href="#">
+                        <span class="fa fa-instagram"></span>
+                    </a>
+                    <a href="#">
+                        <span class="fa fa-twitter"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-8 col-xl-4 col-lg-4 connect">
+                <div class="row">
+                    <div
+                        class="col-sm-12 col-md-6 col-xl-6 col-xl-6 border-right text-md-center text-xl-center text-lg-center">
+                        <a href="#">hello@crayond.com</a>
+                    </div>
+                    <div
+                        class="col-sm-12 col-md-6 col-xl-6 col-xl-6 border-right text-md-center text-xl-center text-lg-center">
+                        <a href="#">+(91) 7448390100</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-xl-3 col-lg-3 mb-3">
+                <p class="address my-auto">105, South West Boag Road, T.Nagar Chennai, India</p>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
     <script src="plugins/jquery/jquery.min.js"></script>
     <script src="plugins/popper/popper.min.js"></script>
     <script src="plugins/bootstrap/bootstrap.min.js"></script>
@@ -455,10 +547,10 @@
             $('#loader').show();
             setTimeout(function () {
                 $('#Preloader').hide();
-                $(".wrapper").toggle();
-                $("#nav-desktop-wrapper").toggle();
-                $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', 'styles/query.css'));
-            }, 5000); ///6 count 5000s
+            }, 1); ///4000
+            setTimeout(function () {
+                $('#chatbot').toggle();
+            }, 2); ///2500
         });
         ///mobile view container toggler ---ON
         $("#toggler-on").click("onclick", function () {
@@ -482,20 +574,17 @@
         })
 
         ////animation missing...chage to jquery on sroll event and animation...review todo app
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function () {
-            document.getElementById("nav-desktop-wrapper").style.boxShadow = "0 1px 1px 0 #6c757d";
-            var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                document.getElementById("nav-desktop-wrapper").style.top = "0";
-            } else {
-                document.getElementById("nav-desktop-wrapper").style.top = "-91px";
-            }
-            prevScrollpos = currentScrollPos;
-            setTimeout(function () {
-                document.getElementById("nav-desktop-wrapper").style.boxShadow = "";
-            }, 1);
-        }
+        var lastScrollPosition;
+        $(window).scroll(function () {
+            var currentScrollPosition = $(window).scrollTop();
+            if (currentScrollPosition > 60) $("#nav-desktop-wrapper").css('box-shadow', 'rgb(212, 209, 209) 0px 1px 12px 0px');
+            else $("#nav-desktop-wrapper").css('box-shadow', 'none');
+            if (currentScrollPosition > lastScrollPosition) {
+                $("#nav-desktop-wrapper").slideUp("fast")
+            } else $("#nav-desktop-wrapper").slideDown("fast")
+            //update
+            lastScrollPosition = currentScrollPosition;
+        });
     </script>
 
 </body>
