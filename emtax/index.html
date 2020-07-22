@@ -547,10 +547,10 @@
             $('#loader').show();
             setTimeout(function () {
                 $('#Preloader').hide();
-            }, 1); ///4000
+            }, 5000); 
             setTimeout(function () {
                 $('#chatbot').toggle();
-            }, 2); ///2500
+            }, 3000); 
         });
         ///mobile view container toggler ---ON
         $("#toggler-on").click("onclick", function () {
@@ -573,7 +573,7 @@
             $(".chatbot-messenger").toggle();
         })
 
-        ////animation missing...chage to jquery on sroll event and animation...review todo app
+        
         var lastScrollPosition;
         $(window).scroll(function () {
             var currentScrollPosition = $(window).scrollTop();
