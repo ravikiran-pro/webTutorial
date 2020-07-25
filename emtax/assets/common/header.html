@@ -1,0 +1,88 @@
+<nav>
+    <div class="container-fluid p-0" id="nav-desktop-wrapper">
+        <nav class="container">
+            <div class="row align-items-center" id="nav-desktop">
+                <div class="col-6 col-md-3 col-xl-3 col-lg-3">
+                    <a href="">
+                        <img src="assets/images/companylogo.jpg" alt="log" id="logo">
+                    </a>
+                </div>
+                <div class="col-12 col-md-6 col-xl-7 col-lg-7 pl-4">
+                    <a href="#">Who We Are</a>
+                    <a href="#" class="ml-md-2 ml-xl-4 ml-lg-4">Our Approach</a>
+                    <a href="#" class="ml-md-2 ml-xl-4 ml-lg-4">Products<tag>NEW&nbsp; </tag></a>
+                    <a href="#" class="ml-md-4 ml-xl-5 ml-lg-4">Blog</a>
+                    <a href="#" class="ml-md-2 ml-xl-4 ml-lg-4">Contact</a>
+                </div>
+                <div class="col-6 col-md-2 col-xl-2 col-lg-2">
+                    <button class="btn ml-md-5 ml-xl-2 ml-lg-2">TALK TO US</button>
+                </div>
+            </div>
+        </nav>
+    </div>
+</nav>
+
+
+<nav class="navbar navbar-expand-lg navbar-light p-0" id="nav-mobile-header">
+    <a class="navbar-brand mx-auto p-1" href="">
+        <img src="assets/images/companylogo.jpg" alt="Crayon'D">
+    </a>
+    <a class="bg-white" id="toggler-on">
+        <span class="fa fa-bars"></span>
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <div class="d-block bg-white align">
+            <ul class="list-unstyled">
+                <!-- note link-->
+                <a href="#">
+                    <li>Who We Are</li>
+                </a>
+                <a href="#">
+                    <li>Our Approach</li>
+                </a>
+                <a href="#">
+                    <li>Opportunities</li>
+                </a>
+                <a href="#">
+                    <li>Products<sup>
+                            <tag>NEW&nbsp; </tag>
+                        </sup></li>
+                </a>
+                <a href="#">
+                    <li>Blog</li>
+                </a>
+                <a href="#">
+                    <li>Contact</li>
+                </a>
+            </ul>
+        </div>
+        <div class="close pt-3">
+            <span class="fa fa-close" id="toggler-off"></span>
+        </div>
+    </div>
+</nav>
+
+<script>
+    $("#toggler-on").click("onclick", function () {
+        $("#toggler-on").hide();
+        $("#navbar-content").toggle();
+    });
+
+    $("#toggler-off").click("onclick", function () {
+        $("#toggler-on").show();
+        $("#navbar-content").toggle();
+    });
+
+    
+    var lastScrollPosition;
+    $(window).scroll(function () {
+        var currentScrollPosition = $(window).scrollTop();
+        if (currentScrollPosition > 60) $("#nav-desktop-wrapper").css('box-shadow', 'rgb(212, 209, 209) 0px 1px 12px 0px');
+        else $("#nav-desktop-wrapper").css('box-shadow', 'none');
+        if (currentScrollPosition > lastScrollPosition) {
+            $("#nav-desktop-wrapper").slideUp("fast")
+        } else $("#nav-desktop-wrapper").slideDown("fast")
+        lastScrollPosition = currentScrollPosition;
+    });
+</script>

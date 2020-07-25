@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="chatbot" id="chatbot">
+        <div class="none"></div>
+        <img src="assets/images/chatbot.svg" id="chatbot-on">
+        <div class="chatbot-messenger">
+            <span class="fa fa-close float-right" id="chatbot-off"></span>
+            <div id="chat-messanger-top">
+                <div class="title">
+                    <img src="https://assetscdn-wchat.freshchat.com/static/assets/images/freshchat-line-1cc53925eae96a19142ee7b807093272.svg"
+                        id="icon">
+                    <p>INBOX</p>
+                </div>
+            </div>
+            <div class="container-fluid" id="chat-messanger-chat">
+                <div class="header"></div>
+                <div class="body"></div>
+            </div>
+            <input type="text" class="form-control border-none" placeholder="Reply here ...">
+        </div>
+    </div>
+</div>
+
+<script>
+     /*chatbot toggler*/
+     $("#chatbot-on").click("onclick", function () {
+            $('#chatbot-on').toggle();
+            $(".chatbot-messenger").toggle();
+        })
+        
+    $("#chatbot-off").click("onclick", function () {
+        $('#chatbot-on').toggle();
+        $(".chatbot-messenger").toggle();
+    })
+</script>
