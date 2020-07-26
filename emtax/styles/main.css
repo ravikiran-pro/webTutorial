@@ -204,7 +204,7 @@ html, body {
 }
 
 #nav-desktop-wrapper #nav-desktop a:hover {
-  color: #665CD7;
+  color: #675ED7;
 }
 
 #nav-desktop-wrapper #nav-desktop a tag {
@@ -232,7 +232,7 @@ html, body {
 }
 
 #nav-desktop-wrapper #nav-desktop button:hover {
-  background-color: #665CD7;
+  background-color: #675ED7;
   color: white;
 }
 
@@ -252,7 +252,7 @@ html, body {
 }
 
 #nav-mobile-header #toggler-on {
-  margin-right: 10px;
+  margin-right: 3%;
   border: none;
 }
 
@@ -340,19 +340,20 @@ html, body {
 }
 
 #introduction .services-available .service .icon {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 60px;
   height: 60px;
   border-radius: 50%;
   border: solid 1.5px #EEEEEE;
-  text-align: center;
-}
-
-#introduction .services-available .service .icon img {
-  margin-top: 30%;
 }
 
 #introduction .services-available .service div:nth-child(2) {
-  padding-left: 30px;
+  margin-left: 20px;
   font-size: 14px;
 }
 
@@ -374,37 +375,42 @@ html, body {
   color: white;
 }
 
+#challenge img {
+  width: 100%;
+}
+
 #challenge .d-flex .heading {
   font-family: 'Avenir Black';
   font-size: 36px;
   font-weight: bold;
   padding-top: 20px;
+  margin-bottom: 15px;
 }
 
 #challenge .d-flex .content {
-  padding-left: 2%;
-  padding-right: 2%;
+  margin-top: 6%;
   font-family: 'Avenir-Medium';
   font-size: 24px;
   color: #BEBAC9;
   text-align: center;
   text-align-last: center;
   font-stretch: expanded;
-  line-height: 1.8;
-  padding-bottom: 20px;
+  line-height: 2.4em;
 }
 
 #challenge .d-flex .borderline {
   width: 100px;
   height: 2px;
   border: solid 1.2px #f9a12a;
-  margin-top: 15px;
-  margin-bottom: 34px;
 }
 
 #challenge .right {
   position: absolute;
   right: 0;
+}
+
+.goals {
+  margin: 8px;
 }
 
 #goals-main .title {
@@ -413,7 +419,6 @@ html, body {
 }
 
 #goals-main .title #oval-violet {
-  margin-top: 10px;
   margin-left: 75%;
 }
 
@@ -422,17 +427,22 @@ html, body {
 }
 
 #goals-main .title .d-flex {
-  margin: auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
   border-radius: 50%;
-  margin-bottom: 30%;
+  margin-bottom: 20%;
   width: 100px;
+  height: 100px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #FCEBC8;
 }
 
 #goals-main .title .d-flex img {
-  width: 35px;
+  width: 40%;
+  height: 40%;
 }
 
 #goals-main .title .header {
@@ -441,15 +451,14 @@ html, body {
 
 #goals-main .title .header .borderline {
   width: 100px;
-  height: 4px;
+  height: 2px;
   border: solid 1.2px #f9a12a;
-  margin-top: 28px;
-  margin-bottom: 34px;
 }
 
 #goals-main .title .header .heading {
   font-size: 32px;
   font-weight: bold;
+  margin-bottom: 4%;
 }
 
 #goals-main .title .header .sub-heading {
@@ -457,13 +466,7 @@ html, body {
   font-size: 22px;
   line-height: 2em;
   color: #878787;
-}
-
-#goals-main #oval-orange {
-  width: 7%;
-  float: right;
-  margin-top: -4%;
-  margin-right: -5%;
+  margin-top: 4%;
 }
 
 #goals-contents {
@@ -491,8 +494,8 @@ html, body {
 
 #goals-contents #oval-white {
   position: absolute;
-  width: 12%;
-  margin-left: -8%;
+  width: 10%;
+  margin-left: -6.6%;
   margin-top: -8%;
 }
 
@@ -561,39 +564,44 @@ html, body {
   font-family: 'Avenir-Black';
   font-size: 36px;
   font-weight: bold;
+  margin-bottom: 4%;
 }
 
 #features .borderline {
   width: 100px;
-  height: 1px;
+  height: 2px;
   border: solid 1px #f9a12a;
-  margin: 30px auto 26px auto;
+  margin: auto;
 }
 
 #features .sub-heading {
+  margin: 4% 12% 40px 12%;
   font-family: 'Avenir-Medium';
   font-size: 24px;
-  margin-left: 14%;
-  margin-right: 14%;
   color: #878787;
   line-height: 1.8em;
 }
 
 #features .card {
-  width: 108%;
   border-radius: 12px;
-  margin-top: 7%;
-  margin-bottom: 6%;
-  margin-left: 2%;
-  height: 80vh;
+  height: 70vh;
 }
 
 #features .card .align {
-  margin: auto 0px auto 10%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 54%;
+  margin-left: 60px;
+  margin-top: 5%;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #features .card .align .heading-card {
-  width: 100%;
   font-family: 'Avenir-Heavy';
   font-size: 38px;
   font-weight: bold;
@@ -601,7 +609,6 @@ html, body {
 }
 
 #features .card .align .sub-heading-card {
-  width: 52%;
   font-family: 'Avenir-Medium';
   font-size: 24px;
   line-height: 2em;
@@ -610,10 +617,13 @@ html, body {
 #features .guard {
   background-color: white;
   position: absolute;
-  margin-top: 11%;
+  margin-top: 6%;
   right: 0;
   width: 38%;
   height: 56%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   z-index: 3;
   border-radius: 15px;
   border: solid 2px #E4E4E4;
@@ -657,7 +667,7 @@ html, body {
   height: 187px;
   width: 214px;
   z-index: 4;
-  margin-right: 30px;
+  margin-right: 6%;
   border-radius: 30px;
   -webkit-box-shadow: 0 0px 104px -24px rgba(210, 210, 210, 0.52), 0px 13px 0px 0px #191111;
           box-shadow: 0 0px 104px -24px rgba(210, 210, 210, 0.52), 0px 13px 0px 0px #191111;
@@ -699,6 +709,7 @@ html, body {
   padding-top: 25px;
   padding-left: 6.5%;
   padding-right: 6.5%;
+  margin-bottom: 5%;
   color: #878787;
 }
 
@@ -706,7 +717,7 @@ html, body {
   width: 100px;
   height: 1px;
   border: solid 1px #6455C2;
-  margin: 30px auto 0px auto;
+  margin: auto;
 }
 
 #result .bullet {
@@ -715,7 +726,6 @@ html, body {
   border-radius: 50%;
   background-color: #F9A02A;
   margin: auto;
-  margin-top: 14px;
 }
 
 #result .list {
@@ -759,6 +769,16 @@ html, body {
   background-color: #fcc12c;
   border-radius: 5px;
   color: #ffffff;
+}
+
+#help .row .btn span {
+  padding-left: 14px;
+  font-size: 14px;
+  display: none;
+}
+
+#help .row .btn:hover span {
+  display: inline;
 }
 
 #nav-bottom {
@@ -819,6 +839,101 @@ html, body {
   font-weight: lighter;
 }
 
+@media (max-width: 768px) {
+  #challenge img {
+    width: 150%;
+  }
+  #endorsement .row {
+    padding: 3px;
+  }
+  #endorsement .header #quote-header {
+    font-size: 20px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+  }
+  #endorsement .header .header-main {
+    font-size: 28px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+  }
+  .quote-box-content .para p {
+    font-size: 17px;
+    line-height: 2em;
+    color: #BFBCC3;
+  }
+  #result .sub-header {
+    font-size: 24px;
+    color: black;
+  }
+  #help .row .header {
+    font-size: 24px;
+  }
+  #help .row .sub-header {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 556px) {
+  #challenge img {
+    width: 200%;
+  }
+  #challenge .d-flex .heading {
+    font-size: 28px;
+  }
+  #challenge .d-flex .content {
+    font-size: 18px;
+  }
+  #goals-main {
+    margin-top: 60px;
+  }
+  #goals-main .title .d-flex {
+    width: 70px;
+    height: 70px;
+  }
+  #goals-main .title .header .heading {
+    font-size: 24px;
+  }
+  #goals-main .title .header .sub-heading {
+    font-size: 20px;
+  }
+  #goals-contents #list {
+    font-size: 20px;
+  }
+  #goals-contents #oval-white {
+    left: 14px;
+  }
+  #help img:nth-child(1) {
+    width: 35%;
+  }
+  #help .row .header {
+    font-size: 21px;
+  }
+  #help .row .sub-header {
+    font-size: 28px;
+  }
+  #features .guard {
+    margin: 0px;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    height: 30%;
+  }
+  #features .card .align {
+    width: 100%;
+    margin: auto;
+    margin-top: 160px;
+  }
+  #features .card .align .heading-card {
+    font-size: 18px;
+    text-align: center;
+  }
+  #features .card .align .sub-heading-card {
+    font-size: 18px;
+    line-height: 1.5em;
+    color: black;
+  }
+}
+
 @media (max-width: 992px) {
   #nav-desktop {
     display: none;
@@ -827,73 +942,6 @@ html, body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-  #concentric-cirle {
-    width: 200px;
-    margin-top: 50px;
-  }
-}
-
-@media (max-width: 768px) {
-  #concentric-cirle {
-    width: 100%;
-  }
-  .quote-box-content .para p {
-    font-size: 17px;
-    line-height: 2em;
-    color: #bfbcc3;
-  }
-  #result .sub-header {
-    font-size: 24px;
-    color: black;
-  }
-  #endorsement .header #quote-header {
-    font-size: 20px;
-    margin-left: 0;
-    margin-bottom: 0;
-  }
-  #endorsement .header .header-main {
-    font-size: 24px;
-    margin-left: 0;
-    margin-bottom: 0;
-  }
-  #challenge .d-flex .heading {
-    font-size: 16px;
-    padding-left: 0;
-    font-weight: bold;
-  }
-  #challenge .d-flex .content {
-    font-size: 16px;
-    line-height: 2.4em;
-    padding: 0;
-  }
-  #features .card .align .heading-card {
-    font-size: 26px;
-  }
-  #features .card .align .sub-heading-card {
-    font-size: 20px;
-  }
-  #endorsement .row {
-    padding: 0;
-  }
-}
-
-@media (max-width: 556px) {
-  .quote-box-content .para p {
-    font-size: 12px;
-    color: brown;
-    line-height: 2em;
-    color: #bfbcc3;
-  }
-  .quote-box-content .para p {
-    font-size: 12px;
-    line-height: 2em;
-    color: #bfbcc3;
-    margin-left: -12px;
-    width: 95%;
   }
 }
 /*# sourceMappingURL=main.css.map */

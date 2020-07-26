@@ -43,7 +43,7 @@ html,body{
             font-size: 16px;
             font-family: 'LatoRegular';
             &:hover{
-                color: #665CD7;
+                color: #675ED7;
             }
             tag{
                 position: absolute;
@@ -67,7 +67,7 @@ html,body{
             font-weight: bolder;
             box-shadow: 0 5px 12px 0 rgba(11, 33, 105, 0.17);
             &:hover{
-                background-color: #665CD7;
+                background-color: #675ED7;
                 color: white;
             }
         }
@@ -87,7 +87,7 @@ html,body{
         margin-left: 12px;
     }
     #toggler-on{
-        margin-right: 10px;
+        margin-right: 3%;
         border: none;
     }
     #navbar-content{
@@ -157,17 +157,15 @@ html,body{
             margin-left: 18px;
             display: flex;
             .icon{
+                justify-content: center;
+                align-items: center;
                 width: 60px;
                 height: 60px;
                 border-radius: 50%;
                 border: solid 1.5px #EEEEEE;
-                text-align: center;
-                img{
-                    margin-top: 30%;
-                }
             }
             div:nth-child(2){
-                padding-left: 30px;
+                margin-left: 20px;
                 font-size: 14px;
                 p{
                     font-family : 'Avenir-Heavy' ;
@@ -190,31 +188,31 @@ html,body{
     border-radius: 30px;
     overflow-x: hidden;
     color: white;
+    img{
+        width: 100%;
+    }
     .d-flex{
         .heading{
             font-family : 'Avenir Black' ;
             font-size: 36px;
             font-weight: bold;
             padding-top: 20px;
+            margin-bottom: 15px;
         }
         .content{
-            padding-left: 2%;
-            padding-right:2%;
+            margin-top:6%;
             font-family : 'Avenir-Medium' ;
             font-size: 24px;
             color: #BEBAC9;
             text-align: center;
             text-align-last: center;
             font-stretch: expanded;
-            line-height: 1.8;
-            padding-bottom: 20px;
+            line-height: 2.4em;
         }
         .borderline{
             width: 100px;
             height: 2px;
-            border: solid 1.2px rgb(249,161,42);
-            margin-top: 15px;
-            margin-bottom:34px
+            border: solid 1.2px rgb(249,161,42);            
         }
     }   
     .right{
@@ -222,56 +220,52 @@ html,body{
         right: 0;
     }
 }
+.goals{
+    margin: 8px;
+}
 #goals-main{
     .title{
             border: solid 2px #EEEEEE;
             padding-bottom: 5%;
             #oval-violet{
-                margin-top: 10px;
                 margin-left: 75%;
             }
             #oval-green{
                 margin-left: 40%;
             }
-            .d-flex{
-                margin: auto;
-                padding-top: 30px;
-                padding-bottom: 30px;
+            .d-flex{   
                 border-radius: 50%;
-                margin-bottom: 30%;
+                margin-bottom: 20%;
                 width: 100px;
+                height: 100px;
+                justify-content: center;
+                align-items: center;
                 background-color: #FCEBC8;
                 img{
-                    width: 35px;
+                    width: 40%;
+                    height: 40%;
                 }
             }
             .header{
                 font-family : 'Avenir-Medium' ;
                 .borderline{
                     width: 100px;
-                    height: 4px;
+                    height: 2px;
                     border: solid 1.2px rgb(249,161,42);
-                    margin-top: 28px;
-                    margin-bottom:34px
                 }
                 .heading{
                     font-size: 32px;
                     font-weight: bold;
+                    margin-bottom: 4%;
                 }
                 .sub-heading{
                     padding-right: 18%;
                     font-size: 22px;
                     line-height: 2em;
                     color: #878787;
+                    margin-top:4%;
                 }
             }
-    }
-    #oval-orange{
-        width: 7%;
-        float: right;
-        margin-top: -4%;
-        margin-right: -5%;
-        
     }
 }
 #goals-contents{
@@ -294,8 +288,8 @@ html,body{
     }
     #oval-white{
         position: absolute;
-        width: 12%;
-        margin-left: -8%;
+        width: 10%;
+        margin-left: -6.6%;
         margin-top: -8%;
     }
 }
@@ -355,40 +349,38 @@ html,body{
         font-family : 'Avenir-Black';
         font-size: 36px;
         font-weight: bold;
+        margin-bottom: 4%;
     }
     .borderline{
         width: 100px;
-        height: 1px;
+        height: 2px;
         border: solid 1px rgb(249,161,42);
-        margin:30px auto 26px auto;
+        margin: auto;
     }
     .sub-heading{
+        margin: 4% 12% 40px 12%;
         font-family : 'Avenir-Medium';
         font-size: 24px;
-        margin-left: 14%;
-        margin-right: 14%;
         color: rgb(135,135,135);
         line-height: 1.8em;
     }
     .card{
-        width:108%;
         border-radius: 12px;
-        margin-top: 7%;
-        margin-bottom: 6%;
-        margin-left: 2%;
-        height:80vh;
-
+        height:70vh;
         .align{
-            margin: auto 0px auto 10%;
+            flex-direction: column;
+            width: 54%;
+            margin-left: 60px;
+            margin-top: 5%;
+            height: 100%;
+            justify-content: center;
             .heading-card{
-                width: 100%;
                 font-family : 'Avenir-Heavy';
                 font-size: 38px;
                 font-weight: bold;
                 line-height: 2.5em;
             }
             .sub-heading-card{
-                width: 52%;
                 font-family : 'Avenir-Medium';
                 font-size: 24px;
                 line-height: 2em;
@@ -398,10 +390,11 @@ html,body{
     .guard{
         background-color: white;
         position: absolute;
-        margin-top: 11%;
+        margin-top: 6%;
         right: 0;
         width:38%;
         height: 56%;
+        justify-content: center;
         z-index: 3;
         border-radius: 15px;
         border: solid 2px #E4E4E4; 
@@ -442,7 +435,7 @@ html,body{
                     height: 187px;
                     width: 214px;
                     z-index:4;
-                    margin-right: 30px;
+                    margin-right: 6%;
                     border-radius: 30px;
                     box-shadow: 0 0px 104px -24px rgba(210, 210, 210, 0.52), 0px 13px 0px 0px rgba(25, 17, 17, 1);
 
@@ -482,13 +475,14 @@ html,body{
         padding-top: 25px;
         padding-left: 6.5%;
         padding-right: 6.5%;
+        margin-bottom: 5%;
         color: #878787;
     }
     .borderline{
         width: 100px;
         height: 1px;
         border: solid 1px #6455C2;
-        margin:30px auto 0px auto;
+        margin: auto;
     }
     .bullet{
         width: 15px;
@@ -496,7 +490,7 @@ html,body{
         border-radius: 50%;
         background-color: #F9A02A;
         margin: auto;
-        margin-top: 14px;
+     
     }
     .list{
         color: #8A8A8A;
@@ -535,6 +529,14 @@ html,body{
             background-color: rgb(252,193,44);
             border-radius: 5px;
             color: #ffffff;
+            span{
+                padding-left:14px; font-size:14px; display: none;
+            }
+            &:hover{
+                span{
+                    display: inline;
+                }
+            }
         }
     }
 }
@@ -590,8 +592,47 @@ html,body{
     }
 }
 
-@media(max-width:992px){#nav-desktop{display:none}#nav-mobile-header{display:flex}} 
-@media(min-width:768px) and (max-width:992px){#concentric-cirle{width:200px;margin-top:50px}}
-@media(max-width:768px){#concentric-cirle{width:100%}.quote-box-content .para p{font-size:17px;line-height:2em;color:#bfbcc3}
-#result .sub-header{font-size:24px;color:black}#endorsement .header #quote-header{font-size:20px;margin-left:0;margin-bottom:0}
-#endorsement .header .header-main{font-size:24px;margin-left:0;margin-bottom:0}#challenge .d-flex .heading{font-size:16px;padding-left:0;font-weight:bold}#challenge .d-flex .content{font-size:16px;line-height:2.4em;padding:0}#features .card .align .heading-card{font-size:26px}#features .card .align .sub-heading-card{font-size:20px}#endorsement .row{padding:0}}@media(max-width:556px){.quote-box-content .para p{font-size:12px;color:brown;line-height:2em;color:#bfbcc3}.quote-box-content .para p{font-size:12px;line-height:2em;color:#bfbcc3;margin-left:-12px;width:95%}}
+@media (max-width:768px){
+    #challenge{img{width: 150%;}}
+    #endorsement{
+        .row{padding: 3px;}
+        .header{
+            #quote-header{font-size: 20px; margin-left: 0px; margin-bottom: 0px;}
+            .header-main{font-size: 28px; margin-left: 0px; margin-bottom: 0px;}
+        }
+    }
+    .quote-box-content .para p{font-size: 17px;line-height: 2em;color: #BFBCC3;}
+    #result .sub-header{font-size: 24px; color: black;}
+    #help {.row {.header{font-size: 24px;} .sub-header{font-size: 32px;}}}
+}
+@media (max-width:556px){
+    #challenge{ 
+        img{width: 200%;}
+        .d-flex{ .heading{  font-size: 28px; } .content{font-size: 18px;}}
+    }
+    #goals-main{
+        margin-top: 60px;
+            .title{
+                .d-flex{width: 70px;height: 70px;}
+                .header{ .heading {font-size: 24px;}  .sub-heading{font-size: 20px;}}
+            }}
+    #goals-contents{#list{font-size: 20px;} #oval-white{left: 14px;}}
+    #help { 
+        img:nth-child(1){width: 35%;}
+        .row {.header{font-size: 21px;} .sub-header{font-size: 28px;}}}
+    #features {
+        .guard{margin: 0px;   margin-left: 10%;   margin-right: 10%;  width: 80%; height: 30%;}
+        .card{
+        .align{
+            width: 100%;
+            margin: auto;
+            margin-top: 160px;
+            .heading-card{font-size: 18px; text-align: center;}
+            .sub-heading-card{font-size: 18px; line-height: 1.5em; color: black;}
+        }}
+    }
+}
+@media (max-width:992px){
+    #nav-desktop{display: none;}
+    #nav-mobile-header{display:flex;}   
+}
