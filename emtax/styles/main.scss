@@ -1,28 +1,10 @@
-@import "chatbot";
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-@font-face {
-  font-family: "Avenir Black";
-  src        : url("../plugins/fonts/Avenir Book.ttf")
-}
-@font-face {
-  font-family: "Avenir-Heavy";
-  src        : url("../plugins/fonts/Avenir-Heavy.ttf")
-}
-@font-face {
-  font-family: "Avenir-Medium";
-  src        : url("../plugins/fonts/Avenir-Medium.ttf")
-}
-@font-face{
-  font-family: "Graphikbold";
-  src: url('../plugins/fonts/GraphikBold.otf');
-}  
-@font-face{
-    font-family: "Graphikregular";
-    src:url('../plugins/fonts/GraphikRegular.otf');
-}
-@font-face{
-    font-family: 'LatoRegular';
-    src:url('../plugins/fonts/Lato-Regular.ttf')
+@mixin borderline($linecolor,$margin:none) {
+    .borderline{
+        width: 100px;
+        height: 2px;
+        border: solid 1.2px $linecolor;
+        margin: $margin;
+    }
 }
 html,body{
     overflow-x: hidden;
@@ -41,13 +23,12 @@ html,body{
         a{
             color:#43434B;
             font-size: 16px;
-            font-family: 'LatoRegular';
+            
             &:hover{
                 color: #675ED7;
             }
             tag{
                 position: absolute;
-                font-family: Arial, Helvetica, sans-serif;
                 background-color: rgb(88,206,188);
                 border-radius: 2px;
                 margin-left: -5px;
@@ -99,7 +80,6 @@ html,body{
             border-bottom-right-radius: 30px;
             text-align: center;
             ul{
-                font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
                 padding-top: 45px;
                 line-height: 3em;
                 font-size: 16px;
@@ -108,7 +88,6 @@ html,body{
                     color: black;
                     tag{
                         vertical-align: super;
-                        font-family: Arial, Helvetica, sans-serif;
                         background-color: rgb(88,206,188);
                         border-radius: 2px;
                         font-size: 10px;
@@ -134,16 +113,13 @@ html,body{
 #introduction{
     margin-top: 14.8%;
     cursor: auto;
-    font-family : 'Avenir Black' ;
     .header{
         margin-top: 16px;
-        font-family: Arial, Helvetica, sans-serif;
         font-size: 32px;
         color: #FDBC2C;
     }
     .title{
         font-size: 48px;
-        font-family: 'Graphikbold';
     }
     .content{
         margin-top: 30px;
@@ -168,7 +144,6 @@ html,body{
                 margin-left: 20px;
                 font-size: 14px;
                 p{
-                    font-family : 'Avenir-Heavy' ;
                     margin-top: 5px;
                     font-size: 17px;
                     font-weight: bold;
@@ -193,7 +168,6 @@ html,body{
     }
     .d-flex{
         .heading{
-            font-family : 'Avenir Black' ;
             font-size: 36px;
             font-weight: bold;
             padding-top: 20px;
@@ -201,7 +175,6 @@ html,body{
         }
         .content{
             margin-top:6%;
-            font-family : 'Avenir-Medium' ;
             font-size: 24px;
             color: #BEBAC9;
             text-align: center;
@@ -209,11 +182,7 @@ html,body{
             font-stretch: expanded;
             line-height: 2.4em;
         }
-        .borderline{
-            width: 100px;
-            height: 2px;
-            border: solid 1.2px rgb(249,161,42);            
-        }
+        @include borderline(rgb(249,161,42));
     }   
     .right{
         position: absolute;
@@ -247,12 +216,7 @@ html,body{
                 }
             }
             .header{
-                font-family : 'Avenir-Medium' ;
-                .borderline{
-                    width: 100px;
-                    height: 2px;
-                    border: solid 1.2px rgb(249,161,42);
-                }
+                @include borderline(rgb(249,161,42));
                 .heading{
                     font-size: 32px;
                     font-weight: bold;
@@ -273,7 +237,6 @@ html,body{
     border-top: none;
     padding-top: 7%;
     padding-bottom: 5%;
-    font-family : 'Avenir-Medium' ;
     color: rgb(89,89,89);
     .row{
         margin-top: -0px;
@@ -298,7 +261,6 @@ html,body{
     margin-bottom: 7%;
     padding-top: 4%;
     padding-bottom: 7%;
-    font-family : 'Avenir-Medium' ;
     background-color:#1D1A42;
     .header{
         padding-left: 12%;
@@ -309,7 +271,6 @@ html,body{
             color: rgb(249,160,42);
         }
         .header-main{
-            font-family : 'Avenir Black';
             font-size: 56px;
         }
     }
@@ -333,7 +294,6 @@ html,body{
             .title{
                 margin-top: 4%;
                 margin-bottom: 1.5%;
-                font-family : 'Avenir-Heavy';
                 font-size: 24px;
                 font-weight: bold;
             }
@@ -346,20 +306,13 @@ html,body{
 }
 #features{
     .header{
-        font-family : 'Avenir-Black';
         font-size: 36px;
         font-weight: bold;
         margin-bottom: 4%;
     }
-    .borderline{
-        width: 100px;
-        height: 2px;
-        border: solid 1px rgb(249,161,42);
-        margin: auto;
-    }
+    @include borderline(rgb(249,161,42),auto);
     .sub-heading{
         margin: 4% 12% 40px 12%;
-        font-family : 'Avenir-Medium';
         font-size: 24px;
         color: rgb(135,135,135);
         line-height: 1.8em;
@@ -375,13 +328,11 @@ html,body{
             height: 100%;
             justify-content: center;
             .heading-card{
-                font-family : 'Avenir-Heavy';
                 font-size: 38px;
                 font-weight: bold;
                 line-height: 2.5em;
             }
             .sub-heading-card{
-                font-family : 'Avenir-Medium';
                 font-size: 24px;
                 line-height: 2em;
             }
@@ -405,24 +356,19 @@ html,body{
     .row{
         &:nth-child(1){
             .title{
-                font-family : 'Avenir Black';
                 font-size: 38px;
                 font-weight: bold;
                 text-align: center;
+                margin-bottom: 20px;
             }
-            .borderline{
-                width: 100px;
-                height: 2px;
-                border: solid 1px #6455C2;
-                margin:30px auto 26px auto;
-            }
+            @include borderline(#6455C2,auto);
             .sub-title{
                 padding-left: 16%;
                 padding-right: 16%;
-                font-family : 'Avenir-Medium';
                 font-size: 22px;
                 text-align: center;
                 padding-bottom: 17%;
+                margin-top: 30px;
             }
         }
         &:nth-child(2){
@@ -459,11 +405,9 @@ html,body{
 }
 #result{
     background-color: #FCFAFA;
-    font-family : 'Avenir-Medium';
     padding-top: 5%;
     padding-bottom: 7%;
     .header{
-        font-family : 'Avenir Black';
         font-size: 32px;
         color: #FDBC2C;       
         text-align: center;
@@ -478,12 +422,7 @@ html,body{
         margin-bottom: 5%;
         color: #878787;
     }
-    .borderline{
-        width: 100px;
-        height: 1px;
-        border: solid 1px #6455C2;
-        margin: auto;
-    }
+    @include borderline(#6455C2,auto);
     .bullet{
         width: 15px;
         height: 15px;
@@ -502,11 +441,9 @@ html,body{
     border-radius: 20px;
     background-color:#1D1A42;
     color: white;
-    font-family : 'Avenir Black';
     box-shadow:
       0 3.5px 3.5px -23px rgba(0, 0, 0, 0.075),
-      0 28px 28px -23px rgba(0, 0, 0, 0.15)
-    ;
+      0 28px 28px -23px rgba(0, 0, 0, 0.15);
     .row{
         padding-top: 7%;
         padding-bottom: 4%;
@@ -518,10 +455,8 @@ html,body{
         .sub-header{
             margin-top: 10px;
             font-size: 38px;
-            font-family: 'Graphikbold';
         }
         .btn{
-            font-family : 'Avenir-Heavy';
             width: 250px;
             height: 56px;
             font-size: 22px;
@@ -548,7 +483,6 @@ html,body{
             height: 32px;
         }
         a{
-            font-family: 'LatoRegular';
             color: #000000;
             font-size: 16px;
         }
@@ -580,72 +514,16 @@ html,body{
         }
         a{
             color: #6A6A70;
-            font-family: Graphicregular;
             font-weight: lighter;
         }
     }
     .address{
         margin-bottom: 20px;
         color: #6A6A70;
-        font-family: Graphicregular;
         font-weight: lighter;
     }
 }
-@media (max-width:768px){
-    #challenge{img{width: 150%;}}
-    #endorsement{
-        .row{padding: 3px;}
-        .header{
-            #quote-header{font-size: 20px; margin-left: 0px; margin-bottom: 0px;}
-            .header-main{font-size: 28px; margin-left: 0px; margin-bottom: 0px;}
-        }
-    }
-    .quote-box-content .para p{font-size: 17px;line-height: 2em;color: #BFBCC3;}
-    #result .sub-header{font-size: 24px; color: black;}
-    #help {.row {.header{font-size: 24px;} .sub-header{font-size: 32px;}}}
-    .company-name{font-size: 16px;}
-}
-@media (max-width:556px){
-    #challenge{ 
-        img{width: 200%;}
-        .d-flex{ .heading{  font-size: 26px; } .content{font-size: 18px;}}
-    }
-    #goals-main{
-        margin-top: 60px;
-            .title{
-                .d-flex{width: 70px;height: 70px;}
-                .header{ .heading {font-size: 24px;}  .sub-heading{font-size: 20px;}}
-            }}
-    #goals-contents{#list{font-size: 20px;} #oval-white{left: 14px;}}
-    #help { 
-        img:nth-child(1){width: 35%;}
-        .row {.header{font-size: 20px;} .sub-header{font-size: 28px;}}}
-    #features {
-        .guard{margin: 0px;   margin-left: 10%;   margin-right: 10%;  width: 80%; height: 30%;}
-        .card{
-        .align{
-            width: 100%;
-            margin: auto;
-            margin-top: 160px;
-            .heading-card{font-size: 18px; text-align: center;}
-            .sub-heading-card{font-size: 18px; line-height: 1.5em; color: black;}
-        }}
-    }
-    .address{font-size: 16px;}
-}
-@media (max-width:318px){
-    #introduction .title{font-size: 34px;}
-    #challenge .d-flex{ .heading{  font-size: 16px; } .content{font-size: 16px;}}
-    #goals-main{
-            .title{
-                .d-flex{width: 50px;height: 50px;}
-                .header{ .heading {font-size: 18px;}  .sub-heading{font-size: 16px;}}
-            }}
-    #endorsement .header .header-main{font-size: 16px;}
-    .address{font-size: 12px;}
-    .company-name{font-size: 12px;}
-}
-@media (max-width:992px){
-    #nav-desktop{display: none;}
-    #nav-mobile-header{display:flex;}   
-}
+
+@import "chatbot";
+@import "fontclass";
+@import "queries";

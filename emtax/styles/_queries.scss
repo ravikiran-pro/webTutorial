@@ -1,0 +1,58 @@
+@media (max-width:768px){
+    #challenge{img{width: 150%;}}
+    #endorsement{
+        .row{padding: 3px;}
+        .header{
+            #quote-header{font-size: 20px; margin-left: 0px; margin-bottom: 0px;}
+            .header-main{font-size: 28px; margin-left: 0px; margin-bottom: 0px;}
+        }
+    }
+    .quote-box-content .para p{font-size: 17px;line-height: 2em;color: #BFBCC3;}
+    #result .sub-header{font-size: 24px; color: black;}
+    #help {.row {.header{font-size: 24px;} .sub-header{font-size: 32px;}}}
+    .company-name{font-size: 16px;}
+}
+@media (max-width:556px){
+    #challenge{ 
+        img{width: 200%;}
+        .d-flex{ .heading{  font-size: 26px; } .content{font-size: 18px;}}
+    }
+    #goals-main{
+        margin-top: 60px;
+            .title{
+                .d-flex{width: 70px;height: 70px;}
+                .header{ .heading {font-size: 24px;}  .sub-heading{font-size: 20px;}}
+            }}
+    #goals-contents{#list{font-size: 20px;} #oval-white{left: 14px;}}
+    #help { 
+        img:nth-child(1){width: 25%;}
+        .row {.header{font-size: 20px;} .sub-header{font-size: 28px;}}}
+    #features {
+        .guard{margin: 0px;   margin-left: 10%;   margin-right: 10%;  width: 80%; height: 30%;}
+        .card{
+        .align{
+            width: 100%;
+            margin: auto;
+            margin-top: 160px;
+            .heading-card{font-size: 18px; text-align: center;}
+            .sub-heading-card{font-size: 18px; line-height: 1.5em; color: black;}
+        }}
+    }
+    .address{font-size: 16px;}
+}
+@media (max-width:318px){
+    #introduction .title{font-size: 34px;}
+    #challenge .d-flex{ .heading{  font-size: 16px; } .content{font-size: 16px;}}
+    #goals-main{
+            .title{
+                .d-flex{width: 50px;height: 50px;}
+                .header{ .heading {font-size: 18px;}  .sub-heading{font-size: 16px;}}
+            }}
+    #endorsement .header .header-main{font-size: 16px;}
+    .address{font-size: 12px;}
+    .company-name{font-size: 12px;}
+}
+@media (max-width:992px){
+    #nav-desktop{display: none;}
+    #nav-mobile-header{display:flex;}   
+}

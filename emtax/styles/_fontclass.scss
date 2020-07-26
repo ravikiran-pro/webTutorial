@@ -1,0 +1,37 @@
+@mixin fonts($type){
+    font-family: $type;
+}
+@font-face {
+  font-family: "Avenir Black";
+  src        : url("../plugins/fonts/Avenir Book.ttf")
+}
+@font-face {
+  font-family: "Avenir-Heavy";
+  src        : url("../plugins/fonts/Avenir-Heavy.ttf")
+}
+@font-face {
+  font-family: "Avenir-Medium";
+  src        : url("../plugins/fonts/Avenir-Medium.ttf")
+}
+@font-face{
+  font-family: "Graphikbold";
+  src: url('../plugins/fonts/GraphikBold.otf');
+}  
+@font-face{
+    font-family: "Graphikregular";
+    src:url('../plugins/fonts/GraphikRegular.otf');
+}
+@font-face{
+    font-family: 'LatoRegular';
+    src:url('../plugins/fonts/Lato-Regular.ttf')
+}
+.f{
+    &-ar{font-family: Arial, Helvetica, sans-serif;}
+    &-a{
+        &b{ @include fonts("Avenir Black")} &h{@include fonts("Avenir-Heavy")}  &m{@include fonts("Avenir-Medium")} 
+       }
+    &-g{    
+        &b{@include fonts("Graphikbold")}  &r{@include fonts("Graphikregular")}
+       }
+    &-lr{@include fonts('LatoRegular')}
+}
