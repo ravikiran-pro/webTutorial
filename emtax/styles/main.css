@@ -617,7 +617,7 @@ html, body {
 #features .guard {
   background-color: white;
   position: absolute;
-  margin-top: 6%;
+  margin-top: 4%;
   right: 0;
   width: 38%;
   height: 56%;
@@ -871,6 +871,9 @@ html, body {
   #help .row .sub-header {
     font-size: 32px;
   }
+  .company-name {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 556px) {
@@ -878,7 +881,7 @@ html, body {
     width: 200%;
   }
   #challenge .d-flex .heading {
-    font-size: 28px;
+    font-size: 26px;
   }
   #challenge .d-flex .content {
     font-size: 18px;
@@ -931,6 +934,34 @@ html, body {
     font-size: 18px;
     line-height: 1.5em;
     color: black;
+  }
+  .address {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 318px) {
+  #introduction .title {
+    font-size: 34px;
+  }
+  #challenge .d-flex .heading {
+    font-size: 22px;
+  }
+  #challenge .d-flex .content {
+    font-size: 18px;
+  }
+  #goals-main .title .d-flex {
+    width: 50px;
+    height: 50px;
+  }
+  #goals-main .title .header .heading {
+    font-size: 22px;
+  }
+  #goals-main .title .header .sub-heading {
+    font-size: 18px;
+  }
+  #endorsement .header .header-main {
+    font-size: 18px;
   }
 }
 

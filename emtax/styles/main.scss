@@ -390,7 +390,7 @@ html,body{
     .guard{
         background-color: white;
         position: absolute;
-        margin-top: 6%;
+        margin-top: 4%;
         right: 0;
         width:38%;
         height: 56%;
@@ -591,7 +591,6 @@ html,body{
         font-weight: lighter;
     }
 }
-
 @media (max-width:768px){
     #challenge{img{width: 150%;}}
     #endorsement{
@@ -604,11 +603,12 @@ html,body{
     .quote-box-content .para p{font-size: 17px;line-height: 2em;color: #BFBCC3;}
     #result .sub-header{font-size: 24px; color: black;}
     #help {.row {.header{font-size: 24px;} .sub-header{font-size: 32px;}}}
+    .company-name{font-size: 16px;}
 }
 @media (max-width:556px){
     #challenge{ 
         img{width: 200%;}
-        .d-flex{ .heading{  font-size: 28px; } .content{font-size: 18px;}}
+        .d-flex{ .heading{  font-size: 26px; } .content{font-size: 18px;}}
     }
     #goals-main{
         margin-top: 60px;
@@ -631,6 +631,17 @@ html,body{
             .sub-heading-card{font-size: 18px; line-height: 1.5em; color: black;}
         }}
     }
+    .address{font-size: 16px;}
+}
+@media (max-width:318px){
+    #introduction .title{font-size: 34px;}
+    #challenge .d-flex{ .heading{  font-size: 22px; } .content{font-size: 18px;}}
+    #goals-main{
+            .title{
+                .d-flex{width: 50px;height: 50px;}
+                .header{ .heading {font-size: 22px;}  .sub-heading{font-size: 18px;}}
+            }}
+    #endorsement .header .header-main{font-size: 18px;}
 }
 @media (max-width:992px){
     #nav-desktop{display: none;}
