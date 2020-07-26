@@ -909,7 +909,7 @@ html, body {
     width: 35%;
   }
   #help .row .header {
-    font-size: 21px;
+    font-size: 20px;
   }
   #help .row .sub-header {
     font-size: 28px;
@@ -945,23 +945,29 @@ html, body {
     font-size: 34px;
   }
   #challenge .d-flex .heading {
-    font-size: 22px;
+    font-size: 16px;
   }
   #challenge .d-flex .content {
-    font-size: 18px;
+    font-size: 16px;
   }
   #goals-main .title .d-flex {
     width: 50px;
     height: 50px;
   }
   #goals-main .title .header .heading {
-    font-size: 22px;
+    font-size: 18px;
   }
   #goals-main .title .header .sub-heading {
-    font-size: 18px;
+    font-size: 16px;
   }
   #endorsement .header .header-main {
-    font-size: 18px;
+    font-size: 16px;
+  }
+  .address {
+    font-size: 12px;
+  }
+  .company-name {
+    font-size: 12px;
   }
 }
 

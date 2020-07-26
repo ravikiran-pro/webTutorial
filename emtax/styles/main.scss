@@ -619,7 +619,7 @@ html,body{
     #goals-contents{#list{font-size: 20px;} #oval-white{left: 14px;}}
     #help { 
         img:nth-child(1){width: 35%;}
-        .row {.header{font-size: 21px;} .sub-header{font-size: 28px;}}}
+        .row {.header{font-size: 20px;} .sub-header{font-size: 28px;}}}
     #features {
         .guard{margin: 0px;   margin-left: 10%;   margin-right: 10%;  width: 80%; height: 30%;}
         .card{
@@ -635,13 +635,15 @@ html,body{
 }
 @media (max-width:318px){
     #introduction .title{font-size: 34px;}
-    #challenge .d-flex{ .heading{  font-size: 22px; } .content{font-size: 18px;}}
+    #challenge .d-flex{ .heading{  font-size: 16px; } .content{font-size: 16px;}}
     #goals-main{
             .title{
                 .d-flex{width: 50px;height: 50px;}
-                .header{ .heading {font-size: 22px;}  .sub-heading{font-size: 18px;}}
+                .header{ .heading {font-size: 18px;}  .sub-heading{font-size: 16px;}}
             }}
-    #endorsement .header .header-main{font-size: 18px;}
+    #endorsement .header .header-main{font-size: 16px;}
+    .address{font-size: 12px;}
+    .company-name{font-size: 12px;}
 }
 @media (max-width:992px){
     #nav-desktop{display: none;}
