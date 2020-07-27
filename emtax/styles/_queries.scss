@@ -12,9 +12,6 @@
     #help {.row {.header{font-size: 24px;} .sub-header{font-size: 32px;}}}
     .company-name{font-size: 16px;}
 }
-@media (min-width:768px) and (max-width:991px){
-    #model .row:nth-child(2){padding-right: 15%;}
-}
 @media (max-width:556px){
     #challenge{ 
         img{width: 200%;}
