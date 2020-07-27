@@ -16,14 +16,6 @@
     right: 2%;
     bottom: 3%;
     z-index: 120;
-    .none{
-        position: absolute;
-        margin-top: 14px;
-        margin-left: 10px;
-        background-color: white;
-        height: 30px;
-        width: 40px;
-    }
     .chatbot-messenger{ 
         display: none;
         position: relative;
@@ -38,8 +30,8 @@
             #chat-messanger-top{
                 height: 16vh;
                 background-color: #675ED7;
-                border-top-left-radius: 3%;
-                border-top-right-radius: 3%;
+                border-top-left-radius: 2%;
+                border-top-right-radius: 2%;
                 .title{
                     position: absolute;
                     margin: 3%;
@@ -77,8 +69,14 @@
             }
        }
         #chatbot-on{
-            width: 60px;
-            filter: drop-shadow(1px 1.6px 0.9px #575353);
+            img{
+                width: 60px;
+                filter: drop-shadow(1px 1.6px 0.9px #575353);
+            }
+            background-image: url(../assets/images/plain.png);
+            background-repeat: no-repeat;
+            background-size: 34px 24px;
+            background-position: center;
             animation: chatboxIcon 0.4s linear;
         }
         #chatbot-off{

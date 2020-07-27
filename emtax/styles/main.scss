@@ -6,6 +6,7 @@
         margin: $margin;
     }
 }
+
 html,body{
     overflow-x: hidden;
     width: 100%;
@@ -280,11 +281,9 @@ html,body{
             width: 100%;
             padding: 6px;
             background-color: white;
-            height:100%;
         }
         .quote-box-content{ 
             padding-left:6%;
-            padding-top: 2.5%;
             .para{
                 font-size: 24px;
                 line-height: 2em;
@@ -341,7 +340,7 @@ html,body{
     .guard{
         background-color: white;
         position: absolute;
-        margin-top: 4%;
+        margin-top: 3.5%;
         right: 0;
         width:38%;
         height: 56%;

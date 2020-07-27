@@ -7,7 +7,7 @@
             .header-main{font-size: 28px; margin-left: 0px; margin-bottom: 0px;}
         }
     }
-    .quote-box-content .para p{font-size: 17px;line-height: 2em;color: #BFBCC3;}
+    .quote-box-content { .para p{font-size: 17px;line-height: 2em;color: #BFBCC3;}}
     #result .sub-header{font-size: 24px; color: black;}
     #help {.row {.header{font-size: 24px;} .sub-header{font-size: 32px;}}}
     .company-name{font-size: 16px;}
@@ -17,6 +17,7 @@
         img{width: 200%;}
         .d-flex{ .heading{  font-size: 26px; } .content{font-size: 18px;}}
     }
+    .quote-box-content { margin-top: 10px;}
     #goals-main{
         margin-top: 60px;
             .title{
@@ -28,7 +29,7 @@
         img:nth-child(1){width: 25%;}
         .row {.header{font-size: 20px;} .sub-header{font-size: 28px;}}}
     #features {
-        .guard{margin: 0px;   margin-left: 10%;   margin-right: 10%;  width: 80%; height: 30%;}
+        .guard{margin: 0px; margin-top: -40px;   margin-left: 10%;   margin-right: 10%;  width: 80%; height: 30%;}
         .card{
         .align{
             width: 100%;

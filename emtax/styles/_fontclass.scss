@@ -1,8 +1,9 @@
 @mixin fonts($type){
     font-family: $type;
 }
+
 @font-face {
-  font-family: "Avenir Black";
+  font-family: "Avenir Book";
   src        : url("../plugins/fonts/Avenir Book.ttf")
 }
 @font-face {
@@ -28,7 +29,7 @@
 .f{
     &-ar{font-family: Arial, Helvetica, sans-serif;}
     &-a{
-        &b{ @include fonts("Avenir Black")} &h{@include fonts("Avenir-Heavy")}  &m{@include fonts("Avenir-Medium")} 
+        &b{ @include fonts("Avenir Book")} &h{@include fonts("Avenir-Heavy")}  &m{@include fonts("Avenir-Medium")} 
        }
     &-g{    
         &b{@include fonts("Graphikbold")}  &r{@include fonts("Graphikregular")}

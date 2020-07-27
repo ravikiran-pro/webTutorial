@@ -339,12 +339,10 @@ html, body {
   width: 100%;
   padding: 6px;
   background-color: white;
-  height: 100%;
 }
 
 #endorsement .quote-box .quote-box-content {
   padding-left: 6%;
-  padding-top: 2.5%;
 }
 
 #endorsement .quote-box .quote-box-content .para {
@@ -419,7 +417,7 @@ html, body {
 #features .guard {
   background-color: white;
   position: absolute;
-  margin-top: 4%;
+  margin-top: 3.5%;
   right: 0;
   width: 38%;
   height: 56%;
@@ -653,15 +651,6 @@ html, body {
   z-index: 120;
 }
 
-.chatbot .none {
-  position: absolute;
-  margin-top: 14px;
-  margin-left: 10px;
-  background-color: white;
-  height: 30px;
-  width: 40px;
-}
-
 .chatbot .chatbot-messenger {
   display: none;
   position: relative;
@@ -679,8 +668,8 @@ html, body {
 .chatbot .chatbot-messenger #chat-messanger-top {
   height: 16vh;
   background-color: #675ED7;
-  border-top-left-radius: 3%;
-  border-top-right-radius: 3%;
+  border-top-left-radius: 2%;
+  border-top-right-radius: 2%;
 }
 
 .chatbot .chatbot-messenger #chat-messanger-top .title {
@@ -726,11 +715,18 @@ html, body {
 }
 
 .chatbot #chatbot-on {
+  background-image: url(../assets/images/plain.png);
+  background-repeat: no-repeat;
+  background-size: 34px 24px;
+  background-position: center;
+  -webkit-animation: chatboxIcon 0.4s linear;
+          animation: chatboxIcon 0.4s linear;
+}
+
+.chatbot #chatbot-on img {
   width: 60px;
   -webkit-filter: drop-shadow(1px 1.6px 0.9px #575353);
           filter: drop-shadow(1px 1.6px 0.9px #575353);
-  -webkit-animation: chatboxIcon 0.4s linear;
-          animation: chatboxIcon 0.4s linear;
 }
 
 .chatbot #chatbot-off {
@@ -781,7 +777,7 @@ html, body {
 }
 
 @font-face {
-  font-family: "Avenir Black";
+  font-family: "Avenir Book";
   src: url("../plugins/fonts/Avenir Book.ttf");
 }
 
@@ -815,7 +811,7 @@ html, body {
 }
 
 .f-ab {
-  font-family: "Avenir Black";
+  font-family: "Avenir Book";
 }
 
 .f-ah {
@@ -891,6 +887,9 @@ html, body {
   #challenge .d-flex .content {
     font-size: 18px;
   }
+  .quote-box-content {
+    margin-top: 10px;
+  }
   #goals-main {
     margin-top: 60px;
   }
@@ -921,6 +920,7 @@ html, body {
   }
   #features .guard {
     margin: 0px;
+    margin-top: -40px;
     margin-left: 10%;
     margin-right: 10%;
     width: 80%;
