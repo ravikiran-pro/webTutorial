@@ -173,5 +173,6 @@ html,body{
 @media (max-width: 1000px) {
     .sidebar{
       display: none;
+      position: absolute;
     }
   }
