@@ -342,6 +342,7 @@ html, body {
 }
 
 #endorsement .quote-box .quote-box-content {
+  margin: auto;
   padding-left: 6%;
 }
 
@@ -350,6 +351,7 @@ html, body {
   line-height: 2em;
   margin-top: 4.5%;
   margin-bottom: 4.5%;
+  margin-right: 5px;
 }
 
 #endorsement .quote-box .quote-box-content .title {
@@ -886,9 +888,6 @@ html, body {
   }
   #challenge .d-flex .content {
     font-size: 18px;
-  }
-  .quote-box-content {
-    margin-top: 10px;
   }
   #goals-main {
     margin-top: 60px;
