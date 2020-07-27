@@ -7,6 +7,8 @@ html, body {
   background: -webkit-gradient(linear, left top, left bottom, from(#116f6f), color-stop(2%, #247670), color-stop(38%, #1c707d), color-stop(90%, #146b89));
   background: linear-gradient(180deg, #116f6f 0%, #247670 2%, #1c707d 38%, #146b89 90%);
   min-width: 170px;
+  min-height: 100vh;
+  z-index: 2;
 }
 
 .d-flex .sidebar .user {

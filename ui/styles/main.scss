@@ -44,6 +44,8 @@ html,body{
             background: rgb(254,255,255);
             background: linear-gradient(180deg, #116f6f 0%, rgba(36,118,112,1) 2%, rgba(28,112,125,1) 38%, rgba(20,107,137,1) 90%);
             min-width: 170px;
+            min-height: 100vh;
+            z-index: 2;
             .user{
                 color: white;
                 font-size: 15px;
