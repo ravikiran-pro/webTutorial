@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dashboard</title>
+    <link rel="icon" href="assets/logo.png" type="image/icon-type">
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+    <!-- <div id="preloader">
+        <div id="preloader-logo"></div>
+    </div> -->
+
+
+    <div class="container-fluid p-0 d-flex flex-row">
+        <div class="d-flex bg-primary p-0 sidebar ">
+            <div class="drawer bg-secondary" id="drawer" style="width:180px;">    
+                <div class="d-flex flex-column">
+                    <div class="one bg-dark" style="height: 80px;">cd</div>
+                    <div class="two d-block bg-white pt-4"">
+                        <p class="one text-center">one</p>
+                        <p class="one text-center">two</p>
+                        <p class="one text-center">three</p>
+                        <p class="one text-center">four</p>
+                        <p class="one text-center">five</p>
+                        <p class="one text-center">one</p>
+                        <p class="one text-center">two</p>
+                        <p class="one text-center">four</p>
+                        <p class="one text-center">five</p>
+                    </div>
+                    <div class="one bg-danger" style="height: 300px;">dd</div>   
+                </div>
+            </div>
+            <div class="d-flex bg-success" style="height:100vh" id='controller'>
+                <img src="../emtax/assets/oval-copy-5.svg" id="controller" alt="dd" width="20px" height="30px" style="z-index:20; background-color: aquamarine; margin-top: 34px;" onclick="controller();">
+            </div>
+        </div>
+            <div class="container-fluid p-0 bg-dark" id="body">
+                    <div class="row align-items-center bg-dark">
+                        <div class="col-12 p-2">
+                            <div class="btn-1 float-left ml-2">
+                                <button class="btn btn-primary">design task</button>
+                            </div>
+                            <div class="btn-2 float-right mr-2">
+                                <button class="btn btn-primary">Add project</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <div class="row group-1">
+                                <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 timesheet bg-danger">
+                                   <div class="">
+                                            <div class="title">Timesheet</div>
+                                            <div class="items">
+                                                <table class="table">
+                                                    <thead>
+                                                      <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th></tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      <tr><th scope="row">1</th><td>Mark</td><td>Otto</td><td>@mdo</td></tr>
+                                                      <tr><th scope="row">2</th><td>Jacob</td><td>Thornton</td><td>@fat</td></tr>
+                                                      <tr><th scope="row">3</th><td>Larry</td><td>the Bird</td><td>@twitter</td></tr>
+                                                      <tr><th scope="row">1</th><td>Mark</td><td>Otto</td><td>@mdo</td></tr>
+                                                      <tr><th scope="row">2</th><td>Jacob</td><td>Thornton</td><td>@fat</td></tr>
+                                                    </tbody>
+                                                  </table>
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 todo bg-info">Report</div>
+                            </div>
+                        </div>
+                    
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <div class="row group-2">
+                                <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 report bg-warning">
+                                    <div class="mt-2">
+                                        <div class="title">To-Do-Lists</div>
+                                        <div class="d-flex flex-row items">
+                                            <div class="date p-2" style="width: 50px;">
+                                                <div class="text-center">20</div>
+                                                <div class="text-center">may</div>
+                                            </div>
+                                            <div class="message bg-light p-2" style="width: 100%;">
+                                                <div>Do it today</div>
+                                                <div>today</div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row items mt-2">
+                                            <div class="date p-2" style="width: 50px;">
+                                                <div class="text-center">20</div>
+                                                <div class="text-center">may</div>
+                                            </div>
+                                            <div class="message bg-light p-2" style="width: 100%;">
+                                                <div>Do it today</div>
+                                                <div>today</div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row items mt-2 mb-2">
+                                            <div class="date p-2" style="width: 50px;">
+                                                <div class="text-center">20</div>
+                                                <div class="text-center">may</div>
+                                            </div>
+                                            <div class="message bg-light p-2" style="width: 100%;">
+                                                <div>Do it today</div>
+                                                <div>today</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 screenshot bg-dark">screenshots</div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+    </div>
+<body>  
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/popper/popper.min.js"></script>
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+    <script>
+        function controller(){
+            var x=document.getElementById("drawer");
+            $("#drawer").toggle();
+        }
+    </script>
+</body>
+</html>

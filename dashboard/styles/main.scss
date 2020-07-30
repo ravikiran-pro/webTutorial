@@ -1,0 +1,38 @@
+
+#body{
+    height: 100vh;
+    overflow-y: scroll;
+}
+#drawer{
+    height: 100vh;
+}
+.two{
+    overflow: hidden;
+    height: 50vh;
+}
+.menu{
+    justify-content: center;
+    align-content: center;
+}
+
+@media (max-width:992px){
+    #drawer{
+        z-index: 1;
+        .two{
+            overflow: scroll;
+        }
+    }
+    .sidebar{
+        position: absolute;
+        z-index: 8;
+    }
+    #body{
+        margin-left: 20px;
+    }
+}
+.screenshot{
+    min-height: 200px;
+}
+.todo{
+    min-height: 200px;
+}
