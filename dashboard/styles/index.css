@@ -1,3 +1,7 @@
+html, body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 #layout {
   background-color: #fff;
 }
@@ -31,7 +35,7 @@
   color: white;
   opacity: 0.5;
   margin-left: 14px;
-  font-size: 12px;
+  font-size: 11px;
   text-decoration: none;
 }
 
@@ -47,7 +51,7 @@
 }
 
 #layout #sidebar .end .d-flex {
-  padding: 5px 0px;
+  margin-top: 12px;
 }
 
 #layout #sidebar .end .d-flex img {
@@ -55,7 +59,9 @@
 }
 
 #layout #grid .topnav {
-  border-bottom: solid 1px #DBDCE4;
+  border-bottom: solid 1px #f4f4f4;
+  -webkit-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.02);
+          box-shadow: 0 8px 12px rgba(0, 0, 0, 0.02);
   padding-top: 20px;
   padding-bottom: 15px;
 }
@@ -63,12 +69,13 @@
 #layout #grid .topnav .btn-left {
   height: 32px;
   width: 132px;
-  border-radius: 5px;
+  border-radius: 4px;
   font-size: 12px;
   font-weight: lighter;
   color: black;
   border: solid 1px #DBDCE4;
   background-color: #f8f7f8;
+  margin-left: 8px;
 }
 
 #layout #grid .topnav .btn-left a {
@@ -83,11 +90,12 @@
 #layout #grid .topnav .btn-right {
   height: 32px;
   width: 132px;
-  border-radius: 5px;
+  border-radius: 4px;
   font-size: 12px;
   font-weight: bold;
   color: #382F9C;
   border: none;
+  margin-right: 8px;
 }
 
 #layout #grid .topnav .btn-right:hover {
@@ -96,11 +104,15 @@
 }
 
 #layout #grid .group-1 {
-  border-bottom: solid 1px #DBDCE4;
+  border-bottom: solid 1px #f4f4f4;
 }
 
 #layout #grid .group-1 .timesheet {
   padding-top: 10px;
+}
+
+#layout #grid .group-1 .timesheet .d-flex {
+  margin-top: 5px;
 }
 
 #layout #grid .group-1 .timesheet .d-flex div:nth-child(1) {
@@ -110,7 +122,7 @@
 #layout #grid .group-1 .timesheet .d-flex div:nth-child(2) button {
   height: 32px;
   width: 132px;
-  border-radius: 5px;
+  border-radius: 4px;
   font-size: 12px;
   font-weight: bold;
   color: #382F9C;
@@ -123,13 +135,20 @@
 }
 
 #layout #grid .group-1 .timesheet .tables {
-  margin-left: -5px;
   margin-top: 18px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+#layout #grid .group-1 .timesheet .tables tbody tr {
+  margin-right: 10px;
 }
 
 #layout #grid .group-1 .timesheet .tables tbody tr:nth-child(odd) {
   background-color: #f8f7f8;
+}
+
+#layout #grid .group-1 .timesheet .tables tbody tr td:nth-child(1) {
+  width: 32%;
 }
 
 #layout #grid .group-1 .timesheet .tables tbody tr:hover {
@@ -178,37 +197,42 @@
 }
 
 #layout #grid .group-1 .box-2 {
-  border-left: solid 1px #DBDCE4;
+  border-left: solid 2px #f4f4f4;
 }
 
 #layout #grid .group-1 .box-2 .report {
-  margin: 4px;
+  margin: 12px;
   margin-bottom: 20px;
 }
 
 #layout #grid .group-1 .box-2 .report .heading {
-  margin-top: 10px;
+  margin-top: 8px;
   margin-bottom: 25px;
   font-weight: bold;
 }
 
 #layout #grid .group-1 .box-2 .report .card {
   padding: 4px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   border-radius: 10px;
 }
 
 #layout #grid .group-1 .box-2 .report .card .left {
-  padding: 5px;
+  padding: 6px;
 }
 
-#layout #grid .group-1 .box-2 .report .card .left img {
-  padding: 8px;
+#layout #grid .group-1 .box-2 .report .card .left .img {
+  background-color: #534ba9;
   border-radius: 5px;
 }
 
+#layout #grid .group-1 .box-2 .report .card .left img {
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+}
+
 #layout #grid .group-1 .box-2 .report .card .center {
-  padding-left: 6px;
   width: 50%;
   margin: auto;
   line-height: 1.2em;
@@ -216,7 +240,7 @@
 
 #layout #grid .group-1 .box-2 .report .card .center p {
   margin: auto;
-  font-size: 10px;
+  font-size: 9px;
 }
 
 #layout #grid .group-1 .box-2 .report .card .center p:nth-child(2) {
@@ -232,8 +256,8 @@
 }
 
 #layout #grid .group-1 .box-2 .report .card .right div:nth-child(1) {
-  padding: 4px 8px;
-  border-radius: 5px;
+  padding: 2px 6px;
+  border-radius: 4px;
   font-weight: bolder;
 }
 
@@ -242,14 +266,14 @@
 }
 
 #layout #grid .group-1 .box-2 .report .export {
-  margin-top: 10px;
+  margin-top: 12px;
   margin-bottom: 12px;
 }
 
 #layout #grid .group-1 .box-2 .report .export button {
   height: 32px;
   width: 132px;
-  border-radius: 5px;
+  border-radius: 4px;
   font-size: 12px;
   font-weight: bold;
   color: #382F9C;
@@ -267,7 +291,7 @@
 }
 
 #layout #grid .group-2:nth-child(2) {
-  border-left: solid 1px #DBDCE4;
+  border-left: solid 2px #f4f4f4;
 }
 
 #layout #grid .group-2 .heading {
@@ -276,16 +300,15 @@
 }
 
 #layout #grid .group-2 .todo {
-  padding-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 #layout #grid .group-2 .todo .heading {
-  margin-bottom: 14px;
+  margin-bottom: 13px;
+  margin-left: 8px;
 }
 
 #layout #grid .group-2 .todo .d-flex {
-  margin-left: 0px;
-  margin-right: 20px;
   margin-bottom: 14px;
 }
 
@@ -339,17 +362,17 @@
   font-size: 10px;
 }
 
+#layout #grid .group-2 .screenshot {
+  margin: 12px;
+}
+
 #layout #grid .group-2 .screenshot .heading {
   margin-bottom: 6px;
 }
 
-#layout #grid .group-2 .screenshot .d-flex {
-  padding-right: 13px;
-}
-
 #layout #grid .group-2 .screenshot .d-flex .details {
   padding: 11px 0px;
-  border-bottom: solid 1px #f8f7f8;
+  border-bottom: solid 1px #f4f4f4;
 }
 
 #layout #grid .group-2 .screenshot .d-flex .details img {
@@ -366,12 +389,12 @@
 #layout #grid .group-2 .screenshot .d-flex .details button {
   height: 32px;
   width: 132px;
-  border-radius: 5px;
+  border-radius: 4px;
   font-size: 12px;
   font-weight: lighter;
   color: #382F9C;
   border: solid 1px #DBDCE4;
-  width: 100%;
+  width: 34px;
   height: 100%;
   border-radius: 3px;
   font-size: 10px;
@@ -384,13 +407,13 @@
 
 #layout #grid .group-2 .screenshot .view {
   margin-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 #layout #grid .group-2 .screenshot .view button {
   height: 32px;
   width: 132px;
-  border-radius: 5px;
+  border-radius: 4px;
   font-size: 12px;
   font-weight: bold;
   color: #382F9C;
@@ -404,13 +427,77 @@
   color: #fff;
 }
 
-@media (max-width: 1400px) {
-  #opener, #opener-1 {
-    display: none;
+.alterwidth {
+  max-width: 65%;
+}
+
+@media (max-width: 768px) {
+  .alterwidth {
+    max-width: 100%;
+  }
+  #layout #grid .topnav {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
+@media (max-width: 500px) {
+  .alterwidth {
+    max-width: 100%;
+    padding: 4px;
+  }
+  #layout #grid .topnav .btn-left {
+    width: 90px;
+  }
+  #layout #grid .topnav .btn-left a {
+    font-size: 10px;
+    padding-right: 6px;
+    padding-left: 4px;
+    margin: auto;
+  }
+  #layout #grid .topnav .btn-right {
+    font-size: 10px;
+    width: 100px;
+  }
+  #layout #grid .timesheet button {
+    font-size: 10px !important;
+    width: 110px !important;
+  }
+  #layout #grid .box-2 {
+    border-top: solid 1px #f4f4f4;
+  }
+  #layout #grid .box-2 .report {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+  #layout #grid .todo .heading {
+    margin-left: 0px;
+  }
+  #layout #grid .todo .left p:nth-child(1) {
+    font-size: 12px !important;
+    font-weight: lighter !important;
+  }
+  #layout #grid .screenshot {
+    margin: 0px !important;
+  }
+  #layout #grid .group-2:nth-child(2) {
+    border-top: solid 1px #f4f4f4;
+  }
+  #change {
+    margin-left: 4px !important;
+  }
+}
+
+#opener, #opener-1 {
+  display: none;
+}
+
 @media (max-width: 992px) {
+  #arrow img {
+    margin-left: 10px !important;
+    width: 15px !important;
+    margin-top: 3px !important;
+  }
   #layout #sidebar {
     display: none;
     position: absolute;
@@ -426,8 +513,8 @@
   #opener {
     display: block;
   }
-  #opener-1 {
-    display: none;
+  .logo {
+    margin-top: 54px !important;
   }
 }
 /*# sourceMappingURL=index.css.map */

@@ -2,6 +2,10 @@ $primarycolor:#fff;
 $secondarycolor:#382F9C;
 $bordercolor:#DBDCE4;
 
+html,body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 @mixin contrast($bgcolor:white,$color:black){
     background-color: $bgcolor;
     color: $color;
@@ -10,7 +14,7 @@ $bordercolor:#DBDCE4;
 @mixin button-lg($color:black,$weight:lighter,$border:false,$animation:false){
     height: 32px;
     width: 132px;
-    border-radius: 5px;
+    border-radius: 4px;
     font-size: 12px;
     font-weight: $weight;
     color: $color;
@@ -25,6 +29,7 @@ $bordercolor:#DBDCE4;
         }
     }
 }
+
 #layout{
     background-color: $primarycolor;
     #sidebar{
@@ -46,8 +51,8 @@ $bordercolor:#DBDCE4;
                     a{
                         color: white;
                         opacity: 0.5;
-                        margin-left: 14px;
-                        font-size: 12px;
+                        margin-left: 14px;  
+                        font-size: 11px;
                         text-decoration: none;
                         &:hover{
                             opacity: 1;
@@ -64,7 +69,7 @@ $bordercolor:#DBDCE4;
         }
         .end{
             .d-flex{
-                padding: 5px 0px;
+                margin-top: 12px;
                 img{
                     width: 16px;
                 }
@@ -73,29 +78,36 @@ $bordercolor:#DBDCE4;
     }
     #grid{
         .topnav{
-            border-bottom: solid 1px $bordercolor;
+            border-bottom: solid 1px #f4f4f4;   
+            box-shadow:
+  0 8px 12px rgba(0, 0, 0, 0.02)
+;
             padding-top: 20px;
             padding-bottom: 15px;
             .btn-left{
                 @include button-lg();
                 background-color: #f8f7f8;
+                margin-left: 8px;
                 a{
                     color: black;
                     font-size: 12px;
                     &:nth-child(2){
                         border-left: solid 1px $bordercolor;
                     }
+                    
                 }
             }
             .btn-right{
                 @include button-lg($secondarycolor,bold,$border:true,$animation:true);
+                margin-right: 8px;
             }
         }
             .group-1{
-                border-bottom: solid 1px $bordercolor;
+                border-bottom: solid 1px #f4f4f4;
                     .timesheet{
                         padding-top: 10px;
                         .d-flex{
+                            margin-top: 5px;
                             div{
                                 &:nth-child(1){
                                     font-weight: bold;
@@ -108,12 +120,18 @@ $bordercolor:#DBDCE4;
                             }
                         }
                         .tables{
-                            margin-left: -5px;
                             margin-top: 18px;
-                            margin-bottom: 30px;
+                            margin-bottom: 20px;
                             tbody tr{   
                                 &:nth-child(odd) {
                                 background-color: #f8f7f8;
+                                }
+                                margin-right: 10px;
+                                td{
+                                    &:nth-child(1){
+                                        width: 32%;
+                                    }
+                                    
                                 }
                                 &:hover{
                                     background-color: #DBDCE4;
@@ -144,34 +162,39 @@ $bordercolor:#DBDCE4;
                         
                     }
                     .box-2{
-                        border-left: solid 1px $bordercolor;
+                        border-left: solid 2px #f4f4f4;
                         .report{
-                            margin: 4px;
+                            margin: 12px;
                             margin-bottom:20px;
                             .heading{
-                                margin-top: 10px;
+                                margin-top: 8px;
                                 margin-bottom: 25px;
                                 font-weight: bold;
                             }
                             .card{
                                 padding: 4px;
-                                margin-bottom: 20px;
+                                margin-bottom: 15px;
                                 border-radius: 10px;
                                 .left{
-                                    padding: 5px;
-                                    img{
-                                        padding: 8px;
+                                    padding: 6px;
+                                    .img{
+                                        
+                                        background-color: #534ba9;  
                                         border-radius: 5px;
+                                    }
+                                    img{
+                                        padding: 10px;
+                                        width: 40px;
+                                        height: 40px;
                                     }
                                 }
                                 .center{
-                                    padding-left: 6px;
                                     width: 50%;
                                     margin: auto;
                                     line-height: 1.2em;
                                     p{
                                         margin: auto;
-                                        font-size: 10px;
+                                        font-size: 9px;
                                         &:nth-child(2){
                                             font-weight: bolder;
                                             font-size: 14px;
@@ -184,8 +207,8 @@ $bordercolor:#DBDCE4;
                                     color: white;
                                     font-size: 10px;
                                     div:nth-child(1){
-                                        padding: 4px 8px;
-                                        border-radius: 5px;
+                                        padding: 2px 6px;
+                                        border-radius: 4px;
                                         font-weight: bolder;
                                     }
                                     span{
@@ -194,7 +217,7 @@ $bordercolor:#DBDCE4;
                                 }
                             }
                             .export{
-                                margin-top: 10px;
+                                margin-top: 12px;
                                 margin-bottom: 12px;
                                 button{
                                     @include button-lg($secondarycolor,bold,$animation:true);
@@ -210,18 +233,16 @@ $bordercolor:#DBDCE4;
             }
         .group-2{
             &:nth-child(2){
-                border-left: solid 1px $bordercolor;
+                border-left: solid 2px #f4f4f4;
             }
             .heading{
                 margin-top: 10px;
                 font-weight: bold;
             }
             .todo{
-                .heading{margin-bottom: 14px;}
-                padding-bottom: 25px;
+                .heading{margin-bottom: 13px; margin-left: 8px;}
+                margin-bottom: 25px;
                 .d-flex{
-                    margin-left: 0px;
-                    margin-right: 20px;
                     margin-bottom: 14px;
                         .date{
                             margin: auto;
@@ -265,13 +286,13 @@ $bordercolor:#DBDCE4;
                         
                 }
             }
-            .screenshot{   
+            .screenshot{
+                margin: 12px;   
                 .heading{margin-bottom: 6px;}
                 .d-flex{
-                    padding-right: 13px;
                     .details{
                         padding:11px 0px;
-                        border-bottom: solid 1px #f8f7f8;
+                        border-bottom: solid 1px #f4f4f4;
                         img{
                             width: 20px;
                         }
@@ -283,7 +304,7 @@ $bordercolor:#DBDCE4;
                         }
                         button{
                             @include button-lg($secondarycolor,$animation:true);                               
-                            width: 100%;
+                            width: 34px;
                             height: 100%;
                             border-radius: 3px;
                             font-size: 10px;
@@ -292,7 +313,7 @@ $bordercolor:#DBDCE4;
                 }
                 .view{
                     margin-top: 20px;
-                    margin-bottom: 30px;
+                    margin-bottom: 20px;
                     button{
                         @include button-lg($secondarycolor,bold,$animation:true);                               
                         width: 100%;
@@ -303,12 +324,56 @@ $bordercolor:#DBDCE4;
         }
     }
 }
-@media (max-width:1400px){
-    #opener,#opener-1{
-        display: none;
+.alterwidth{
+    max-width: 65%;
+}
+@media (max-width:768px){
+    .alterwidth{max-width: 100%;}
+    #layout #grid{
+        .topnav{padding-left: 0px; padding-right: 0px;}
+        
     }
 }
+@media (max-width:500px){
+    .alterwidth{
+        max-width: 100%;
+        padding: 4px;
+    }
+    #layout #grid{
+        .topnav{
+            .btn-left{width: 90px; a{font-size: 10px; padding-right: 6px; padding-left: 4px; margin: auto;}}
+            .btn-right{font-size: 10px; width: 100px;}
+        }
+        .timesheet button{
+            font-size: 10px !important;
+            width: 110px !important;
+        }
+        .box-2{
+            border-top: solid 1px #f4f4f4;   
+            .report{
+                margin-left: 0px !important;
+                margin-right: 0px !important;
+            }
+        }
+        .todo {.heading{margin-left: 0px; } .left{p:nth-child(1){font-size: 12px !important; font-weight: lighter !important;}}}
+        .screenshot{margin: 0px !important;}
+        .group-2{&:nth-child(2){border-top: solid 1px #f4f4f4;}}
+    }
+    #change{
+        margin-left:4px !important;   
+    }
+}
+#opener,#opener-1{
+    display: none;
+}
 @media (max-width:992px){
+    #arrow{
+        img{
+            margin-left: 10px !important;
+            width: 15px !important;
+            margin-top: 3px !important;
+        }
+    }
     #layout #sidebar{
         display: none;
         position: absolute;
@@ -322,9 +387,9 @@ $bordercolor:#DBDCE4;
         overflow-y: scroll;
     }
     #opener{
-     display: block;
+     display: block ;
     }
-    #opener-1{
-        display: none;
+    .logo{
+        margin-top: 54px !important;
     }
 }
