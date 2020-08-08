@@ -20,8 +20,8 @@ html, body {
 
 #layout #sidebar .d-flex {
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+      -ms-flex: 1;
+          flex: 1;
   padding: 0px 30px;
 }
 
@@ -534,7 +534,10 @@ html, body {
 }
 
 #layout #grid .group-2 .screenshot .d-flex {
-  margin: 10px 2px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 6px 2px;
 }
 
 #layout #grid .group-2 .screenshot .d-flex .details {
@@ -684,4 +687,4 @@ html, body {
     width: 100px;
   }
 }
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=main.css.map */

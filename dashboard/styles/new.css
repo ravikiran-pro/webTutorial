@@ -1,46 +1,47 @@
 html, body {
   font-family: Arial, Helvetica, sans-serif;
-}
-
-/*
-        filter: blur(0.8px);
-        filter: contrast(100%);
-        */
-#layout {
-  height: 100vh;
-  background-color: #fff;
-}
-
-#layout #sidebar {
-  width: 250px;
-  min-height: 100vh;
   overflow: hidden;
+}
+
+#sidebar::-webkit-scrollbar {
+  width: 0px;
+  /* Remove scrollbar space */
+  height: 0px;
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+
+#sidebar {
+  position: fixed;
+  width: 220px;
+  height: 100vh;
+  overflow-x: scroll;
   background-color: #382F9C;
 }
 
-#layout #sidebar .d-flex {
+#sidebar .d-flex {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding: 0px 30px;
 }
 
-#layout #sidebar .d-flex ul {
+#sidebar .d-flex ul {
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-#layout #sidebar .d-flex ul li {
+#sidebar .d-flex ul li {
   text-align: left;
   padding: 0px;
   line-height: 2.6rem;
 }
 
-#layout #sidebar .d-flex ul li img {
+#sidebar .d-flex ul li img {
   width: 14px;
 }
 
-#layout #sidebar .d-flex ul li a {
+#sidebar .d-flex ul li a {
   color: white;
   opacity: 0.5;
   margin-left: 14px;
@@ -48,41 +49,54 @@ html, body {
   text-decoration: none;
 }
 
-#layout #sidebar .d-flex ul li a:hover {
+#sidebar .d-flex ul li a:hover {
   opacity: 1;
 }
 
-#layout #sidebar .bottom {
+#sidebar .bottom {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-#layout #sidebar .bottom #clip-path {
+#sidebar .bottom #clip-path {
   height: 160px;
   width: 35px;
   z-index: 5px;
 }
 
-#layout #sidebar .bottom .end {
-  padding: 10px 0px;
+#sidebar .bottom .end {
+  padding: 10px 20px;
 }
 
-#layout #sidebar .bottom .end .d-flex img {
+#sidebar .bottom .end .d-flex img {
   width: 18px;
 }
 
-#layout #grid .topnav {
+#section-parent {
+  height: 100vh;
+  margin-left: 210px;
+  overflow: auto;
+  scrollbar-width: 1px;
+}
+
+.fixed-top {
+  margin-left: 220px;
+  width: calc(100vw - 235px);
+  background-color: white;
+}
+
+.topnav {
   border-bottom: solid 1px #f4f4f4;
   -webkit-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.02);
           box-shadow: 0 8px 12px rgba(0, 0, 0, 0.02);
   padding: 14px 25px;
 }
 
-#layout #grid .topnav .btn-left {
-  height: 36px;
-  width: 145px;
-  border-radius: 6px;
+.topnav .btn-left {
+  height: 32px;
+  width: 132px;
+  border-radius: 4px;
   font-size: 12px;
   font-weight: lighter;
   color: black;
@@ -90,19 +104,19 @@ html, body {
   background-color: #f8f7f8;
 }
 
-#layout #grid .topnav .btn-left a {
+.topnav .btn-left a {
   color: black;
   font-size: 14px;
 }
 
-#layout #grid .topnav .btn-left a:nth-child(2) {
+.topnav .btn-left a:nth-child(2) {
   border-left: solid 1px #DBDCE4;
 }
 
-#layout #grid .topnav .btn-right {
-  height: 36px;
-  width: 145px;
-  border-radius: 6px;
+.topnav .btn-right {
+  height: 32px;
+  width: 132px;
+  border-radius: 4px;
   font-size: 12px;
   font-weight: bold;
   color: #382F9C;
@@ -110,45 +124,44 @@ html, body {
   font-weight: bolder;
 }
 
-#layout #grid .topnav .btn-right:hover {
-  cursor: pointer;
+.topnav .btn-right:hover {
   background-color: #382F9C;
   color: #fff;
 }
 
-#layout #grid .group-1 {
+.group-1 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   border-bottom: solid 1px #f4f4f4;
 }
 
-#layout #grid .group-1 .timesheet {
+.group-1 .timesheet {
   padding: 15px 25px;
 }
 
-#layout #grid .group-1 .timesheet .d-flex div #change {
+.group-1 .timesheet .d-flex div #change {
   cursor: pointer;
   width: 18px;
   margin-left: 10px;
 }
 
 @media (max-width: 500px) {
-  #layout #grid .group-1 .timesheet .d-flex div #change {
+  .group-1 .timesheet .d-flex div #change {
     margin-left: 0px;
   }
 }
 
-#layout #grid .group-1 .timesheet .d-flex div:nth-child(1) {
+.group-1 .timesheet .d-flex div:nth-child(1) {
   font-size: 16px;
   font-weight: bold;
   margin-right: 5px;
 }
 
-#layout #grid .group-1 .timesheet .d-flex div:nth-child(2) button {
-  height: 36px;
-  width: 145px;
-  border-radius: 6px;
+.group-1 .timesheet .d-flex div:nth-child(2) button {
+  height: 32px;
+  width: 132px;
+  border-radius: 4px;
   font-size: 12px;
   font-weight: bold;
   color: #382F9C;
@@ -156,27 +169,26 @@ html, body {
   font-size: 18px;
 }
 
-#layout #grid .group-1 .timesheet .d-flex div:nth-child(2) button:hover {
-  cursor: pointer;
+.group-1 .timesheet .d-flex div:nth-child(2) button:hover {
   background-color: #382F9C;
   color: #fff;
 }
 
 @media (max-width: 500px) {
-  #layout #grid .group-1 .timesheet .d-flex div:nth-child(2) button {
+  .group-1 .timesheet .d-flex div:nth-child(2) button {
     font-size: 10px !important;
     width: 110px;
   }
 }
 
-#layout #grid .group-1 .timesheet .tables {
+.group-1 .timesheet .tables {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   margin: 15px 0px;
 }
 
-#layout #grid .group-1 .timesheet .tables td[scope=row] span {
+.group-1 .timesheet .tables td[scope=row] span {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -185,111 +197,111 @@ html, body {
           align-items: center;
 }
 
-#layout #grid .group-1 .timesheet .tables td[scope=row] span:nth-child(2) {
+.group-1 .timesheet .tables td[scope=row] span:nth-child(2) {
   margin-left: 13px;
 }
 
-#layout #grid .group-1 .timesheet .tables tbody tr {
+.group-1 .timesheet .tables tbody tr {
   font-stretch: expanded;
   margin-right: 10px;
 }
 
-#layout #grid .group-1 .timesheet .tables tbody tr:nth-child(odd) {
+.group-1 .timesheet .tables tbody tr:nth-child(odd) {
   background-color: #f8f7f8;
 }
 
-#layout #grid .group-1 .timesheet .tables tbody tr:hover {
+.group-1 .timesheet .tables tbody tr:hover {
   background-color: #DBDCE4;
 }
 
-#layout #grid .group-1 .timesheet .tables tbody tr span {
+.group-1 .timesheet .tables tbody tr span {
   font-size: 10px;
   border-radius: 4px;
 }
 
 @media (max-width: 992px) {
-  #layout #grid .group-1 .timesheet .tables tbody tr span {
+  .group-1 .timesheet .tables tbody tr span {
     font-size: 10px;
   }
 }
 
-#layout #grid .group-1 .timesheet .tables tbody tr span.span-1 {
+.group-1 .timesheet .tables tbody tr span.span-1 {
   background-color: #dcdbea;
   color: #5048a7;
   padding: 2px 8px;
   font-weight: bolder;
 }
 
-#layout #grid .group-1 .timesheet .tables tbody tr span.span-2 {
+.group-1 .timesheet .tables tbody tr span.span-2 {
   background-color: #f1ebd9;
   color: #c6a750;
   padding: 2px 8px;
   font-weight: bolder;
 }
 
-#layout #grid .group-1 .timesheet .tables tbody tr span.span-3 {
+.group-1 .timesheet .tables tbody tr span.span-3 {
   background-color: #fae9ed;
   color: #fe7a9a;
   padding: 2px 8px;
   font-weight: bolder;
 }
 
-#layout #grid .group-1 .timesheet .tables tbody tr span.span-4 {
+.group-1 .timesheet .tables tbody tr span.span-4 {
   background-color: #dfe9fa;
   color: #628bd0;
   padding: 2px 8px;
   font-weight: bolder;
 }
 
-#layout #grid .group-1 .timesheet .tables tbody tr span.span-5 {
+.group-1 .timesheet .tables tbody tr span.span-5 {
   background-color: #faede2;
   color: #fda353;
   padding: 2px 8px;
   font-weight: bolder;
 }
 
-#layout #grid .group-1 .timesheet .tables .table-bordered td,
-#layout #grid .group-1 .timesheet .tables .table-bordered th {
+.group-1 .timesheet .tables .table-bordered td,
+.group-1 .timesheet .tables .table-bordered th {
   vertical-align: middle;
   border: none;
   border-right: 1px solid #DBDCE4;
   font-size: 10px;
 }
 
-#layout #grid .group-1 .timesheet .tables .table-bordered th {
+.group-1 .timesheet .tables .table-bordered th {
   font-size: 10px;
 }
 
 @media (max-width: 500px) {
-  #layout #grid .group-1 .timesheet .tables .table-bordered td,
-  #layout #grid .group-1 .timesheet .tables .table-bordered th {
+  .group-1 .timesheet .tables .table-bordered td,
+  .group-1 .timesheet .tables .table-bordered th {
     padding: 4px;
   }
 }
 
 @media (max-width: 992px) {
-  #layout #grid .group-1 .timesheet .tables .table-bordered td,
-  #layout #grid .group-1 .timesheet .tables .table-bordered th {
+  .group-1 .timesheet .tables .table-bordered td,
+  .group-1 .timesheet .tables .table-bordered th {
     font-size: 10px;
     padding: 6px;
   }
 }
 
-#layout #grid .group-1 .timesheet td:nth-child(1), #layout #grid .group-1 .timesheet th:nth-child(1) {
+.group-1 .timesheet td:nth-child(1), .group-1 .timesheet th:nth-child(1) {
   padding: 3px 10px !important;
 }
 
-#layout #grid .group-1 .report {
+.group-1 .report {
   padding: 18px 30px;
   border-left: solid 2px #f4f4f4;
 }
 
-#layout #grid .group-1 .report .heading {
+.group-1 .report .heading {
   font-size: 16px;
   font-weight: bold;
 }
 
-#layout #grid .group-1 .report .cards {
+.group-1 .report .cards {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -299,17 +311,17 @@ html, body {
           justify-content: center;
 }
 
-#layout #grid .group-1 .report .card {
+.group-1 .report .card {
   padding: 13px;
   margin-bottom: 20px;
   border-radius: 10px;
 }
 
-#layout #grid .group-1 .report .card .left {
+.group-1 .report .card .left {
   margin: auto;
 }
 
-#layout #grid .group-1 .report .card .left .img {
+.group-1 .report .card .left .img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -325,50 +337,50 @@ html, body {
 }
 
 @media (min-width: 990px) and (max-width: 1116px) {
-  #layout #grid .group-1 .report .card .left .img {
+  .group-1 .report .card .left .img {
     width: 30px;
     height: 30px;
   }
-  #layout #grid .group-1 .report .card .left img {
+  .group-1 .report .card .left img {
     padding: 4px;
   }
 }
 
-#layout #grid .group-1 .report .card .center {
+.group-1 .report .card .center {
   width: 100%;
   padding: 0px 10px;
   margin: auto;
 }
 
-#layout #grid .group-1 .report .card .center p {
+.group-1 .report .card .center p {
   margin: auto;
 }
 
-#layout #grid .group-1 .report .card .center p:nth-child(1) {
+.group-1 .report .card .center p:nth-child(1) {
   font-size: 9px;
   opacity: 0.6;
   line-height: 2em;
 }
 
 @media (min-width: 767px) and (max-width: 1024px) {
-  #layout #grid .group-1 .report .card .center p:nth-child(1) {
+  .group-1 .report .card .center p:nth-child(1) {
     font-size: 8px;
   }
 }
 
-#layout #grid .group-1 .report .card .center p:nth-child(2) {
+.group-1 .report .card .center p:nth-child(2) {
   font-weight: bolder;
   font-size: 14px;
 }
 
-#layout #grid .group-1 .report .card .right {
+.group-1 .report .card .right {
   text-align: center;
   margin: auto;
   color: white;
   font-size: 10px;
 }
 
-#layout #grid .group-1 .report .card .right div:nth-child(1) {
+.group-1 .report .card .right div:nth-child(1) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -380,18 +392,18 @@ html, body {
   font-weight: bolder;
 }
 
-#layout #grid .group-1 .report .card .right span {
+.group-1 .report .card .right span {
   padding-right: 4px;
 }
 
-#layout #grid .group-1 .report .export {
+.group-1 .report .export {
   margin: 14px 0px;
 }
 
-#layout #grid .group-1 .report .export button {
-  height: 36px;
-  width: 145px;
-  border-radius: 6px;
+.group-1 .report .export button {
+  height: 32px;
+  width: 132px;
+  border-radius: 4px;
   font-size: 12px;
   font-weight: bold;
   color: #382F9C;
@@ -401,86 +413,85 @@ html, body {
   height: 40px;
 }
 
-#layout #grid .group-1 .report .export button:hover {
-  cursor: pointer;
+.group-1 .report .export button:hover {
   background-color: #382F9C;
   color: #fff;
 }
 
-#layout #grid .group-2 {
+.group-2 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-#layout #grid .group-2:nth-child(2) {
+.group-2:nth-child(2) {
   border-left: solid 2px #f4f4f4;
 }
 
-#layout #grid .group-2 .heading {
+.group-2 .heading {
   font-size: 18px;
   font-weight: bold;
 }
 
-#layout #grid .group-2 .todo {
+.group-2 .todo {
   padding: 15px 25px;
 }
 
-#layout #grid .group-2 .todo .cards {
+.group-2 .todo .cards {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
 
-#layout #grid .group-2 .todo .heading {
+.group-2 .todo .heading {
   font-size: 16px;
 }
 
-#layout #grid .group-2 .todo .d-flex {
+.group-2 .todo .d-flex {
   margin: 12px 0px;
 }
 
-#layout #grid .group-2 .todo .d-flex .date {
+.group-2 .todo .d-flex .date {
   margin: auto;
 }
 
-#layout #grid .group-2 .todo .d-flex .date p {
+.group-2 .todo .d-flex .date p {
   line-height: 1.2em;
   margin: auto;
 }
 
-#layout #grid .group-2 .todo .d-flex .date p:nth-child(1) {
+.group-2 .todo .d-flex .date p:nth-child(1) {
   font-weight: bolder;
   font-size: 20px;
 }
 
 @media (max-width: 500px) {
-  #layout #grid .group-2 .todo .d-flex .date p:nth-child(1) {
+  .group-2 .todo .d-flex .date p:nth-child(1) {
     font-size: 18px;
   }
 }
 
-#layout #grid .group-2 .todo .d-flex .date p:nth-child(2) {
+.group-2 .todo .d-flex .date p:nth-child(2) {
   font-size: 12px;
 }
 
 @media (max-width: 500px) {
-  #layout #grid .group-2 .todo .d-flex .date p:nth-child(2) {
+  .group-2 .todo .d-flex .date p:nth-child(2) {
     font-size: 10px;
   }
 }
 
-#layout #grid .group-2 .todo .d-flex .date:hover {
+.group-2 .todo .d-flex .date:hover {
   color: #382F9C;
 }
 
-#layout #grid .group-2 .todo .d-flex .stack {
+.group-2 .todo .d-flex .stack {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
 
-#layout #grid .group-2 .todo .d-flex .stack .card {
+.group-2 .todo .d-flex .stack .card {
   -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
   padding: 10px 25px;
@@ -488,72 +499,75 @@ html, body {
   opacity: 0.8;
 }
 
-#layout #grid .group-2 .todo .d-flex .stack .card:hover {
+.group-2 .todo .d-flex .stack .card:hover {
   background-color: #ffffff;
   opacity: 1;
 }
 
-#layout #grid .group-2 .todo .d-flex .stack .card p {
+.group-2 .todo .d-flex .stack .card p {
   margin: auto;
   font-size: 13px;
   line-height: 1.5em;
 }
 
-#layout #grid .group-2 .todo .d-flex .stack .card p:nth-child(1) {
+.group-2 .todo .d-flex .stack .card p:nth-child(1) {
   font-weight: bolder;
 }
 
-#layout #grid .group-2 .todo .d-flex .stack .card p:nth-child(2) {
+.group-2 .todo .d-flex .stack .card p:nth-child(2) {
   opacity: 0.6;
   font-size: 12px;
 }
 
 @media (max-width: 500px) {
-  #layout #grid .group-2 .todo .d-flex .stack .card {
+  .group-2 .todo .d-flex .stack .card {
     padding: 10px 12px;
   }
-  #layout #grid .group-2 .todo .d-flex .stack .card p {
+  .group-2 .todo .d-flex .stack .card p {
     line-height: 1.8em;
   }
-  #layout #grid .group-2 .todo .d-flex .stack .card p:nth-child(1) {
+  .group-2 .todo .d-flex .stack .card p:nth-child(1) {
     font-size: 11px;
   }
-  #layout #grid .group-2 .todo .d-flex .stack .card p:nth-child(2) {
+  .group-2 .todo .d-flex .stack .card p:nth-child(2) {
     font-size: 11px;
   }
 }
 
-#layout #grid .group-2 .screenshot {
+.group-2 .screenshot {
   padding: 18px 30px;
   border-left: solid 2px #f4f4f4;
 }
 
-#layout #grid .group-2 .screenshot .heading {
+.group-2 .screenshot .heading {
   margin-bottom: 8px;
   font-size: 16px;
 }
 
-#layout #grid .group-2 .screenshot .d-flex {
+.group-2 .screenshot .stack {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+.group-2 .screenshot .d-flex {
   margin: 6px 2px;
 }
 
-#layout #grid .group-2 .screenshot .d-flex .details {
+.group-2 .screenshot .d-flex .details {
   padding: 12px 0px;
   border-bottom: solid 1px #f4f4f4;
 }
 
-#layout #grid .group-2 .screenshot .d-flex .details .icon {
+.group-2 .screenshot .d-flex .details .icon {
   margin: auto;
 }
 
-#layout #grid .group-2 .screenshot .d-flex .details .icon img {
+.group-2 .screenshot .d-flex .details .icon img {
   width: 20px;
 }
 
-#layout #grid .group-2 .screenshot .d-flex .details .name {
+.group-2 .screenshot .d-flex .details .name {
   font-size: 13px;
   width: 100%;
   margin: auto;
@@ -561,20 +575,20 @@ html, body {
 }
 
 @media (min-width: 767px) and (max-width: 1024px) {
-  #layout #grid .group-2 .screenshot .d-flex .details .name {
+  .group-2 .screenshot .d-flex .details .name {
     font-size: 12px;
     margin-left: 12px;
   }
 }
 
-#layout #grid .group-2 .screenshot .d-flex .details .activity {
+.group-2 .screenshot .d-flex .details .activity {
   margin: auto;
 }
 
-#layout #grid .group-2 .screenshot .d-flex .details .activity button {
-  height: 36px;
-  width: 145px;
-  border-radius: 6px;
+.group-2 .screenshot .d-flex .details .activity button {
+  height: 32px;
+  width: 132px;
+  border-radius: 4px;
   font-size: 12px;
   font-weight: lighter;
   color: #382F9C;
@@ -585,20 +599,19 @@ html, body {
   font-size: 12px;
 }
 
-#layout #grid .group-2 .screenshot .d-flex .details .activity button:hover {
-  cursor: pointer;
+.group-2 .screenshot .d-flex .details .activity button:hover {
   background-color: #382F9C;
   color: #fff;
 }
 
-#layout #grid .group-2 .screenshot .view {
+.group-2 .screenshot .view {
   margin: 20px 0px;
 }
 
-#layout #grid .group-2 .screenshot .view button {
-  height: 36px;
-  width: 145px;
-  border-radius: 6px;
+.group-2 .screenshot .view button {
+  height: 32px;
+  width: 132px;
+  border-radius: 4px;
   font-size: 12px;
   font-weight: bold;
   color: #382F9C;
@@ -607,8 +620,7 @@ html, body {
   background-color: white;
 }
 
-#layout #grid .group-2 .screenshot .view button:hover {
-  cursor: pointer;
+.group-2 .screenshot .view button:hover {
   background-color: #382F9C;
   color: #fff;
 }
@@ -618,27 +630,27 @@ html, body {
 }
 
 @media (max-width: 992px) {
+  .fixed-top {
+    margin: 0;
+    width: inherit;
+  }
   #unlock {
     display: none;
   }
-  #arrow img {
-    margin-left: 12.5px !important;
-    width: 15px !important;
+  #arrow {
+    left: 7px !important;
+    width: 16px !important;
   }
-  #layout #sidebar {
+  #section-parent {
+    margin: 0px;
+  }
+  #sidebar {
     display: none;
     position: absolute;
     z-index: 4;
-    width: 200px;
-    height: 100vh;
-    overflow: scroll;
   }
-  #layout #sidebar .d-flex ul li a {
+  #sidebar .d-flex ul li a {
     font-size: 12px;
-  }
-  #grid {
-    height: 100vh;
-    overflow-y: scroll;
   }
   #opener {
     display: block;
@@ -649,42 +661,44 @@ html, body {
 }
 
 @media (max-width: 1024px) {
-  #layout #grid .group-1 .report {
+  .group-1 .report {
     padding: 21px;
   }
-  #layout #grid .group-2 .screenshot {
+  .group-2 .screenshot {
     padding: 21px;
   }
 }
 
 @media (max-width: 500px) {
-  #layout #grid .group-1 .timesheet, #layout #grid .group-1 .report {
+  .group-1 .timesheet, .group-1 .report {
     padding: 15px;
   }
-  #layout #grid .group-1 .timesheet {
+  .group-1 .timesheet {
     border-bottom: solid 1px #f4f4f4;
   }
-  #layout #grid .group-2 .todo, #layout #grid .group-2 .screenshot {
+  .group-2 .todo, .group-2 .screenshot {
     padding: 15px;
   }
-  #layout #grid .group-2 .todo {
+  .group-2 .todo {
     border-bottom: solid 1px #f4f4f4;
   }
-  #layout #grid .group-2 .todo .date {
+  .group-2 .todo .date {
     padding-left: 4px;
   }
-  #layout #grid .topnav .btn-left {
+  .topnav .btn-left {
     width: 100px;
+    margin-left: -10px;
   }
-  #layout #grid .topnav .btn-left a {
+  .topnav .btn-left a {
     font-size: 10px;
     padding-right: 6px;
     padding-left: 4px;
     margin: auto;
   }
-  #layout #grid .topnav .btn-right {
+  .topnav .btn-right {
     font-size: 10px;
     width: 100px;
+    margin-right: -10px;
   }
 }
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=new.css.map */
