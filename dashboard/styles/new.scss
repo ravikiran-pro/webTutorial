@@ -4,7 +4,6 @@ $bordercolor:#DBDCE4;
 
 html,body{
     font-family: Arial, Helvetica, sans-serif;
-    overflow: hidden;
 }
 
 @mixin contrast($bgcolor:white,$color:black){
@@ -13,9 +12,9 @@ html,body{
 }
 
 @mixin button-lg($color:black,$weight:lighter,$border:false,$animation:false){
-    height: 32px;
-    width: 132px;
-    border-radius: 4px;
+    height: 36px;
+    width: 145px;
+    border-radius: 6px;
     font-size: 12px;
     font-weight: $weight;
     color: $color;
@@ -26,27 +25,42 @@ html,body{
     }
     @if $animation{
         &:hover{
+            cursor: pointer;
             @include contrast($secondarycolor,$primarycolor )
         }
     }
 }
-#sidebar::-webkit-scrollbar {
-    width: 0px;  /* Remove scrollbar space */
+#sidebar-scroll::-webkit-scrollbar {
+    width: 10px;  /* Remove scrollbar space */
     height: 0px;
-    background: transparent;  /* Optional: just make scrollbar invisible */
 }
-
+#sidebar-scroll::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px orange; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+#sidebar-scroll::-webkit-scrollbar-thumb {
+    background: white; 
+    border-radius: 10px;
+  }
 #sidebar{
     position: fixed;
     width: 220px;
     height: 100vh;
-    overflow-x: scroll;
     background-color: $secondarycolor;
-    .d-flex{
-        flex-grow: 1;
+    #sidebar-scroll{
+        overflow-x: auto;
+        margin-right: 1px;
+    }
+    .d-flex{ 
         padding: 0px 30px;
+        margin-top: 10px;
         ul{
             margin-top: 20px;
+            &:nth-child(1){
+                margin-top: 0px;
+            }
             margin-bottom: 20px;
             li{
                 text-align: left;
@@ -70,14 +84,14 @@ html,body{
     }
     
     .bottom{
-        align-items: center;
+        flex-grow: 2;
         #clip-path{
         height: 160px;
         width: 35px;
         z-index: 5px;
         }   
     .end{
-        padding: 10px 20px;
+        padding: 15px 20px;
         .d-flex{
             img{
                 width: 18px;
@@ -145,6 +159,7 @@ html,body{
                     &:nth-child(2){
                         button{
                             @include button-lg($secondarycolor,bold,$border:true,$animation:true);
+                            width: 145px;
                             font-size: 18px;
                             @media (max-width:500px){
                                 font-size: 10px !important; 
@@ -459,7 +474,13 @@ html,body{
             .group-2 {.screenshot{padding: 21px;}}
     }
     @media (max-width:500px){
-        
+        #arrow-mobile{
+            margin-top: 4px;
+            width: 18px !important;
+        }
+            .logo{
+                margin-top: 40px !important;
+            }
             .group-1{
                 .timesheet,.report{
                     padding: 15px;

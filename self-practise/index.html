@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dashboard</title>
+    <link rel="icon" href="assets/logo.png" type="image/icon-type">
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+   <div class="container-fluid dashboard p-0">
+        <!--sidebar-->
+            <div class="sidebar-wrapper position-fixed">
+                <div class="brand d-flex  align-items-center" style="color: #766cb5;">
+                    <span class="fa fa-heart fa-2x" style="color: #766cb5;"></span>
+                    <strong style="padding-left:8px; font-size: 18px;">Vuesax</strong>
+                    <span class=" ml-auto fa fa-circle-o fa float-right" style="font-size:20px"></span>
+                </div>
+                <div class="menu-items">
+                        <div class="list-group">
+                            <ul class="list list-unstyled dropdown">
+                                <li><span class="fa fa-home menu-icon"></span><strong class="menu-type">Dashboard</strong><span class="fa fa-angle-right menu-dropdown" onclick="toggleitems(0)"></span></li>
+                            </ul>
+                            <ul class="list list-unstyled hidden-list">
+                                <li><span class="fa fa-circle-o"></span><strong class="menu-type">Analytics</strong></li>
+                                <li><span class="fa fa-circle-o"></span><strong class="menu-type">eCommerce</strong></li>
+                            </ul>
+                        </div>
+                        <div class="list-group-heading">APPS</div>
+                        <div class="list-group">
+                            <ul class="list list-unstyled">
+                                <li><span class="fa fa-envelope-o menu-icon"></span><strong class="menu-type">Email</strong></li>
+                                <li><span class="fa fa-comment-o menu-icon"></span><strong class="menu-type">Chat</strong></li>
+                                <li><span class="fa fa-calendar-check-o menu-icon"></span><strong class="menu-type">Todo</strong></li>
+                                <li><span class="fa fa-calendar-o menu-icon"></span><strong class="menu-type">Calender</strong></li>
+                            </ul>
+                        </div>
+                        <div class="list-group-heading">UI ELEMENTS</div>
+                        <div class="list-group">
+                            <ul class="list-unstyled dropdown">
+                                <li><span class="fa fa-window-restore menu-icon"></span><strong class="menu-type">Grid</strong><span class="fa fa-angle-right menu-dropdown" onclick="toggleitems(1)"></span></li>
+                                <ul class="list list-unstyled hidden-list">
+                                    <li><span class="fa fa-square-o menu-icon"></span><strong class="menu-type">Box Layout</strong></li>
+                                    <li><span class="fa fa-list-alt menu-icon"></span><strong class="menu-type">List Layout</strong></li>
+                                </ul>
+                                <li><span class="fa fa-tint menu-icon"></span><strong class="menu-type">Colors</strong></li>
+                                <li><span class="fa fa-id-card-o menu-icon"></span><strong class="menu-type">Card</strong><span class="fa fa-angle-right menu-dropdown" onclick="toggleitems(2)"></span></li>
+                                <li><span class="fa fa-times menu-icon"></span><strong class="menu-type">Table</strong></li>
+                                <li><span class="fa fa-sitemap menu-icon"></span><strong class="menu-type">Components</strong><span class="fa fa-angle-right menu-dropdown" onclick="toggleitems(3)"></span></li>
+                            </ul>
+                        </div>
+                        <div class="list-group-heading">FORMS</div>
+                        <div class="list-group">
+                            <ul class="list list-unstyled">
+                                <li><span class="fa fa-window-restore menu-icon"></span><strong class="menu-type">Form Elements</strong><span class="fa fa-angle-right menu-dropdown" onclick="toggleitems(4)"></span></li>
+                                <li><span class="fa fa-file-excel-o menu-icon"></span><strong class="menu-type">Form Layouts</strong></li>
+                                <li><span class="fa fa-file-word-o menu-icon"></span><strong class="menu-type">Form Wizard</strong></li>
+                                <li><span class="fa fa-check-circle-o menu-icon"></span><strong class="menu-type">Form Validation</strong></li>
+                            </ul>
+                        </div>
+                        <div class="list-group-heading">PAGES</div>
+                        <div class="list-group">
+                            <ul class="list list-unstyled">
+                                <li><span class="fa fa-lock menu-icon"></span><strong class="menu-type">Authentication</strong><span class="fa fa-angle-right menu-dropdown" onclick="toggleitems(5)"></span></li>
+                                <li><span class="fa fa-clock-o menu-icon"></span><strong class="menu-type">Coming Soon</strong></li>
+                                <li><span class="fa fa-exclamation-circle menu-icon"></span><strong class="menu-type">Error</strong><span class="fa fa-angle-right menu-dropdown" onclick="toggleitems(6)"></span></li>
+                                <li><span class="fa fa-anchor menu-icon"></span><strong class="menu-type">Maintainence</strong></li>
+                                <li><span class="fa fa-user menu-icon"></span><strong class="menu-type">Profile</strong></li>
+                                <li><span class="fa fa-question-circle-o menu-icon"></span><strong class="menu-type">FAQ</strong></li>
+                                <li><span class="fa fa-cloud menu-icon"></span><strong class="menu-type">Knowledge Base</strong></li>
+                                <li><span class="fa fa-search menu-icon"></span><strong class="menu-type">Search</strong></li>
+                                <li><span class="fa fa-sticky-note-o menu-icon"></span><strong class="menu-type">Invoice</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+            <script>
+                function toggleitems(e){
+                    $(".hidden-list").eq(e).toggle();   
+                }
+            </script>
+        <!--sidebar-->
+        <!--Layout-->
+        <div class="layout h-100">
+            <div class="container-fluid">
+            <div class="topnav row align-items-center bg-white">
+                <div class="col-6 p-0">
+                    <span class="fa fa-sticky-note-o"></span>
+                    <span class="fa fa-comment-o"></span>
+                    <span class="fa fa-envelope-o"></span>
+                    <span class="fa fa-suitcase"></span>
+                    <span class="fa fa-star-o"></span>
+                </div>
+                <div class="col-6 d-flex align-items-center justify-content-end p-0">
+                    <strong style="font-size: 12px; padding: 4px;">English</strong>
+                    <span class="fa fa-bell-o"></span>
+                    <span class="fa fa-search"></span>
+                    <div class="flex flex-column " style="line-height: 14px;">
+                        <div style="font-size: 12px;"><strong>John Doe</strong></div>
+                        <div class="float-right" style="font-size: 8px;">Administrator</div>
+                    </div>
+                    <span class="fa fa-user-circle" style="font-size: 24px;"></span>
+                </div>
+            </div>
+            </div> 
+            <div class="container-fluid h-100">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 bg-info">
+                        d
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <div class="row">
+                            <div class="col-6 bg-danger">f</div>
+                            <div class="col-6 bg-dark">d</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Layout-->
+   </div>
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/popper/popper.min.js"></script>
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+</body>
+</html>

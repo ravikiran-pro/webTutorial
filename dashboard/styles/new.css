@@ -1,34 +1,49 @@
 html, body {
   font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden;
 }
 
-#sidebar::-webkit-scrollbar {
-  width: 0px;
+#sidebar-scroll::-webkit-scrollbar {
+  width: 10px;
   /* Remove scrollbar space */
   height: 0px;
-  background: transparent;
-  /* Optional: just make scrollbar invisible */
+}
+
+#sidebar-scroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px orange;
+          box-shadow: inset 0 0 5px orange;
+  border-radius: 10px;
+}
+
+/* Handle */
+#sidebar-scroll::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
 }
 
 #sidebar {
   position: fixed;
   width: 220px;
   height: 100vh;
-  overflow-x: scroll;
   background-color: #382F9C;
 }
 
+#sidebar #sidebar-scroll {
+  overflow-x: auto;
+  margin-right: 1px;
+}
+
 #sidebar .d-flex {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   padding: 0px 30px;
+  margin-top: 10px;
 }
 
 #sidebar .d-flex ul {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+#sidebar .d-flex ul:nth-child(1) {
+  margin-top: 0px;
 }
 
 #sidebar .d-flex ul li {
@@ -54,9 +69,9 @@ html, body {
 }
 
 #sidebar .bottom {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
 }
 
 #sidebar .bottom #clip-path {
@@ -66,7 +81,7 @@ html, body {
 }
 
 #sidebar .bottom .end {
-  padding: 10px 20px;
+  padding: 15px 20px;
 }
 
 #sidebar .bottom .end .d-flex img {
@@ -94,9 +109,9 @@ html, body {
 }
 
 .topnav .btn-left {
-  height: 32px;
-  width: 132px;
-  border-radius: 4px;
+  height: 36px;
+  width: 145px;
+  border-radius: 6px;
   font-size: 12px;
   font-weight: lighter;
   color: black;
@@ -114,9 +129,9 @@ html, body {
 }
 
 .topnav .btn-right {
-  height: 32px;
-  width: 132px;
-  border-radius: 4px;
+  height: 36px;
+  width: 145px;
+  border-radius: 6px;
   font-size: 12px;
   font-weight: bold;
   color: #382F9C;
@@ -125,6 +140,7 @@ html, body {
 }
 
 .topnav .btn-right:hover {
+  cursor: pointer;
   background-color: #382F9C;
   color: #fff;
 }
@@ -159,17 +175,19 @@ html, body {
 }
 
 .group-1 .timesheet .d-flex div:nth-child(2) button {
-  height: 32px;
-  width: 132px;
-  border-radius: 4px;
+  height: 36px;
+  width: 145px;
+  border-radius: 6px;
   font-size: 12px;
   font-weight: bold;
   color: #382F9C;
   border: none;
+  width: 145px;
   font-size: 18px;
 }
 
 .group-1 .timesheet .d-flex div:nth-child(2) button:hover {
+  cursor: pointer;
   background-color: #382F9C;
   color: #fff;
 }
@@ -401,9 +419,9 @@ html, body {
 }
 
 .group-1 .report .export button {
-  height: 32px;
-  width: 132px;
-  border-radius: 4px;
+  height: 36px;
+  width: 145px;
+  border-radius: 6px;
   font-size: 12px;
   font-weight: bold;
   color: #382F9C;
@@ -414,6 +432,7 @@ html, body {
 }
 
 .group-1 .report .export button:hover {
+  cursor: pointer;
   background-color: #382F9C;
   color: #fff;
 }
@@ -586,9 +605,9 @@ html, body {
 }
 
 .group-2 .screenshot .d-flex .details .activity button {
-  height: 32px;
-  width: 132px;
-  border-radius: 4px;
+  height: 36px;
+  width: 145px;
+  border-radius: 6px;
   font-size: 12px;
   font-weight: lighter;
   color: #382F9C;
@@ -600,6 +619,7 @@ html, body {
 }
 
 .group-2 .screenshot .d-flex .details .activity button:hover {
+  cursor: pointer;
   background-color: #382F9C;
   color: #fff;
 }
@@ -609,9 +629,9 @@ html, body {
 }
 
 .group-2 .screenshot .view button {
-  height: 32px;
-  width: 132px;
-  border-radius: 4px;
+  height: 36px;
+  width: 145px;
+  border-radius: 6px;
   font-size: 12px;
   font-weight: bold;
   color: #382F9C;
@@ -621,6 +641,7 @@ html, body {
 }
 
 .group-2 .screenshot .view button:hover {
+  cursor: pointer;
   background-color: #382F9C;
   color: #fff;
 }
@@ -670,6 +691,13 @@ html, body {
 }
 
 @media (max-width: 500px) {
+  #arrow-mobile {
+    margin-top: 4px;
+    width: 18px !important;
+  }
+  .logo {
+    margin-top: 40px !important;
+  }
   .group-1 .timesheet, .group-1 .report {
     padding: 15px;
   }
