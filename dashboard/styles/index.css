@@ -6,25 +6,6 @@ html, body {
         filter: blur(0.8px);
         filter: contrast(100%);
         */
-#arrow {
-  position: absolute;
-  left: -4px;
-  top: 45px;
-  background-color: white;
-  width: 14px;
-  height: 38px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 47% 53% 50% 50% / 42% 42% 52% 44%;
-}
-
 #layout {
   height: 100vh;
   background-color: #fff;
@@ -37,11 +18,45 @@ html, body {
   background-color: #382F9C;
 }
 
+#layout #sidebar #arrow-sidebar {
+  position: absolute;
+  width: 16px;
+  left: 6px;
+  top: 54px;
+  z-index: 500;
+  display: none;
+}
+
+#layout #sidebar .logo {
+  margin: 0px 30px;
+  margin-top: 20px;
+}
+
+#layout #sidebar .logo img {
+  width: 20px;
+}
+
+#layout #sidebar #hidden-curve {
+  width: 20px;
+  height: 30px;
+  margin-left: 92.6%;
+  margin-top: 5px;
+  background-color: #f4f4f4;
+  border-radius: 100% 0% 0% 100%/47% 30% 70% 53%;
+}
+
 #layout #sidebar .d-flex {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   padding: 0px 30px;
+}
+
+#layout #sidebar .d-flex hr {
+  background-color: white;
+  width: 20px;
+  margin: 0px;
+  opacity: 0.6;
 }
 
 #layout #sidebar .d-flex ul {
@@ -87,8 +102,28 @@ html, body {
   padding: 10px 0px;
 }
 
+#layout #sidebar .bottom .end .d-flex div {
+  cursor: pointer;
+}
+
+#layout #sidebar .bottom .end .d-flex div:nth-child(1) span {
+  position: absolute;
+  font-size: 8px;
+  color: white;
+  background-color: #DC143C;
+  font-weight: bolder;
+  border-radius: 50%;
+  width: 10px;
+  text-align: center;
+  margin-left: -12px;
+}
+
 #layout #sidebar .bottom .end .d-flex img {
   width: 18px;
+}
+
+#layout #sidebar .bottom .end .d-flex img:nth-last-child(1) {
+  border-radius: 50%;
 }
 
 #layout #grid .topnav {
@@ -96,6 +131,32 @@ html, body {
   -webkit-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.02);
           box-shadow: 0 8px 12px rgba(0, 0, 0, 0.02);
   padding: 14px 25px;
+}
+
+#layout #grid .topnav #arrow-desk-bend {
+  position: absolute;
+  left: -4px;
+  top: 45px;
+  background-color: white;
+  width: 14px;
+  height: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 47% 53% 50% 50% / 42% 42% 52% 44%;
+}
+
+#layout #grid .topnav #arrow-desk {
+  position: absolute;
+  width: 20px;
+  left: -12px;
+  top: 54px;
 }
 
 #layout #grid .topnav .btn-left {
@@ -172,7 +233,7 @@ html, body {
   font-weight: bold;
   color: #382F9C;
   border: none;
-  font-size: 18px;
+  font-size: 13px;
 }
 
 #layout #grid .group-1 .timesheet .d-flex div:nth-child(2) button:hover {
@@ -275,6 +336,11 @@ html, body {
   font-size: 10px;
 }
 
+#layout #grid .group-1 .timesheet .tables .table-bordered td:nth-last-child(1),
+#layout #grid .group-1 .timesheet .tables .table-bordered th:nth-last-child(1) {
+  border: none;
+}
+
 #layout #grid .group-1 .timesheet .tables .table-bordered th {
   font-size: 10px;
 }
@@ -322,6 +388,31 @@ html, body {
   padding: 13px;
   margin-bottom: 20px;
   border-radius: 10px;
+}
+
+#layout #grid .group-1 .report .card:nth-child(1) {
+  background-color: #382F9C;
+}
+
+#layout #grid .group-1 .report .card:nth-child(1) .img {
+  background-color: #534ba9;
+}
+
+#layout #grid .group-1 .report .card:nth-child(1) .right div:nth-child(1) {
+  background-color: #39c084;
+}
+
+#layout #grid .group-1 .report .card:nth-child(2) {
+  background-color: #f4f4f4;
+}
+
+#layout #grid .group-1 .report .card:nth-child(2) .img {
+  background-color: white;
+}
+
+#layout #grid .group-1 .report .card:nth-child(2) .right div:nth-child(1) {
+  background-color: #fae9ed;
+  color: #fe7a9a;
 }
 
 #layout #grid .group-1 .report .card .left {
@@ -426,6 +517,12 @@ html, body {
   color: #fff;
 }
 
+#layout #grid .group-1 .report .export button img {
+  height: 14px;
+  z-index: 100;
+  background-color: white;
+}
+
 #layout #grid .group-2 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -510,6 +607,11 @@ html, body {
 #layout #grid .group-2 .todo .d-flex .stack .card:hover {
   background-color: #ffffff;
   opacity: 1;
+}
+
+#layout #grid .group-2 .todo .d-flex .stack .card .right img {
+  width: 18px;
+  cursor: pointer;
 }
 
 #layout #grid .group-2 .todo .d-flex .stack .card p {
@@ -634,15 +736,26 @@ html, body {
 
 #opener, #opener-1 {
   display: none;
+  position: fixed;
+  top: 50vh;
+  z-index: 20;
+  background-color: blue;
+}
+
+#opener-1 {
+  left: 200px;
 }
 
 @media (max-width: 992px) {
-  #unlock {
+  #hidden-curve {
     display: none;
   }
-  #arrow img {
+  #arrow-desk-bend {
+    display: none;
+  }
+  #arrow-desk {
     margin-left: 12.5px !important;
-    width: 15px !important;
+    width: 18px !important;
   }
   #layout #sidebar {
     display: none;

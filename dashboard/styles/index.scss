@@ -34,16 +34,7 @@ html,body{
         filter: blur(0.8px);
         filter: contrast(100%);
         */
-#arrow{
-    position: absolute; left: -4px; top: 45px; 
-    background-color:white; 
-    width: 14px; 
-    height: 38px; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    border-radius: 47% 53% 50% 50% / 42% 42% 52% 44% ;
-}
+
 #layout{
     height: 100vh;
     background-color: $primarycolor;
@@ -52,9 +43,33 @@ html,body{
         min-height: 100vh;
         overflow: hidden;
         background-color: $secondarycolor;
+        #arrow-sidebar{
+            position: absolute; 
+            width: 16px; 
+            left: 6px; 
+            top: 54px; 
+            z-index: 500; 
+            display: none;
+        }
+        .logo{
+            margin: 0px 30px; 
+            margin-top: 20px;
+            img{width: 20px;}
+        }
+        #hidden-curve{
+            width: 20px; 
+            height: 30px; 
+            margin-left: 92.6%; 
+            margin-top: 5px; 
+            background-color: #f4f4f4; 
+            border-radius: 100% 0% 0% 100%/47% 30% 70% 53%;
+        }
         .d-flex{
             flex: 1;
             padding: 0px 30px;
+            hr{
+                background-color: white; width: 20px; margin: 0px; opacity: 0.6;
+            }
             ul{
                 margin-top: 20px;
                 margin-bottom: 20px;
@@ -89,14 +104,50 @@ html,body{
         .end{
             padding: 10px 0px;
             .d-flex{
+                div{
+                    cursor: pointer;
+                    &:nth-child(1){
+                        span{
+                            position: absolute; 
+                            font-size: 8px; 
+                            color: white; 
+                            background-color: #DC143C; 
+                            font-weight: bolder; 
+                            border-radius: 50%; 
+                            width: 10px; 
+                            text-align: center; 
+                            margin-left: -12px;
+                        }
+                    }
+
+                }
                 img{
-                    width: 18px;
+                    width: 18px; 
+                    &:nth-last-child(1){border-radius: 50%;}
                 }
             }
         }}
     }
     #grid{
         .topnav{
+            #arrow-desk-bend{
+                position: absolute; 
+                left: -4px; 
+                top: 45px; 
+                background-color:white; 
+                width: 14px; 
+                height: 38px; 
+                display: flex; 
+                justify-content: center; 
+                align-items: center; 
+                border-radius: 47% 53% 50% 50% / 42% 42% 52% 44% ;
+            }
+            #arrow-desk{
+                position:absolute; 
+                width: 20px; 
+                left: -12px; 
+                top: 54px;
+            }
             border-bottom: solid 1px #f4f4f4;   
             box-shadow:0 8px 12px rgba(0, 0, 0, 0.02);
             padding: 14px 25px;
@@ -137,7 +188,7 @@ html,body{
                                 &:nth-child(2){
                                     button{
                                         @include button-lg($secondarycolor,bold,$border:true,$animation:true);
-                                        font-size: 18px;
+                                        font-size: 13px;
                                         @media (max-width:500px){
                                             font-size: 10px !important; 
                                             width: 110px;
@@ -160,10 +211,10 @@ html,body{
                             }
                             tbody tr{   
                                 font-stretch: expanded;
+                                margin-right: 10px;
                                 &:nth-child(odd) {
                                 background-color: #f8f7f8;
                                 }
-                                margin-right: 10px;
                                 &:hover{
                                     background-color: #DBDCE4;
                                 }
@@ -187,7 +238,10 @@ html,body{
                             vertical-align: middle;
                             border: none;
                             border-right: 1px solid $bordercolor;
-                            font-size: 10px;
+                            font-size: 10px;      
+                                &:nth-last-child(1){
+                                    border: none;
+                                }
                             }
                             .table-bordered th{
                                 font-size: 10px;
@@ -209,7 +263,7 @@ html,body{
                         td,th{
                             &:nth-child(1){
                                 padding: 3px 10px !important;
-                            }      
+                            }
                         }
                     }
                         
@@ -229,6 +283,16 @@ html,body{
                                 padding: 13px;
                                 margin-bottom: 20px;
                                 border-radius: 10px;
+                                &:nth-child(1){
+                                    background-color: #382F9C;
+                                   .img{background-color: #534ba9;}
+                                   .right div:nth-child(1){background-color: #39c084;}
+                                }
+                                &:nth-child(2){
+                                    background-color: #f4f4f4;
+                                   .img{background-color: white;}
+                                   .right div:nth-child(1){background-color:#fae9ed; color: #fe7a9a;}
+                                }
                                 .left{
                                     margin: auto;
                                     .img{
@@ -288,6 +352,11 @@ html,body{
                                     background-color: white;
                                     width: 100%;
                                     height: 40px;
+                                    img{
+                                        height:14px; 
+                                        z-index: 100; 
+                                        background-color: white;
+                                    }
                                 }
                             }
                         }
@@ -340,6 +409,9 @@ html,body{
                                 &:hover{
                                     background-color: #ffffff;
                                     opacity: 1;
+                                }
+                                .right{
+                                    img{width: 18px; cursor: pointer;}
                                 }
                                 p{
                                     margin: auto;
@@ -413,16 +485,24 @@ html,body{
 }
 #opener,#opener-1{
     display: none;
+    position: fixed; 
+    top: 50vh; 
+    z-index: 20;
+    background-color: blue;
+}
+#opener-1{
+    left: 200px;
 }
 @media (max-width:992px){
-    #unlock{
+    #hidden-curve{
         display: none;
     }
-    #arrow{
-        img{
+    #arrow-desk-bend{
+        display: none;
+    }
+    #arrow-desk{
             margin-left: 12.5px !important;
-            width: 15px !important;
-        }
+            width: 18px !important;
     }
     #layout #sidebar{
         display: none;
