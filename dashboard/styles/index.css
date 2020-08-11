@@ -293,39 +293,34 @@ html, body {
   }
 }
 
-#layout #grid .group-1 .timesheet .tables tbody tr span.span-1 {
+#layout #grid .group-1 .timesheet .tables tbody tr span.sno {
+  padding: 2px 8px;
+  font-weight: bolder;
+}
+
+#layout #grid .group-1 .timesheet .tables tbody tr span.sno-1 {
   background-color: #dcdbea;
   color: #5048a7;
-  padding: 2px 8px;
-  font-weight: bolder;
 }
 
-#layout #grid .group-1 .timesheet .tables tbody tr span.span-2 {
+#layout #grid .group-1 .timesheet .tables tbody tr span.sno-2 {
   background-color: #f1ebd9;
   color: #c6a750;
-  padding: 2px 8px;
-  font-weight: bolder;
 }
 
-#layout #grid .group-1 .timesheet .tables tbody tr span.span-3 {
+#layout #grid .group-1 .timesheet .tables tbody tr span.sno-3 {
   background-color: #fae9ed;
   color: #fe7a9a;
-  padding: 2px 8px;
-  font-weight: bolder;
 }
 
-#layout #grid .group-1 .timesheet .tables tbody tr span.span-4 {
+#layout #grid .group-1 .timesheet .tables tbody tr span.sno-4 {
   background-color: #dfe9fa;
   color: #628bd0;
-  padding: 2px 8px;
-  font-weight: bolder;
 }
 
-#layout #grid .group-1 .timesheet .tables tbody tr span.span-5 {
+#layout #grid .group-1 .timesheet .tables tbody tr span.sno-5 {
   background-color: #faede2;
   color: #fda353;
-  padding: 2px 8px;
-  font-weight: bolder;
 }
 
 #layout #grid .group-1 .timesheet .tables .table-bordered td,

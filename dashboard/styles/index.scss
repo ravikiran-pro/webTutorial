@@ -224,12 +224,14 @@ html,body{
                                         font-size: 10px;
                                     }
                                     border-radius: 4px;
-                                    &.span{
-                                        &-1{@include contrast(#dcdbea,#5048a7);padding: 2px 8px; font-weight: bolder;}
-                                        &-2{@include contrast(#f1ebd9,#c6a750);padding: 2px 8px; font-weight: bolder;}
-                                        &-3{@include contrast(#fae9ed,#fe7a9a);padding: 2px 8px; font-weight: bolder;}
-                                        &-4{@include contrast(#dfe9fa,#628bd0);padding: 2px 8px; font-weight: bolder;}
-                                        &-5{@include contrast(#faede2,#fda353);padding: 2px 8px; font-weight: bolder;}
+                                    &.sno{
+                                        &-1{@include contrast(#dcdbea,#5048a7);}
+                                        &-2{@include contrast(#f1ebd9,#c6a750);}
+                                        &-3{@include contrast(#fae9ed,#fe7a9a);}
+                                        &-4{@include contrast(#dfe9fa,#628bd0);}
+                                        &-5{@include contrast(#faede2,#fda353);}
+                                        padding: 2px 8px; 
+                                        font-weight: bolder;
                                     }
                                 }
                             }
