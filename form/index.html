@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dashboard</title>
+    <link rel="icon" href="assets/logo.png" type="image/icon-type">
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body> 
+   <div class="container-fluid p-0">
+       <div class="container form">
+            <div class="head">
+                <a href="#">
+                    <span class="fa fa-arrow-left"></span>
+                </a>
+                <h6><b>My Whistle from home</b></h6>
+            </div>
+            <form class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-xl-6 col-lg-6  d-flex flex-column form-group pr-sm-0 pr-md-5">
+                            <label class="form-text text-muted">What's Your name?</label>
+                            <input type="text" class="form-control ml-1" placeholder="Ashwin Ravichandran"/>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-xl-6 col-lg-6  d-flex flex-column form-group pl-sm-0 pl-md-5">
+                            <label class="form-text text-muted">Where are you from?</label>
+                            <input type="text" class="form-control ml-1" placeholder="Chennai, India"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-xl-6 col-lg-6 d-flex flex-column form-group pr-sm-0 pr-md-5">
+                            <label class="form-text text-muted">What's Your date of birth?</label>
+                            <input type="date" class="form-control ml-1"/>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-xl-6 col-lg-6  d-flex flex-column form-group  pl-sm-0 pl-md-5">
+                            <label class="form-text text-muted">Who's your favorite player in the CSK team?</label>
+                            <select class="custom-select ml-1" id="inputGroupSelect01">
+                                <option selected>Harbhajan singh</option>
+                                <option value="1">M.S Dhoni</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 d-flex flex-column form-group mb-0">
+                    <label class="form-text text-muted">What's Your date of birth?</label>
+                    <textarea type="textarea" rows="3" class="form-control ml-1" maxlength="250" placeholder="Let's begin the whistles"></textarea>
+                    <small class="form-text text-muted text-right">Max 250 Letters</small>
+                </div>
+                <div class="col-sm-12 col-md-5 col-xl-5 col-lg-5 d-flex flex-column form-group pr-sm-0 pr-md-5">
+                    <label class="text-muted">Attach Your Whistles</label>
+                    <label class="upload">
+                        <input type="file" accept="image/*"/>
+                        <div class="attachment d-flex flex-row justify-content-between align-items-center">
+                            <div>
+                               <b>Attach here</b>
+                              <div><span>Png,jpg,video,gif</span></div>
+                            </div>
+                            <div class="icon">
+                                <span class="fa fa-paperclip"></span>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <div class="col-12 d-flex flex-column form-group mb-0">
+                    <label class="form-text text-muted">Dhoni can hit a helicopter shot?</label>
+                    <textarea type="textarea" rows="3" class="form-control ml-1" maxlength="250" placeholder="Yes he can."></textarea>
+                    <small class="form-text text-muted text-right">Max 250 Letters</small>
+                </div>
+                <div class="col-12 d-flex flex-column form-group mb-0">
+                    <label class="form-text text-muted">How much do you like Dhoni as a captain?</label>
+                    <textarea type="textarea" rows="3" class="form-control ml-1" maxlength="250" placeholder="He is the Best of Best"></textarea>
+                    <small class="form-text text-muted text-right">Max 250 Letters</small>
+                </div>
+                <div class="col-12 d-flex flex-column form-group mb-0">
+                    <label class="form-text text-muted">How much do you prefer csk matches?</label>
+                    <textarea type="textarea" rows="3" class="form-control ml-1" maxlength="250" placeholder="Let's begin the whistles"></textarea>
+                    <small class="form-text text-muted text-right">Max 250 Letters</small>
+                </div>
+                <div class="col-12 mt-5 mb-5">
+                    <div class="float-right">
+                        <button type="submit" class="btn submit">Preview</button>
+                    </div>
+                </div>
+            </form>
+       </div>
+   </div>
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/popper/popper.min.js"></script>
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+</body>
+</html>
